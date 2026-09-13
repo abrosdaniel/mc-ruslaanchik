@@ -1,0 +1,30 @@
+[breeder]
+	breeding_time = 1200
+
+[converter]
+	converting_time = 6000
+
+[farmer]
+	farm_speed = 10
+	crop_blacklist = ["#easy_villagers:invalid_farmer_crop"]
+
+[iron_farm]
+	spawn_time = 4800
+
+[trader]
+	min_restock_time = 1200
+	max_restock_time = 3600
+
+[auto_trader]
+	min_restock_time = 1200
+	max_restock_time = 3600
+	trade_cooldown = 20
+
+[villager]
+	inventory_sounds = true
+	sound_amount = 20
+	trade_cycling = true
+	universal_reputation = true
+
+[incubator]
+	speed = 2

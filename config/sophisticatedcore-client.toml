@@ -1,0 +1,4 @@
+[client]
+	sortButtonsPosition = "TITLE_LINE_RIGHT"
+	playButtonSound = true
+	mouseTweaksScrollEnabled = true

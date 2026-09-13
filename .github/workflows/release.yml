@@ -1,0 +1,217 @@
+name: Сборка и релиз
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверить версию
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PYTHON'
+          import json
+          import os
+          import re
+          import urllib.error
+          import urllib.request
+          from pathlib import Path
+
+          version = json.loads(Path('manifest.json').read_text())['version']
+          if not isinstance(version, str) or not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)', version):
+              raise ValueError('Укажите version в формате 1.0.0')
+          tag = 'v' + version
+          request = urllib.request.Request(
+              f"https://api.github.com/repos/{os.environ['GH_REPO']}/releases/tags/{tag}",
+              headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                       'Accept': 'application/vnd.github+json', 'User-Agent': 'Ruslaanchik-build/1.0'})
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  publish = json.load(response)['draft']
+          except urllib.error.HTTPError as error:
+              if error.code != 404:
+                  raise
+              publish = True
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'version={version}\ntag={tag}\npublish={str(publish).lower()}\n')
+          print(f'{tag}: ' + ('сборка релиза' if publish else 'уже опубликован, пропускаем'))
+          PYTHON
+      - uses: actions/setup-python@v5
+        if: steps.version.outputs.publish == 'true'
+        with:
+          python-version: '3.12'
+      - name: Собрать файлы
+        if: steps.version.outputs.publish == 'true'
+        env:
+          BUILD_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          python - <<'PY'
+          import gzip
+          import hashlib
+          import json
+          import os
+          import struct
+          import urllib.request
+          import zipfile
+          from pathlib import Path, PurePosixPath
+          from urllib.parse import urlparse
+
+          manifest = json.loads(Path('manifest.json').read_text())
+          if not Path('RELEASE.md').read_text(encoding='utf-8').strip():
+              raise ValueError('Заполните RELEASE.md')
+          modrinth = True
+          version = os.environ['BUILD_VERSION']
+          downloads = {}
+          shared = {}
+          index = []
+          seen = set()
+          allowed = {'mods', 'resourcepacks', 'shaderpacks', 'texturepacks', 'config', 'defaultconfigs'}
+          private = {'authlogic', 'auth-logic', 'accounts', 'saves', 'logs', 'screenshots', 'crash-reports', 'xaero', 'arcadia'}
+
+          def check_path(name):
+              path = PurePosixPath(name)
+              if path.is_absolute() or '..' in path.parts or '\\' in name or path.as_posix() != name:
+                  raise ValueError('Недопустимый путь: ' + name)
+              if not path.parts or path.parts[0] not in allowed:
+                  raise ValueError('Недопустимая папка: ' + name)
+              if any(p.startswith('.') or p.lower() in private for p in path.parts):
+                  raise ValueError('Личные данные: ' + name)
+              if path.name.lower() in {'sodium-fingerprint.json', 'usercache.json', 'usernamecache.json'} or path.suffix.lower() in {'.key', '.pem', '.log', '.bak'}:
+                  raise ValueError('Личные данные: ' + name)
+              if name.casefold() in seen:
+                  raise ValueError('Повторяющийся путь: ' + name)
+              seen.add(name.casefold())
+
+          def encode(value):
+              return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
+
+          def archive(name, entries):
+              target = Path('dist') / name
+              with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as output:
+                  for path, data in sorted(entries.items()):
+                      entry = zipfile.ZipInfo(path, (2020, 1, 1, 0, 0, 0))
+                      entry.compress_type = zipfile.ZIP_DEFLATED
+                      entry.external_attr = 0o100644 << 16
+                      output.writestr(entry, data)
+              with zipfile.ZipFile(target) as output:
+                  if output.testzip():
+                      raise ValueError('Повреждённый архив: ' + name)
+              print(name, target.stat().st_size)
+              return target
+
+          for item in manifest['files']:
+              name = item['path']
+              check_path(name)
+              parsed = urlparse(item['url'])
+              if parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password:
+                  raise ValueError('Нужна прямая HTTPS-ссылка: ' + name)
+              request = urllib.request.Request(item['url'], headers={'User-Agent': 'Ruslaanchik-build/1.0'})
+              with urllib.request.urlopen(request, timeout=90) as response:
+                  data = response.read()
+                  modrinth = modrinth and parsed.hostname == 'cdn.modrinth.com' and urlparse(response.geturl()).hostname == 'cdn.modrinth.com'
+              hashes = {kind: hashlib.new(kind, data).hexdigest() for kind in ('sha512', 'sha1')}
+              if item.get('sha512') and hashes['sha512'] != item['sha512']:
+                  raise ValueError('Не совпала контрольная сумма: ' + name)
+              downloads[name] = data
+              index.append({'path': name, 'hashes': hashes, 'downloads': [item['url']], 'fileSize': len(data),
+                            'env': {'client': 'required', 'server': 'unsupported'}})
+
+          if not downloads:
+              raise ValueError('Список файлов пуст')
+          for path in sorted(Path('config').rglob('*')):
+              if path.is_symlink():
+                  raise ValueError('Символические ссылки не поддерживаются')
+              if path.is_file():
+                  name = path.as_posix()
+                  check_path(name)
+                  shared[name] = path.read_bytes()
+
+          def string(value):
+              data = value.encode()
+              return struct.pack('>H', len(data)) + data
+
+          def text_tag(name, value):
+              return b'\x08' + string(name) + string(value)
+
+          server = b'\x0a\x00\x00\x09' + string('servers') + b'\x0a' + struct.pack('>i', 1)
+          server += text_tag('name', manifest['name']) + text_tag('ip', manifest['server']) + b'\x00\x00'
+          shared['servers.dat'] = gzip.compress(server, mtime=0)
+          shared['FILES.md'] = ('# Состав сборки\n\n' + '\n'.join(
+              '- [' + item['path'] + '](' + item['url'] + ')' for item in manifest['files']
+          ) + '\n').encode()
+          install = (
+              f"{manifest['name']}\nMinecraft {manifest['minecraft']} · NeoForge {manifest['neoforge']} · Java {manifest['java']} (64-bit)\n\n"
+              'Ruslaanchik-files.zip: создайте отдельный профиль Minecraft с указанным NeoForge, '
+              'выберите Java и скопируйте содержимое minecraft в игровую папку профиля.\n'
+              'Ruslaanchik-Prism.zip: импортируйте как сборку в Prism Launcher / MultiMC.\n'
+              + ('Ruslaanchik.mrpack: импортируйте в лаунчер с поддержкой Modrinth. '
+                 'Моды скачаются при импорте.\n\n' if modrinth else '\n') +
+              f"Сервер: {manifest['server']}\n"
+              'Не смешивайте сборку со старыми модами и не передавайте данные AuthLogic.\n'
+          ).encode()
+          game = {'minecraft/' + path: data for path, data in (downloads | shared).items()}
+          components = {'formatVersion': 1, 'components': [
+              {'uid': 'net.minecraft', 'version': manifest['minecraft'], 'important': True},
+              {'uid': 'net.neoforged', 'version': manifest['neoforge']}
+          ]}
+          mrpack = {'formatVersion': 1, 'game': 'minecraft', 'name': manifest['name'],
+                    'versionId': version, 'files': index,
+                    'dependencies': {'minecraft': manifest['minecraft'], 'neoforge': manifest['neoforge']}}
+          Path('dist').mkdir(exist_ok=True)
+          Path('dist/Ruslaanchik.mrpack').unlink(missing_ok=True)
+          artifacts = [
+              archive('Ruslaanchik-files.zip', game | {'INSTALL.txt': install}),
+              archive('Ruslaanchik-Prism.zip', game | {'INSTALL.txt': install, 'mmc-pack.json': encode(components),
+                      'instance.cfg': b'[General]\nInstanceType=OneSix\nname=Ruslaanchik\niconKey=default\n'})
+          ]
+          if modrinth:
+              artifacts.append(archive('Ruslaanchik.mrpack', {'modrinth.index.json': encode(mrpack)} |
+                               {'overrides/' + path: data for path, data in shared.items()}))
+          else:
+              print('Пропускаем .mrpack: есть ссылки вне cdn.modrinth.com')
+          Path('dist/SHA256SUMS.txt').write_text(''.join(
+              hashlib.sha256(path.read_bytes()).hexdigest() + '  ' + path.name + '\n' for path in artifacts
+          ))
+          PY
+      - name: Опубликовать релиз
+        if: steps.version.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          COMMIT: ${{ github.sha }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" --json isDraft --jq '.isDraft' > /tmp/release-draft; then
+            if [ "$(cat /tmp/release-draft)" = "false" ]; then
+              exit 0
+            fi
+          else
+            gh release create "$TAG" --target "$COMMIT" --draft \
+              --title "Ruslaanchik $TAG" \
+              --notes-file RELEASE.md
+          fi
+          ASSETS=(dist/Ruslaanchik-files.zip dist/Ruslaanchik-Prism.zip dist/SHA256SUMS.txt)
+          if [ -f dist/Ruslaanchik.mrpack ]; then
+            ASSETS+=(dist/Ruslaanchik.mrpack)
+          else
+            gh api "repos/$GH_REPO/releases/tags/$TAG" --jq '.assets[] | select(.name == "Ruslaanchik.mrpack") | .id' > /tmp/mrpack-assets
+            while read -r ASSET_ID; do
+              gh api --method DELETE "repos/$GH_REPO/releases/assets/$ASSET_ID"
+            done < /tmp/mrpack-assets
+          fi
+          gh release upload "$TAG" "${ASSETS[@]}" --clobber
+          gh release edit "$TAG" --notes-file RELEASE.md --draft=false --latest

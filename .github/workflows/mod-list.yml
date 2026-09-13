@@ -1,0 +1,115 @@
+name: Обновить список модов
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - manifest.json
+      - .github/workflows/mod-list.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mod-list
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Сформировать таблицу
+        run: |
+          python3 - <<'PYTHON'
+          import html
+          import json
+          import re
+          import subprocess
+          import urllib.request
+          from concurrent.futures import ThreadPoolExecutor
+          from functools import lru_cache
+          from pathlib import Path
+          from urllib.parse import urlparse
+          
+          @lru_cache(maxsize=None)
+          def api(path):
+              request = urllib.request.Request('https://api.modrinth.com/v2/' + path,
+                                               headers={'User-Agent': 'abrosdaniel/mc-ruslaanchik (README generator)'})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return json.load(response)
+          
+          def mod(item):
+              required = item.get('required', True)
+              if not isinstance(required, bool):
+                  raise ValueError('required должен быть true или false: ' + item['path'])
+              parsed = urlparse(item['url'])
+              match = re.fullmatch(r'/data/([A-Za-z0-9]+)/versions/([A-Za-z0-9]+)/[^/]+', parsed.path)
+              if parsed.scheme == 'https' and parsed.hostname == 'cdn.modrinth.com' and match:
+                  project_id, version_id = match.groups()
+                  project = api('project/' + project_id)
+                  version = api('version/' + version_id)
+                  if version['project_id'] != project_id:
+                      raise ValueError('Версия принадлежит другому моду: ' + item['path'])
+                  members = api('team/' + project['team'] + '/members')
+                  authors = ', '.join(member['user'].get('name') or member['user']['username']
+                                      for member in members if member.get('accepted', True))
+                  name = item.get('name', project['title'])
+                  number = item.get('version', version['version_number'])
+                  author = item.get('author', authors or '—')
+                  page = item.get('page', 'https://modrinth.com/mod/' + project_id + '/version/' + version_id)
+              else:
+                  name, number, author = (item.get(key) for key in ('name', 'version', 'author'))
+                  page = item.get('page', item['url'])
+              for value in (name, number, author, page):
+                  if not isinstance(value, str) or not value.strip():
+                      raise ValueError('Заполните name, version и author для мода: ' + item['path'])
+              link = urlparse(page)
+              if link.scheme != 'https' or not link.hostname or link.username or link.password:
+                  raise ValueError('Нужна HTTPS-ссылка для мода: ' + item['path'])
+              escape = lambda value: html.escape(' '.join(value.split()), quote=True)
+              row = f'<li><a href="{escape(page)}">{escape(name)}</a> [{escape(number)}] by {escape(author)}</li>'
+              return required, name.casefold(), row
+          
+          manifest = json.loads(Path('manifest.json').read_text(encoding='utf-8'))
+          items = [item for item in manifest['files'] if item['path'].startswith('mods/')]
+          with ThreadPoolExecutor(max_workers=6) as pool:
+              mods = sorted(pool.map(mod, items), key=lambda entry: entry[1])
+          rows = ['<table width="100%">', '<tr><th>Обязательные</th><th>Необязательные</th></tr>', '<tr>']
+          for required in (True, False):
+              entries = [row for group, name, row in mods if group == required]
+              rows += ['<td width="50%" valign="top"><ul>', *entries, '</ul></td>']
+          rows += ['</tr>', '</table>']
+          body = '\n'.join(rows)
+          p = Path('README.md')
+          s = p.read_text(encoding='utf-8')
+          start, end = '<div id="mod-list">', '<a name="mod-list-end"></a>'
+          if s.count(start) != 1 or s.count(end) != 1:
+              raise ValueError('Не найдены уникальные границы таблицы модов в README.md')
+          a, b = s.index(start), s.index(end)
+          if a >= b:
+              raise ValueError('Неверный порядок границ таблицы модов')
+          old = s[a:b]
+          if body not in old:
+              date = subprocess.check_output(['git', 'log', '-1', '--format=%cs', '--', 'manifest.json'], text=True).strip()
+              date_line = f'Список обновлён: {date}.' if date else 'Список формируется из manifest.json.'
+              block = start + '\n\n<p><strong>' + date_line + '</strong></p>\n\n' + body + '\n\n</div>\n\n'
+              p.write_text(s[:a] + block + s[b:], encoding='utf-8')
+          print(f'Таблица: {len(mods)} модов, {sum(not group for group, name, row in mods)} необязательных')
+          PYTHON
+      - name: Сохранить README
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Обновить список модов"
+          git push origin HEAD:main

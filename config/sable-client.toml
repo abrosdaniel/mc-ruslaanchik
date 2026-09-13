@@ -1,0 +1,8 @@
+sub_level_dynamic_shading = true
+sub_level_water_occlusion = true
+sub_level_skylight_shadows = false
+debug_draw_loaded_chunks = false
+sub_level_snapshot_interpolation_delay_ticks = 1.5
+sub_level_renderer = "SODIUM_REACHAROUND"
+sub_level_zoom_sensitivity = 0.2
+attempt_udp_networking = true

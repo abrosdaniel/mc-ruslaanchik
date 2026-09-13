@@ -1,0 +1,8 @@
+trackpadSensitivity:39.956983109595086
+reverseHotbarScrolling:false
+reverseScrolling:false
+momentumScrolling:false
+interfaceSmoothScroll:false
+disableCtrlClickFix:false
+useCommandKey:false
+blockCommandQQuit:true

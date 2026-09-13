@@ -1,0 +1,309 @@
+[server]
+	maxUpgradesPerStorage = ["shulker_box|stack_upgrades|2", "shulker_box|furnace_upgrades|1", "shulker_box|jukebox_upgrades|1", "chest|stack_upgrades|2", "chest|furnace_upgrades|1", "chest|jukebox_upgrades|1", "limited_barrel|jukebox_upgrades|1", "limited_barrel|furnace_upgrades|1", "barrel|stack_upgrades|2", "barrel|furnace_upgrades|1", "barrel|jukebox_upgrades|1"]
+	tooManyItemEntityDrops = 200
+	limitedBarrelCountDyeingEnabled = true
+	controllerRange = 15
+
+	[server.WoodBarrel]
+		inventorySlotCount = 27
+		upgradeSlotCount = 1
+
+	[server.CopperBarrel]
+		inventorySlotCount = 45
+		upgradeSlotCount = 1
+
+	[server.IronBarrel]
+		inventorySlotCount = 54
+		upgradeSlotCount = 2
+
+	[server.GoldBarrel]
+		inventorySlotCount = 81
+		upgradeSlotCount = 3
+
+	[server.DiamondBarrel]
+		inventorySlotCount = 108
+		upgradeSlotCount = 4
+
+	[server.NetheriteBarrel]
+		inventorySlotCount = 132
+		upgradeSlotCount = 5
+
+	[server.LimitedBarrelI]
+		baseSlotLimitMultiplier = 32
+		upgradeSlotCount = 1
+
+	[server.LimitedCopperBarrelI]
+		baseSlotLimitMultiplier = 53
+		upgradeSlotCount = 1
+
+	[server.LimitedIronBarrelI]
+		baseSlotLimitMultiplier = 64
+		upgradeSlotCount = 2
+
+	[server.LimitedGoldBarrelI]
+		baseSlotLimitMultiplier = 96
+		upgradeSlotCount = 3
+
+	[server.LimitedDiamondBarrelI]
+		baseSlotLimitMultiplier = 128
+		upgradeSlotCount = 4
+
+	[server.LimitedNetheriteBarrelI]
+		baseSlotLimitMultiplier = 160
+		upgradeSlotCount = 5
+
+	[server.LimitedBarrelII]
+		baseSlotLimitMultiplier = 16
+		upgradeSlotCount = 1
+
+	[server.LimitedCopperBarrelII]
+		baseSlotLimitMultiplier = 27
+		upgradeSlotCount = 1
+
+	[server.LimitedIronBarrelII]
+		baseSlotLimitMultiplier = 32
+		upgradeSlotCount = 2
+
+	[server.LimitedGoldBarrelII]
+		baseSlotLimitMultiplier = 48
+		upgradeSlotCount = 3
+
+	[server.LimitedDiamondBarrelII]
+		baseSlotLimitMultiplier = 64
+		upgradeSlotCount = 4
+
+	[server.LimitedNetheriteBarrelII]
+		baseSlotLimitMultiplier = 80
+		upgradeSlotCount = 5
+
+	[server.LimitedBarrelIII]
+		baseSlotLimitMultiplier = 10
+		upgradeSlotCount = 1
+
+	[server.LimitedCopperBarrelIII]
+		baseSlotLimitMultiplier = 17
+		upgradeSlotCount = 1
+
+	[server.LimitedIronBarrelIII]
+		baseSlotLimitMultiplier = 20
+		upgradeSlotCount = 2
+
+	[server.LimitedGoldBarrelIII]
+		baseSlotLimitMultiplier = 30
+		upgradeSlotCount = 3
+
+	[server.LimitedDiamondBarrelIII]
+		baseSlotLimitMultiplier = 40
+		upgradeSlotCount = 4
+
+	[server.LimitedNetheriteBarrelIII]
+		baseSlotLimitMultiplier = 50
+		upgradeSlotCount = 5
+
+	[server.LimitedBarrelIV]
+		baseSlotLimitMultiplier = 8
+		upgradeSlotCount = 1
+
+	[server.LimitedCopperBarrelIV]
+		baseSlotLimitMultiplier = 13
+		upgradeSlotCount = 1
+
+	[server.LimitedIronBarrelIV]
+		baseSlotLimitMultiplier = 16
+		upgradeSlotCount = 2
+
+	[server.LimitedGoldBarrelIV]
+		baseSlotLimitMultiplier = 24
+		upgradeSlotCount = 3
+
+	[server.LimitedDiamondBarrelIV]
+		baseSlotLimitMultiplier = 32
+		upgradeSlotCount = 4
+
+	[server.LimitedNetheriteBarrelIV]
+		baseSlotLimitMultiplier = 40
+		upgradeSlotCount = 5
+
+	[server.WoodChest]
+		inventorySlotCount = 27
+		upgradeSlotCount = 1
+
+	[server.CopperChest]
+		inventorySlotCount = 45
+		upgradeSlotCount = 1
+
+	[server.IronChest]
+		inventorySlotCount = 54
+		upgradeSlotCount = 2
+
+	[server.GoldChest]
+		inventorySlotCount = 81
+		upgradeSlotCount = 3
+
+	[server.DiamondChest]
+		inventorySlotCount = 108
+		upgradeSlotCount = 4
+
+	[server.NetheriteChest]
+		inventorySlotCount = 132
+		upgradeSlotCount = 5
+
+	[server.ShulkerBox]
+		inventorySlotCount = 27
+		upgradeSlotCount = 1
+
+	[server.CopperShulkerBox]
+		inventorySlotCount = 45
+		upgradeSlotCount = 1
+
+	[server.IronShulkerBox]
+		inventorySlotCount = 54
+		upgradeSlotCount = 2
+
+	[server.GoldShulkerBox]
+		inventorySlotCount = 81
+		upgradeSlotCount = 3
+
+	[server.DiamondShulkerBox]
+		inventorySlotCount = 108
+		upgradeSlotCount = 4
+
+	[server.NetheriteShulkerBox]
+		inventorySlotCount = 132
+		upgradeSlotCount = 5
+
+	[server.shulkerBoxDisallowedItems]
+		disallowedItems = []
+		containerItemsDisallowed = false
+
+	[server.stackUpgrade]
+		nonStackableItems = ["minecraft:bundle", "minecraft:shulker_box", "minecraft:white_shulker_box", "minecraft:orange_shulker_box", "minecraft:magenta_shulker_box", "minecraft:light_blue_shulker_box", "minecraft:yellow_shulker_box", "minecraft:lime_shulker_box", "minecraft:pink_shulker_box", "minecraft:gray_shulker_box", "minecraft:light_gray_shulker_box", "minecraft:cyan_shulker_box", "minecraft:purple_shulker_box", "minecraft:blue_shulker_box", "minecraft:brown_shulker_box", "minecraft:green_shulker_box", "minecraft:red_shulker_box", "minecraft:black_shulker_box"]
+
+	[server.compactingUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+		additionalCompactingShapes = ["111/101/111"]
+		additionalCompactingShapeOverrides = []
+
+	[server.advancedCompactingUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+
+	[server.feedingUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+
+	[server.advancedFeedingUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+
+	[server.filterUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+
+	[server.advancedFilterUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+
+	[server.magnetUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+		magnetRange = 3
+
+	[server.advancedMagnetUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+		magnetRange = 5
+
+	[server.pickupUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+
+	[server.advancedPickupUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+
+	[server.voidUpgrade]
+		filterSlots = 9
+		slotsInRow = 3
+		voidAlwaysEnabled = true
+
+	[server.advancedVoidUpgrade]
+		filterSlots = 16
+		slotsInRow = 4
+		voidAlwaysEnabled = true
+
+	[server.smeltingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+
+	[server.smokingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+
+	[server.blastingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+
+	[server.autoSmeltingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+		inputFilterSlots = 8
+		inputFilterSlotsInRow = 4
+		fuelFilterSlots = 4
+		fuelFilterSlotsInRow = 4
+
+	[server.autoSmokingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+		inputFilterSlots = 8
+		inputFilterSlotsInRow = 4
+		fuelFilterSlots = 4
+		fuelFilterSlotsInRow = 4
+
+	[server.autoBlastingUpgrade]
+		smeltingSpeedMultiplier = 1.0
+		fuelEfficiencyMultiplier = 1.0
+		inputFilterSlots = 8
+		inputFilterSlotsInRow = 4
+		fuelFilterSlots = 4
+		fuelFilterSlotsInRow = 4
+
+	[server.pumpUpgrade]
+		filterSlots = 4
+		maxInputOutput = 20
+		stackMultiplierRatio = 1.0
+
+	[server.xpPumpUpgrade]
+		mendingOn = true
+		maxXpPointsPerMending = 5
+
+	[server.compressionUpgrade]
+		maxNumberOfSlots = 5
+		additionalDecompressibleItems = ["minecraft:glowstone=4xminecraft:glowstone_dust", "minecraft:quartz_block=4xminecraft:quartz", "minecraft:clay=4xminecraft:clay_ball", "minecraft:snow_block=4xminecraft:snowball", "minecraft:bricks=4xminecraft:brick", "minecraft:nether_bricks=4xminecraft:nether_brick", "minecraft:nether_wart_block=9xminecraft:nether_wart", "minecraft:melon=9xminecraft:melon_slice", "minecraft:packed_ice=9xminecraft:ice", "minecraft:blue_ice=9xminecraft:packed_ice"]
+
+	[server.hopperUpgrade]
+		inputFilterSlots = 2
+		inputFilterSlotsInRow = 2
+		outputFilterSlots = 2
+		outputFilterSlotsInRow = 2
+		transferSpeedTicks = 8
+		maxTransferStackSize = 1
+
+	[server.advancedHopperUpgrade]
+		inputFilterSlots = 4
+		inputFilterSlotsInRow = 4
+		outputFilterSlots = 4
+		outputFilterSlotsInRow = 4
+		transferSpeedTicks = 2
+		maxTransferStackSize = 4
+
+	[server.advancedJukeboxUpgrade]
+		numberOfSlots = 12
+		slotsInRow = 4
+
+	[server.alchemyUpgrade]
+		filterSlots = 4
+
+	[server.advancedAlchemyUpgrade]
+		filterSlots = 8

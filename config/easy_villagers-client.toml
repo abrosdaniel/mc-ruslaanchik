@@ -1,0 +1,6 @@
+[villager]
+	sneak_pick_up = true
+	volume = 1.0
+	cycle_trades_button_location = "TOP_LEFT"
+	render_block_contents = true
+	block_render_distance = 32

@@ -1,0 +1,39 @@
+enabled = true
+grabEnabled = true
+
+[trigger]
+	cooldownTicks = 60
+	affectCreative = true
+	autoSeatOnTrigger = true
+	allowManualTrigger = true
+	minDismountTicks = 60
+
+[physics]
+	maxVelocityDelta = 120.0
+	maxFlingSpeed = 128.0
+	ragdollMaxLaunchSpeed = 128.0
+	partSelfCollision = true
+	grabBreakEnabled = true
+	grabBreakDistance = 0.275
+
+[impact_damage]
+	impactDamageEnabled = true
+	impactFeedbackThreshold = 4.0
+	impactDamageThreshold = 12.0
+	impactDamageMultiplier = 0.75
+	impactDamageMax = 20.0
+	impactDamageCooldownTicks = 10
+
+[despawn]
+	expireAfterDuration = false
+	ragdollDurationTicks = 40
+	expireWhenSlow = false
+	releaseSpeedThreshold = 0.1
+	expireAfterSafetyTimeout = false
+	step1BodyLifetimeTicks = 200
+
+[body_mass]
+	mobMassDensity = 1.4
+
+[debug]
+	debugLogging = true

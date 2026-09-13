@@ -1,0 +1,117 @@
+{
+  "name": "Ruslaanchik",
+  "version": "1.0.0",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.250",
+  "java": 21,
+  "server": "mc-ruslaanchik.ebash.id",
+  "files": [
+    {
+      "path": "mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar"
+    },
+    {
+      "path": "mods/LocatorBar-neoforge-1.2.2+1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar"
+    },
+    {
+      "path": "mods/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar"
+    },
+    {
+      "path": "mods/appleskin-neoforge-mc1.21-3.0.9.jar",
+      "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar"
+    },
+    {
+      "path": "mods/architectury-13.0.11-neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar"
+    },
+    {
+      "path": "mods/auth-logic-0.0.5+1.21.1-neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/3YH8L7pG/versions/DKQipJGe/auth-logic-0.0.5%2B1.21.1-neoforge.jar"
+    },
+    {
+      "path": "mods/chat_heads-0.15.7-neoforge-1.21.jar",
+      "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
+      "required": false
+    },
+    {
+      "path": "mods/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
+      "url": "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar"
+    },
+    {
+      "path": "mods/corpse-neoforge-1.21.1-1.1.13.jar",
+      "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar"
+    },
+    {
+      "path": "mods/easy-villagers-neoforge-1.21.1-1.1.42.jar",
+      "url": "https://cdn.modrinth.com/data/Kaov2qgi/versions/uXQvvtUt/easy-villagers-neoforge-1.21.1-1.1.42.jar"
+    },
+    {
+      "path": "mods/emi-1.1.24+1.21.1+neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
+    },
+    {
+      "path": "mods/ferritecore-7.0.3-neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar"
+    },
+    {
+      "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+      "required": false
+    },
+    {
+      "path": "mods/lambdynamiclights-4.8.11+1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar"
+    },
+    {
+      "path": "mods/macos_input_fixes-26.04.27.jar",
+      "url": "https://cdn.modrinth.com/data/ac3bcWXA/versions/l5jRTw9P/macos_input_fixes-26.04.27.jar",
+      "required": false
+    },
+    {
+      "path": "mods/modernfix-neoforge-5.27.24+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar"
+    },
+    {
+      "path": "mods/plasmovoice-neoforge-1.21.1-2.1.16.jar",
+      "url": "https://cdn.modrinth.com/data/1bZhdhsH/versions/zMpeWebP/plasmovoice-neoforge-1.21.1-2.1.16.jar"
+    },
+    {
+      "path": "mods/ragdoll_reactions-1.21.1-0.7.0.jar",
+      "url": "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar"
+    },
+    {
+      "path": "mods/sable-neoforge-1.21.1-2.0.5.jar",
+      "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar"
+    },
+    {
+      "path": "mods/sable_player_ragdoll-1.21.1-0.7.5.jar",
+      "url": "https://cdn.modrinth.com/data/I3mWDgfy/versions/CyKh8XSr/sable_player_ragdoll-1.21.1-0.7.5.jar"
+    },
+    {
+      "path": "mods/sodium-neoforge-0.8.13+mc1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar"
+    },
+    {
+      "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
+      "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/AhPnzNtJ/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar"
+    },
+    {
+      "path": "mods/sophisticatedcore-1.21.1-1.5.1.2341.jar",
+      "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar"
+    },
+    {
+      "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
+      "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/H7wGZ8Sl/sophisticatedstorage-1.21.1-1.5.91.2127.jar"
+    },
+    {
+      "path": "mods/xaerominimap-neoforge-1.21.1-26.5.0.jar",
+      "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar"
+    },
+    {
+      "path": "mods/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+      "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
+    }
+  ]
+}
