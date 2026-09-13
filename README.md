@@ -65,6 +65,58 @@
 
 <div id="mod-list">
 
+<p><strong>Список обновлён: 2026-09-14.</strong></p>
+
+<table width="100%">
+<tr><th>Обязательные</th><th>Необязательные</th></tr>
+<tr>
+<td width="50%" valign="top"><ul>
+<li><a href="https://modrinth.com/mod/lhGA9TYQ/version/1IiqEQGl">Architectury</a> [13.0.11+neoforge] by MaxNeedsSnacks, Juuz</li>
+<li><a href="https://modrinth.com/mod/3YH8L7pG/version/DKQipJGe">AuthLogic</a> [0.0.5+1.21.1-neoforge] by 5w14</li>
+<li><a href="https://modrinth.com/mod/pTfszyXD/version/ds01YFge">CBC Advanced Technology</a> [0.1.4c-1.21.1] by dsvv-modding</li>
+<li><a href="https://modrinth.com/mod/WrpuIfhw/version/Zwf8nv8y">Corpse</a> [neoforge-1.21.1-1.1.13] by henkelmax</li>
+<li><a href="https://modrinth.com/mod/LNytGWDc/version/UjX6dr61">Create</a> [6.0.10+mc1.21.1] by simibubi, IThundxr</li>
+<li><a href="https://modrinth.com/mod/oWaK0Q19/version/44pLdPGg">Create Aeronautics</a> [1.3.2+mc1.21.1] by —</li>
+<li><a href="https://modrinth.com/mod/GWp4jCJj/version/bOiDu0LS">Create Big Cannons</a> [5.11.7] by realRobotix</li>
+<li><a href="https://modrinth.com/mod/ATDdrG1y/version/qYjOyvgW">Create Hypertube</a> [0.6.0] by Rok</li>
+<li><a href="https://modrinth.com/mod/W1ZUfWdr/version/PGhQoSBq">Create: Coasters Simulated</a> [0.1.5] by SilverGold</li>
+<li><a href="https://modrinth.com/mod/UT2M39wf/version/bPYeUWZx">Create: Copycats+</a> [3.0.9+mc.1.21.1-neoforge] by —</li>
+<li><a href="https://modrinth.com/mod/DebMSCVn/version/bG6IJw6J">Create: Fast Schematic Cannon</a> [1.21.1-2.6.1-neoforge] by PInk_Cats</li>
+<li><a href="https://modrinth.com/mod/FTeXqI9v/version/IwtuwMZy">Create: New Age</a> [1.2.0+mc1.21.1] by .constantly, Andromeda-Galaxy29, nullBlade, talstoj</li>
+<li><a href="https://modrinth.com/mod/Jdbbtt0i/version/kVi3TESX">Create: Numismatics</a> [1.1.0+neoforge-mc1.21.1] by SlimeistDev, spottytheturtle, IThundxr</li>
+<li><a href="https://modrinth.com/mod/BLu2Yqfq/version/AntNFNAx">Create: Radars</a> [0.4.9.4-1.21.1] by happygill, krimzik, Aycer, CeoOfGoogle1</li>
+<li><a href="https://modrinth.com/mod/Kaov2qgi/version/uXQvvtUt">Easy Villagers</a> [neoforge-1.21.1-1.1.42] by henkelmax</li>
+<li><a href="https://modrinth.com/mod/1bZhdhsH/version/zMpeWebP">Plasmo Voice</a> [neoforge-1.21.1-2.1.16] by Apehum, kpids</li>
+<li><a href="https://modrinth.com/mod/6awFMFjR/version/yx32Af0N">Ragdoll Reactions</a> [0.7.0] by leonardoinc22</li>
+<li><a href="https://modrinth.com/mod/B3pb093D/version/hZ6B2Z0x">Ritchie&#x27;s Projectile Library</a> [2.1.2] by realRobotix</li>
+<li><a href="https://modrinth.com/mod/T9PomCSv/version/U678xqle">Sable</a> [2.0.5+mc1.21.1] by ryanhcode, KyanBirb, Ocelot, Rhyguy1, BeeIsYou, Cyvack, Eriksonn</li>
+<li><a href="https://modrinth.com/mod/I3mWDgfy/version/CyKh8XSr">Sable Ragdolls</a> [0.7.5] by leonardoinc22</li>
+<li><a href="https://modrinth.com/mod/TyCTlI4b/version/AhPnzNtJ">Sophisticated Backpacks</a> [1.21.1-3.26.3.2158] by P3pp3rF1y</li>
+<li><a href="https://modrinth.com/mod/s85zLEDe/version/Tz7IXNXZ">Sophisticated Backpacks Create Integration</a> [1.21.1-0.2.0.168] by P3pp3rF1y</li>
+<li><a href="https://modrinth.com/mod/nmoqTijg/version/PXl6rB3q">Sophisticated Core</a> [1.21.1-1.5.1.2341] by P3pp3rF1y</li>
+<li><a href="https://modrinth.com/mod/hMlaZH8f/version/H7wGZ8Sl">Sophisticated Storage</a> [1.21.1-1.5.91.2127] by P3pp3rF1y</li>
+</ul></td>
+<td width="50%" valign="top"><ul>
+<li><a href="https://modrinth.com/mod/EsAfCjCV/version/uAKA6Laj">AppleSkin</a> [3.0.9+mc1.21] by squeek502</li>
+<li><a href="https://modrinth.com/mod/Wb5oqrBJ/version/ZPylso9i">Chat Heads</a> [0.15.7] by Fourmisain, dzwdz</li>
+<li><a href="https://modrinth.com/mod/yD9qW65f/version/IgWRdE2d">Chloride</a> [1.8.1-NEO-1.21.1] by SrRapero720</li>
+<li><a href="https://modrinth.com/mod/5bgqgixq/version/opyfkMHl">Create: EMI Schematics</a> [1.1.0] by LIUKRAST, swzo</li>
+<li><a href="https://modrinth.com/mod/uCdwusMi/version/ZpKb4kZp">Distant Horizons</a> [3.2.0-b-1.21.1] by TomTheFurry, Ran, coolGi, cola98765, Morippi, jeseibel, yeshi__, s809, jckf, Karnatour</li>
+<li><a href="https://modrinth.com/mod/fRiHVvU7/version/5sIPA1To">EMI</a> [1.1.24+1.21.1+neoforge] by Emi, exaptations</li>
+<li><a href="https://modrinth.com/mod/uXXizFIs/version/x7kQWVju">Ferrite Core</a> [7.0.3-neoforge] by malte0811</li>
+<li><a href="https://modrinth.com/mod/YL57xq9U/version/KduFYu4t">Iris</a> [1.8.14-beta.1+1.21.1-neoforge] by IMS, coderbot</li>
+<li><a href="https://modrinth.com/mod/yBW8D80W/version/ksaGCvSu">LambDynamicLights</a> [4.8.11+1.21.1] by LambdAurora</li>
+<li><a href="https://modrinth.com/mod/BD7N7OcY/version/Yi2Vr03m">Locator Bar</a> [1.2.2+1.21.1-neoforge] by FuzjaJadrowa</li>
+<li><a href="https://modrinth.com/mod/ac3bcWXA/version/l5jRTw9P">MacOS Input Fixes</a> [26.04.27] by Markap</li>
+<li><a href="https://modrinth.com/mod/nmDcB62a/version/5HLHxQ2F">ModernFix</a> [5.27.24+mc1.21.1] by embeddedt</li>
+<li><a href="https://modrinth.com/mod/aC3cM3Vq/version/9I21YYxf">Mouse Tweaks</a> [1.21-2.26.1-neoforge] by YaLTeR</li>
+<li><a href="https://modrinth.com/mod/AANobbMI/version/uMOpc5uV">Sodium</a> [mc1.21.1-0.8.13-neoforge] by IMS, jellysquid3, douira</li>
+<li><a href="https://modrinth.com/mod/1bokaNcj/version/Q1tuMQBB">Xaero&#x27;s Minimap</a> [neoforge-1.21.1-26.5.0] by thexaero</li>
+<li><a href="https://modrinth.com/mod/NcUtCpym/version/9Ckiihkz">Xaero&#x27;s World Map</a> [neoforge-1.21.1-1.46.0] by thexaero</li>
+</ul></td>
+</tr>
+</table>
+
 </div>
 
 <a name="mod-list-end"></a>
