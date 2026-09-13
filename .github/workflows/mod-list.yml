@@ -1,4 +1,4 @@
-name: Обновить список модов
+name: Update mod list [Auto]
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Сформировать таблицу
+      - name: Create mod list
         run: |
           python3 - <<'PYTHON'
           import html
@@ -37,14 +37,14 @@ jobs:
           from functools import lru_cache
           from pathlib import Path
           from urllib.parse import urlparse
-          
+
           @lru_cache(maxsize=None)
           def api(path):
               request = urllib.request.Request('https://api.modrinth.com/v2/' + path,
                                                headers={'User-Agent': 'abrosdaniel/mc-ruslaanchik (README generator)'})
               with urllib.request.urlopen(request, timeout=30) as response:
                   return json.load(response)
-          
+
           def mod(item):
               required = item.get('required', True)
               if not isinstance(required, bool):
@@ -76,7 +76,7 @@ jobs:
               escape = lambda value: html.escape(' '.join(value.split()), quote=True)
               row = f'<li><a href="{escape(page)}">{escape(name)}</a> [{escape(number)}] by {escape(author)}</li>'
               return required, name.casefold(), row
-          
+
           manifest = json.loads(Path('manifest.json').read_text(encoding='utf-8'))
           items = [item for item in manifest['files'] if item['path'].startswith('mods/')]
           with ThreadPoolExecutor(max_workers=6) as pool:
@@ -111,5 +111,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Обновить список модов"
+          git commit -m "Update mod list [Auto]"
           git push origin HEAD:main

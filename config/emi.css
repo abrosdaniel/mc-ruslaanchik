@@ -1,3 +1,4 @@
+#general {
 	
 	enabled: true;
 
@@ -23,6 +24,7 @@
 	search-tags-by-default: false;
 }
 
+#ui {
 	
 	recipe-book-action: toggle-craftables;
 
@@ -177,6 +179,7 @@
 	bottom-sidebar-theme: transparent;
 }
 
+#binds {
 	
 	toggle-visibility: "ctrl key.keyboard.o";
 
@@ -255,6 +258,7 @@
 	hide-stack-by-id: "ctrl shift key.mouse.left";
 }
 
+#dev {
 	
 	dev-mode: false;
 

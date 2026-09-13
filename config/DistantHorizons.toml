@@ -1,25 +1,5 @@
 _version = 4
 
-[server]
-	realTimeUpdateDistanceRadiusInChunks = 256
-	levelKeyPrefix = ""
-	maxSyncOnLoadRequestDistance = 4096
-	synchronizeOnLoad = true
-	serverKey = ""
-	maxGenerationRequestDistance = 4096
-	enableServerGeneration = true
-	sendLevelKeys = true
-	serverId = -1166821582
-	generationRequestRateLimit = 20
-	syncOnLoadRateLimit = 50
-	enableRealTimeUpdates = true
-	globalBandwidthLimit = 0
-	playerBandwidthLimit = 500
-	enableAdaptiveTransferSpeed = false
-
-	[server.experimental]
-		enableNSizedGeneration = false
-
 	[common.lodBuilding]
 		worldCompression = "VISUALLY_EQUAL"
 		dataCompression = "Z_STD_BLOCK"
