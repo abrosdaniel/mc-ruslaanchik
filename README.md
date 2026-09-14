@@ -19,17 +19,16 @@
 **Minecraft:** 1.21.1  
 **Модлоадер:** NeoForge 21.1.250  
 **Сервер:** `mc-ruslaanchik.ebash.id`\
-[📦 Скачать сборку](https://github.com/abrosdaniel/mc-ruslaanchik/releases/latest)
+[![📦 Скачать сборку](https://img.shields.io/badge/-📦_Скачать_сборку-green)](https://github.com/abrosdaniel/mc-ruslaanchik/releases/latest)
 
 </td>
 <td width="50%" align="center" valign="top">
 
 🎟️ Проходка
 
-Покупается за:
-
-- Баллы канала на [Twitch](https://www.twitch.tv/ruslaanchik)
-- Разовый донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik)
+Покупается за:\
+Баллы канала на [Twitch](https://www.twitch.tv/ruslaanchik)\
+Разовый донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik)
 
 </td>
 </tr>
@@ -45,6 +44,21 @@
 </div>
 
 ---
+
+<details open>
+<summary><h1>📰 Новости</h1></summary>
+
+<details>
+<summary>[14.09.2026] 🌍 Первые шаги</summary>
+
+Наш мир только начинает обретать форму. Сейчас мы находимся на этапе знакомства и развития: исследуем земли, добываем первые ресурсы, строим поселения и осваиваем механики мира.
+
+Но впереди главное - индустриальная эра Create. Шестерёнки скоро придут в движение, появятся первые механизмы, автоматические производства и настоящие фабрики.
+Пока же готовим ресурсы, строим планы и закладываем фундамент будущей промышленности!
+
+</details>
+
+</details>
 
 <a name="launchers"></a>
 
