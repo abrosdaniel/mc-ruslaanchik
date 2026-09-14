@@ -1,6 +1,6 @@
 <h1 align="center">Приватный сервер Ruslaanchik</h1>
 <p align="center">
-  <img src="https://cdn.modrinth.com/data/DGnW8OhL/232d217065b0ff9353d18f0b6defb342d48bde35.png" alt="Ruslaanchik" width="100" height="100">
+  <img src=".github/assets/icon.png" alt="Ruslaanchik" width="150px">
 </p>
 <div align="center">
 
@@ -12,23 +12,24 @@
 <div align="center">
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-<td width="50%" align="center" valign="top">
+<td width="50%" align="left" valign="top">
 
-🚀 О сервере
+<p align="center">🚀 О сервере</p>
 
 **Minecraft:** 1.21.1  
 **Модлоадер:** NeoForge 21.1.250  
-**Сервер:** `mc-ruslaanchik.ebash.id`\
+**Сервер:** `mc-ruslaanchik.ebash.id`
+
 [![📦 Скачать сборку](https://img.shields.io/badge/-📦_Скачать_сборку-green)](https://github.com/abrosdaniel/mc-ruslaanchik/releases/latest)
 
 </td>
-<td width="50%" align="center" valign="top">
+<td width="50%" align="right" valign="top">
 
-🎟️ Проходка
+<p align="center">🎟️ Проходка</p>
+Разовая покупка за:
 
-Покупается за:\
 Баллы канала на [Twitch](https://www.twitch.tv/ruslaanchik)\
-Разовый донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik)
+Донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik)
 
 </td>
 </tr>
