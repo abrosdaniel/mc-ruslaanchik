@@ -112,7 +112,7 @@
 <li><a href="https://modrinth.com/mod/hMlaZH8f/version/H7wGZ8Sl">Sophisticated Storage</a> [1.21.1-1.5.91.2127] by P3pp3rF1y</li>
 </ul></td>
 <td width="50%" valign="top"><ul>
-<li><a href="https://modrinth.com/mod/EsAfCjCV/version/uAKA6Laj">AppleSkin</a> [3.0.9+mc1.21] by squeek502</li>
+<li><a href="https://modrinth.com/mod/EsAfCjCV/version/uAKA6Laj">AppleSkin</a> [3.0.9+mc1.21] by —</li>
 <li><a href="https://modrinth.com/mod/Wb5oqrBJ/version/ZPylso9i">Chat Heads</a> [0.15.7] by Fourmisain, dzwdz</li>
 <li><a href="https://modrinth.com/mod/yD9qW65f/version/IgWRdE2d">Chloride</a> [1.8.1-NEO-1.21.1] by SrRapero720</li>
 <li><a href="https://modrinth.com/mod/5bgqgixq/version/opyfkMHl">Create: EMI Schematics</a> [1.1.0] by LIUKRAST, swzo</li>
@@ -125,7 +125,7 @@
 <li><a href="https://modrinth.com/mod/ac3bcWXA/version/l5jRTw9P">MacOS Input Fixes</a> [26.04.27] by Markap</li>
 <li><a href="https://modrinth.com/mod/nmDcB62a/version/5HLHxQ2F">ModernFix</a> [5.27.24+mc1.21.1] by embeddedt</li>
 <li><a href="https://modrinth.com/mod/aC3cM3Vq/version/9I21YYxf">Mouse Tweaks</a> [1.21-2.26.1-neoforge] by YaLTeR</li>
-<li><a href="https://modrinth.com/mod/AANobbMI/version/uMOpc5uV">Sodium</a> [mc1.21.1-0.8.13-neoforge] by IMS, jellysquid3, douira</li>
+<li><a href="https://modrinth.com/mod/AANobbMI/version/uMOpc5uV">Sodium</a> [mc1.21.1-0.8.13-neoforge] by —</li>
 <li><a href="https://modrinth.com/mod/1bokaNcj/version/Q1tuMQBB">Xaero&#x27;s Minimap</a> [neoforge-1.21.1-26.5.0] by thexaero</li>
 <li><a href="https://modrinth.com/mod/NcUtCpym/version/9Ckiihkz">Xaero&#x27;s World Map</a> [neoforge-1.21.1-1.46.0] by thexaero</li>
 </ul></td>
