@@ -12,7 +12,7 @@
 <div align="center">
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-<td width="50%" align="left" valign="top">
+<td width="600" align="left" valign="top">
 
 <p align="center">🚀 О сервере</p>
 
@@ -23,7 +23,7 @@
 [![📦 Скачать сборку](https://img.shields.io/badge/-📦_Скачать_сборку-green)](https://github.com/abrosdaniel/mc-ruslaanchik/releases/latest)
 
 </td>
-<td width="50%" align="right" valign="top">
+<td width="600" align="right" valign="top">
 
 <p align="center">🎟️ Проходка</p>
 Разовая покупка за:
