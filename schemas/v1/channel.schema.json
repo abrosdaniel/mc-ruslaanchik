@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anthub.dev/schemas/v1/channel.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^https://",
+      "maxLength": 2048
+    },
+    "channel": {
+      "enum": [
+        "stable",
+        "beta",
+        "dev"
+      ]
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "lockUrl": {
+      "type": "string",
+      "pattern": "^https://",
+      "maxLength": 2048
+    },
+    "lockSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signatureUrl": {
+      "type": "string",
+      "pattern": "^https://",
+      "maxLength": 2048
+    },
+    "publishedAt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "repository",
+    "channel",
+    "sequence",
+    "version",
+    "lockUrl",
+    "lockSha256",
+    "signatureUrl",
+    "publishedAt"
+  ]
+}

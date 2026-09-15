@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "ruslaanchik",
+    "name": "Ruslaanchik",
+    "description": "Приватный Minecraft-сервер стримера Ruslaanchik. Выживание и механизмы Create.",
+    "authors": [
+      "Ruslaanchik",
+      "abrosdaniel"
+    ]
+  },
+  "pack": {
+    "version": "1.0.1",
+    "manifest": "pack/client.json"
+  },
+  "minecraft": {
+    "version": "1.21.1",
+    "loader": "neoforge",
+    "loaderVersion": "21.1.250"
+  },
+  "anthub": {
+    "minVersion": "1.0.0-alpha.1"
+  },
+  "policies": {
+    "customFiles": "warn"
+  },
+  "servers": [
+    {
+      "id": "survival",
+      "name": "Ruslaanchik",
+      "address": "mc-ruslaanchik.ebash.id"
+    }
+  ],
+  "defaultServerId": "survival",
+  "integrations": {
+    "luckperms": false
+  },
+  "theme": {
+    "accent": "#9146FF",
+    "icon": "assets/icon.png"
+  },
+  "content": {
+    "rules": "content/rules.md",
+    "news": "content/news",
+    "changelog": "content/changelog.md"
+  }
+}

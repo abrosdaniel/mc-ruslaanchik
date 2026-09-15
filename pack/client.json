@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "id": "appleskin",
+      "name": "AppleSkin",
+      "description": "AppleSkin 3.0.9+mc1.21",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/appleskin-neoforge-mc1.21-3.0.9.jar",
+          "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
+          "version": "3.0.9+mc1.21",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/appleskin-client.toml",
+          "repositoryPath": "config/appleskin-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "20a7295edd5420021ee7e41ac8000ffde41100010bfc911f1c20a4cef099f3ea"
+        }
+      ]
+    },
+    {
+      "id": "architectury",
+      "name": "Architectury",
+      "description": "Architectury 13.0.11+neoforge",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/architectury-13.0.11-neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar",
+          "version": "13.0.11+neoforge",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "authlogic",
+      "name": "AuthLogic",
+      "description": "AuthLogic 0.0.5+1.21.1-neoforge",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/auth-logic-0.0.5+1.21.1-neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/3YH8L7pG/versions/DKQipJGe/auth-logic-0.0.5%2B1.21.1-neoforge.jar",
+          "version": "0.0.5+1.21.1-neoforge",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "chat-heads",
+      "name": "Chat Heads",
+      "description": "Chat Heads 0.15.7",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/chat_heads-0.15.7-neoforge-1.21.jar",
+          "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
+          "version": "0.15.7",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "chloride",
+      "name": "Chloride",
+      "description": "Chloride 1.8.1-NEO-1.21.1",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [
+        "sodium"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
+          "url": "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
+          "version": "1.8.1-NEO-1.21.1",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/chloride-client.toml",
+          "repositoryPath": "config/chloride-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "cf1f60521160ca1e4c40eea5473cb460cf8fc65e5b782b413b3f51514cdb1803"
+        }
+      ]
+    },
+    {
+      "id": "corpse",
+      "name": "Corpse",
+      "description": "Corpse neoforge-1.21.1-1.1.13",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/corpse-neoforge-1.21.1-1.1.13.jar",
+          "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar",
+          "version": "neoforge-1.21.1-1.1.13",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "name": "Create",
+      "description": "Create 6.0.10+mc1.21.1",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/create-1.21.1-6.0.10.jar",
+          "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+          "version": "6.0.10+mc1.21.1",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create-hypertube",
+      "name": "Create Hypertube",
+      "description": "Create Hypertube 0.6.0",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "create"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
+          "url": "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar",
+          "version": "0.6.0",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create-coasters-simulated",
+      "name": "Create: Coasters Simulated",
+      "description": "Create: Coasters Simulated 0.1.5",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "create",
+        "sable"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/simulatedcoasters-0.1.5.jar",
+          "url": "https://cdn.modrinth.com/data/W1ZUfWdr/versions/PGhQoSBq/simulatedcoasters-0.1.5.jar",
+          "version": "0.1.5",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create-copycats",
+      "name": "Create: Copycats+",
+      "description": "Create: Copycats+ 3.0.9+mc.1.21.1-neoforge",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "create"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/copycats-3.0.9+mc.1.21.1-neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar",
+          "version": "3.0.9+mc.1.21.1-neoforge",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create-emi-schematics",
+      "name": "Create: EMI Schematics",
+      "description": "Create: EMI Schematics 1.1.0",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [
+        "create",
+        "emi"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/emi_create_schematics-1.1.0.jar",
+          "url": "https://cdn.modrinth.com/data/5bgqgixq/versions/opyfkMHl/emi_create_schematics-1.1.0.jar",
+          "version": "1.1.0",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "create-fast-schematic-cannon",
+      "name": "Create: Fast Schematic Cannon",
+      "description": "Create: Fast Schematic Cannon 1.21.1-2.6.1-neoforge",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "create"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/DebMSCVn/versions/bG6IJw6J/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
+          "version": "1.21.1-2.6.1-neoforge",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "creativecore",
+      "name": "CreativeCore",
+      "description": "CreativeCore 2.13.46",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/fdEYikBb/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
+          "version": "2.13.46",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "distant-horizons",
+      "name": "Distant Horizons",
+      "description": "Distant Horizons 3.2.0-b-1.21.1",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+          "version": "3.2.0-b-1.21.1",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/DistantHorizons.toml",
+          "repositoryPath": "config/DistantHorizons.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "7f7ee14c699209b6b48a12cdb5cd29433feac42c72a2429ebf7045a1a25a6709"
+        }
+      ]
+    },
+    {
+      "id": "emi",
+      "name": "EMI",
+      "description": "EMI 1.1.24+1.21.1+neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/emi-1.1.24+1.21.1+neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
+          "version": "1.1.24+1.21.1+neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/emi.css",
+          "repositoryPath": "config/emi.css",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "b3e9834aed6b7e00484560596222dd5f0ea114e1572ff7fdb01b340eea8ab113"
+        }
+      ]
+    },
+    {
+      "id": "easy-villagers",
+      "name": "Easy Villagers",
+      "description": "Easy Villagers neoforge-1.21.1-1.1.42",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/easy-villagers-neoforge-1.21.1-1.1.42.jar",
+          "url": "https://cdn.modrinth.com/data/Kaov2qgi/versions/uXQvvtUt/easy-villagers-neoforge-1.21.1-1.1.42.jar",
+          "version": "neoforge-1.21.1-1.1.42",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/easy_villagers-client.toml",
+          "repositoryPath": "config/easy_villagers-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "37380eeb9836dacb085c4c672ad995a6f5b6e52c7622b203cb23ee3d3cb75f85"
+        }
+      ]
+    },
+    {
+      "id": "ferrite-core",
+      "name": "Ferrite Core",
+      "description": "Ferrite Core 7.0.3-neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/ferritecore-7.0.3-neoforge.jar",
+          "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
+          "version": "7.0.3-neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/ferritecore-mixin.toml",
+          "repositoryPath": "config/ferritecore-mixin.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "09cc77239266a8875b77976a3e921f2e26eb433916fb34e5d9d6e6883809d8f0"
+        }
+      ]
+    },
+    {
+      "id": "iris",
+      "name": "Iris",
+      "description": "Iris 1.8.14-beta.1+1.21.1-neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [
+        "sodium"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+          "version": "1.8.14-beta.1+1.21.1-neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/iris.properties",
+          "repositoryPath": "config/iris.properties",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "39cecae545a0597078b12af5713a57655a8eb06edc4c2b27e6f90f0853f3084c"
+        }
+      ]
+    },
+    {
+      "id": "lambdynamiclights",
+      "name": "LambDynamicLights",
+      "description": "LambDynamicLights 4.8.11+1.21.1",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/lambdynamiclights-4.8.11+1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
+          "version": "4.8.11+1.21.1",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/lambdynlights.toml",
+          "repositoryPath": "config/lambdynlights.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "685e962f8d8ea8c6751eca8808d3cc88bb89174f302cdac6d33f24029238639b"
+        }
+      ]
+    },
+    {
+      "id": "locator-bar",
+      "name": "Locator Bar",
+      "description": "Locator Bar 1.2.2+1.21.1-neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/LocatorBar-neoforge-1.2.2+1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
+          "version": "1.2.2+1.21.1-neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/locatorbar.json",
+          "repositoryPath": "config/locatorbar.json",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "a77a770eb37324ed17d991f397b452bf5e5041e3d72ba7b16f51b3222eeee696"
+        }
+      ]
+    },
+    {
+      "id": "macos-input-fixes",
+      "name": "MacOS Input Fixes",
+      "description": "MacOS Input Fixes 26.04.27",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/macos_input_fixes-26.04.27.jar",
+          "url": "https://cdn.modrinth.com/data/ac3bcWXA/versions/l5jRTw9P/macos_input_fixes-26.04.27.jar",
+          "version": "26.04.27",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/macos_input_fixes.txt",
+          "repositoryPath": "config/macos_input_fixes.txt",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "00305dd4fae07c67d520817809db3c68fcf54ce8114662e1b01f2a71b4ad6bde"
+        }
+      ]
+    },
+    {
+      "id": "modernfix",
+      "name": "ModernFix",
+      "description": "ModernFix 5.27.24+mc1.21.1",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/modernfix-neoforge-5.27.24+mc1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar",
+          "version": "5.27.24+mc1.21.1",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/modernfix-common.toml",
+          "repositoryPath": "config/modernfix-common.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "7f3177ba19f729e537c2f8b6856bf917a1cfefab5c1bceca63204ad75471a44f"
+        }
+      ]
+    },
+    {
+      "id": "mouse-tweaks",
+      "name": "Mouse Tweaks",
+      "description": "Mouse Tweaks 1.21-2.26.1-neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+          "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+          "version": "1.21-2.26.1-neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/MouseTweaks.cfg",
+          "repositoryPath": "config/MouseTweaks.cfg",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
+        }
+      ]
+    },
+    {
+      "id": "plasmo-voice",
+      "name": "Plasmo Voice",
+      "description": "Plasmo Voice neoforge-1.21.1-2.1.16",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/plasmovoice-neoforge-1.21.1-2.1.16.jar",
+          "url": "https://cdn.modrinth.com/data/1bZhdhsH/versions/zMpeWebP/plasmovoice-neoforge-1.21.1-2.1.16.jar",
+          "version": "neoforge-1.21.1-2.1.16",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "ragdoll-reactions",
+      "name": "Ragdoll Reactions",
+      "description": "Ragdoll Reactions 0.7.0",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "sable-ragdolls",
+        "sable"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/ragdoll_reactions-1.21.1-0.7.0.jar",
+          "url": "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar",
+          "version": "0.7.0",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "sable",
+      "name": "Sable",
+      "description": "Sable 2.0.5+mc1.21.1",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sable-neoforge-1.21.1-2.0.5.jar",
+          "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar",
+          "version": "2.0.5+mc1.21.1",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/sable-client.toml",
+          "repositoryPath": "config/sable-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "382974c32d6a1186f7a210327036deb131fe1ae79d97662da6a3f281a2290c62"
+        },
+        {
+          "path": "config/sable-common.toml",
+          "repositoryPath": "config/sable-common.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "3ed88484dc135c426e6c7bbe2d980d2787a94cbd3e3f36576830e3f0fd1d27a2"
+        }
+      ]
+    },
+    {
+      "id": "sable-ragdolls",
+      "name": "Sable Ragdolls",
+      "description": "Sable Ragdolls 0.7.5",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "sable"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sable_player_ragdoll-1.21.1-0.7.5.jar",
+          "url": "https://cdn.modrinth.com/data/I3mWDgfy/versions/CyKh8XSr/sable_player_ragdoll-1.21.1-0.7.5.jar",
+          "version": "0.7.5",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/sable_player_ragdoll-client.toml",
+          "repositoryPath": "config/sable_player_ragdoll-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "2349a6c04edae9328070d953f5be5431bcc4f51831984cc7f3c48d333cc69151"
+        }
+      ]
+    },
+    {
+      "id": "sodium",
+      "name": "Sodium",
+      "description": "Sodium mc1.21.1-0.8.13-neoforge",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sodium-neoforge-0.8.13+mc1.21.1.jar",
+          "url": "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar",
+          "version": "mc1.21.1-0.8.13-neoforge",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/sodium-options.json",
+          "repositoryPath": "config/sodium-options.json",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "2d4d3283c3b527f9f7931bf37c1fbd9f9923e5033e6557d0969c69879357097b"
+        }
+      ]
+    },
+    {
+      "id": "sophisticated-backpacks",
+      "name": "Sophisticated Backpacks",
+      "description": "Sophisticated Backpacks 1.21.1-3.26.3.2158",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "sophisticated-core"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
+          "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/AhPnzNtJ/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
+          "version": "1.21.1-3.26.3.2158",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "sophisticated-backpacks-create-integration",
+      "name": "Sophisticated Backpacks Create Integration",
+      "description": "Sophisticated Backpacks Create Integration 1.21.1-0.2.0.168",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "create",
+        "sophisticated-backpacks",
+        "sophisticated-core"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar",
+          "url": "https://cdn.modrinth.com/data/s85zLEDe/versions/Tz7IXNXZ/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar",
+          "version": "1.21.1-0.2.0.168",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "sophisticated-core",
+      "name": "Sophisticated Core",
+      "description": "Sophisticated Core 1.21.1-1.5.1.2341",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sophisticatedcore-1.21.1-1.5.1.2341.jar",
+          "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar",
+          "version": "1.21.1-1.5.1.2341",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/sophisticatedcore-client.toml",
+          "repositoryPath": "config/sophisticatedcore-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "74512a459fd4cfd8b3a57aca903ab156ce512f18ea39ac9da19684ccabe3e7ef"
+        },
+        {
+          "path": "config/sophisticatedcore-common.toml",
+          "repositoryPath": "config/sophisticatedcore-common.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "1b8e2fa4ab8b4d8fa9440eba3c109c6df5c14b05c3d72c9df093488ab47fea9b"
+        }
+      ]
+    },
+    {
+      "id": "sophisticated-storage",
+      "name": "Sophisticated Storage",
+      "description": "Sophisticated Storage 1.21.1-1.5.91.2127",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "sophisticated-core"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
+          "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/H7wGZ8Sl/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
+          "version": "1.21.1-1.5.91.2127",
+          "policy": "enforce"
+        },
+        {
+          "path": "config/sophisticatedstorage-client.toml",
+          "repositoryPath": "config/sophisticatedstorage-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "85a65676f75155fd68e328923ec1f66bbf83fe736de31127e0f05465895f33cf"
+        }
+      ]
+    },
+    {
+      "id": "waterframes",
+      "name": "WaterFrames",
+      "description": "WaterFrames NEOFORGE-mc1.21.1-v2.1.23",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [
+        "creativecore",
+        "watermedia"
+      ],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+          "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/ygogZrIE/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+          "version": "NEOFORGE-mc1.21.1-v2.1.23",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "watermedia",
+      "name": "WaterMedia",
+      "description": "WaterMedia 2.1.34",
+      "kind": "required",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/watermedia-2.1.34.jar",
+          "url": "https://cdn.modrinth.com/data/G922NeHS/versions/qGhHJv6H/watermedia-2.1.34.jar",
+          "version": "2.1.34",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "xaero-s-minimap",
+      "name": "Xaero's Minimap",
+      "description": "Xaero's Minimap neoforge-1.21.1-26.5.0",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/xaerominimap-neoforge-1.21.1-26.5.0.jar",
+          "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar",
+          "version": "neoforge-1.21.1-26.5.0",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "xaero-s-world-map",
+      "name": "Xaero's World Map",
+      "description": "Xaero's World Map neoforge-1.21.1-1.46.0",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "mods/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+          "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+          "version": "neoforge-1.21.1-1.46.0",
+          "policy": "enforce"
+        }
+      ]
+    },
+    {
+      "id": "shared-config",
+      "name": "Общие настройки",
+      "description": "Начальные настройки NeoForge; пользовательские изменения сохраняются.",
+      "kind": "required",
+      "category": "config",
+      "dependencies": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "config/neoforge-client.toml",
+          "repositoryPath": "config/neoforge-client.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "7532f6385a7238c1f2b53b554c728145da1f7aa669a8edd25ff6ba1050359bf5"
+        },
+        {
+          "path": "config/neoforge-common.toml",
+          "repositoryPath": "config/neoforge-common.toml",
+          "version": "1.0.1",
+          "policy": "preserve",
+          "sha256": "f966a2420d2a0a29413b2e8f7e1be5abf6264c747e5f23984e5d13f3edce0f52"
+        }
+      ]
+    }
+  ]
+}

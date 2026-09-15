@@ -1,0 +1,37 @@
+import base64,json,os,subprocess,sys,tempfile
+from pathlib import Path
+def run(args,**kw):return subprocess.run(args,check=True,**kw)
+project=json.loads(Path('anthub.json').read_text());version=project['pack']['version'];channel=os.environ['ANTHUB_CHANNEL'];repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
+if sys.argv[1]=='build':
+    secret=os.environ.pop('ANTHUB_SIGNING_KEY','')
+    if not secret:raise SystemExit('ANTHUB_SIGNING_KEY secret is required')
+    key_id=json.loads(Path('keys/project.pub.json').read_text())['keyId']
+    with tempfile.TemporaryDirectory() as folder:
+        key=Path(folder)/'key.pem';key.write_text(secret);key.chmod(0o600)
+        run([sys.executable,'tooling/anthub.py','build-lock','.', '--output','release-output','--repository','https://github.com/'+repo,'--commit',os.environ['GITHUB_SHA'],'--sequence',os.environ['ANTHUB_SEQUENCE'],'--channel',channel,'--key',str(key),'--key-id',key_id])
+elif sys.argv[1]=='publish':
+    out=Path('release-output');existing=subprocess.run(['gh','release','view',tag,'--repo',repo],capture_output=True)
+    release_exists=existing.returncode==0
+    assets=[str(p) for p in out.iterdir() if p.name not in (channel+'.json',channel+'.sig.json')]
+    if not release_exists:run(['gh','release','create',tag,*assets,'--repo',repo,'--target',os.environ['GITHUB_SHA'],'--title',tag,'--notes','AntHub pack '+version,'--draft'])
+    with tempfile.TemporaryDirectory() as folder:
+        run(['gh','release','download',tag,'--repo',repo,'--dir',folder])
+        for asset in assets:
+            if Path(asset).read_bytes()!=(Path(folder)/Path(asset).name).read_bytes():raise SystemExit('Uploaded asset differs: '+asset)
+    run(['gh','release','edit',tag,'--repo',repo,'--draft=false'])
+    branch=os.environ.get('GITHUB_REF_NAME','main')
+    # One git-tree commit changes both pointer and signature together.
+    def api(endpoint,payload=None):
+        cmd=['gh','api',endpoint]
+        if payload is not None:cmd+=['--method','POST','--input','-']
+        r=subprocess.run(cmd,input=json.dumps(payload).encode() if payload is not None else None,stdout=subprocess.PIPE,check=True)
+        return json.loads(r.stdout)
+    ref=api('repos/'+repo+'/git/ref/heads/'+branch);head=ref['object']['sha'];commit=api('repos/'+repo+'/git/commits/'+head)
+    entries=[]
+    for name in (channel+'.json',channel+'.sig.json'):
+        blob=api('repos/'+repo+'/git/blobs',{'content':base64.b64encode((out/name).read_bytes()).decode(),'encoding':'base64'})
+        entries.append({'path':'channels/'+name,'mode':'100644','type':'blob','sha':blob['sha']})
+    tree=api('repos/'+repo+'/git/trees',{'base_tree':commit['tree']['sha'],'tree':entries})
+    new=api('repos/'+repo+'/git/commits',{'message':'Publish '+tag+' to '+channel,'tree':tree['sha'],'parents':[head]})
+    run(['gh','api','--method','PATCH','repos/'+repo+'/git/refs/heads/'+branch,'--input','-'],input=json.dumps({'sha':new['sha'],'force':False}).encode())
+else:raise SystemExit('Expected build or publish')

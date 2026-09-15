@@ -1,0 +1,44 @@
+name: Publish pack
+on:
+  workflow_dispatch:
+    inputs:
+      sequence:
+        description: Monotonically increasing release sequence
+        type: number
+        required: true
+      channel:
+        type: choice
+        options: [stable, beta, dev]
+        default: stable
+permissions:
+  contents: read
+concurrency:
+  group: pack-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: pip install -r tooling/requirements.txt
+      - run: python tooling/anthub.py validate .
+      - name: Build signed release
+        env:
+          ANTHUB_SIGNING_KEY: ${{ secrets.ANTHUB_SIGNING_KEY }}
+          ANTHUB_CHANNEL: ${{ inputs.channel }}
+          ANTHUB_SEQUENCE: ${{ inputs.sequence }}
+        run: python tooling/publish.py build
+      - name: Verify signed release
+        run: python tooling/anthub.py verify-release release-output --public-key keys/project.pub.json
+      - name: Publish immutable version and then channel pointer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ANTHUB_CHANNEL: ${{ inputs.channel }}
+        run: python tooling/publish.py publish
