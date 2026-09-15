@@ -5,6 +5,7 @@ project=json.loads(Path('anthub.json').read_text());version=project['pack']['ver
 if sys.argv[1]=='build':
     secret=os.environ.pop('ANTHUB_SIGNING_KEY','')
     if not secret:raise SystemExit('ANTHUB_SIGNING_KEY secret is required')
+    os.environ['ANTHUB_RELEASE_TIME']=subprocess.check_output(['git','show','-s','--format=%cI',os.environ['GITHUB_SHA']],text=True).strip()
     key_id=json.loads(Path('keys/project.pub.json').read_text())['keyId']
     with tempfile.TemporaryDirectory() as folder:
         key=Path(folder)/'key.pem';key.write_text(secret);key.chmod(0o600)
@@ -27,6 +28,10 @@ elif sys.argv[1]=='publish':
         r=subprocess.run(cmd,input=json.dumps(payload).encode() if payload is not None else None,stdout=subprocess.PIPE,check=True)
         return json.loads(r.stdout)
     ref=api('repos/'+repo+'/git/ref/heads/'+branch);head=ref['object']['sha'];commit=api('repos/'+repo+'/git/commits/'+head)
+    latest=api('repos/'+repo+'/contents/anthub.json?ref='+head)
+    if json.loads(base64.b64decode(latest['content']))['pack']['version']!=version:
+        raise SystemExit('A newer version is on the branch; release retained, channel not changed')
+
     entries=[]
     for name in (channel+'.json',channel+'.sig.json'):
         blob=api('repos/'+repo+'/git/blobs',{'content':base64.b64encode((out/name).read_bytes()).decode(),'encoding':'base64'})

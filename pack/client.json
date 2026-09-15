@@ -18,7 +18,7 @@
         },
         {
           "path": "config/appleskin-client.toml",
-          "repositoryPath": "config/appleskin-client.toml",
+          "repositoryPath": "files/config/appleskin-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "20a7295edd5420021ee7e41ac8000ffde41100010bfc911f1c20a4cef099f3ea"
@@ -95,7 +95,7 @@
         },
         {
           "path": "config/chloride-client.toml",
-          "repositoryPath": "config/chloride-client.toml",
+          "repositoryPath": "files/config/chloride-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "cf1f60521160ca1e4c40eea5473cb460cf8fc65e5b782b413b3f51514cdb1803"
@@ -267,7 +267,7 @@
         },
         {
           "path": "config/DistantHorizons.toml",
-          "repositoryPath": "config/DistantHorizons.toml",
+          "repositoryPath": "files/config/DistantHorizons.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "7f7ee14c699209b6b48a12cdb5cd29433feac42c72a2429ebf7045a1a25a6709"
@@ -291,7 +291,7 @@
         },
         {
           "path": "config/emi.css",
-          "repositoryPath": "config/emi.css",
+          "repositoryPath": "files/config/emi.css",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "b3e9834aed6b7e00484560596222dd5f0ea114e1572ff7fdb01b340eea8ab113"
@@ -315,7 +315,7 @@
         },
         {
           "path": "config/easy_villagers-client.toml",
-          "repositoryPath": "config/easy_villagers-client.toml",
+          "repositoryPath": "files/config/easy_villagers-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "37380eeb9836dacb085c4c672ad995a6f5b6e52c7622b203cb23ee3d3cb75f85"
@@ -339,7 +339,7 @@
         },
         {
           "path": "config/ferritecore-mixin.toml",
-          "repositoryPath": "config/ferritecore-mixin.toml",
+          "repositoryPath": "files/config/ferritecore-mixin.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "09cc77239266a8875b77976a3e921f2e26eb433916fb34e5d9d6e6883809d8f0"
@@ -365,7 +365,7 @@
         },
         {
           "path": "config/iris.properties",
-          "repositoryPath": "config/iris.properties",
+          "repositoryPath": "files/config/iris.properties",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "39cecae545a0597078b12af5713a57655a8eb06edc4c2b27e6f90f0853f3084c"
@@ -389,7 +389,7 @@
         },
         {
           "path": "config/lambdynlights.toml",
-          "repositoryPath": "config/lambdynlights.toml",
+          "repositoryPath": "files/config/lambdynlights.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "685e962f8d8ea8c6751eca8808d3cc88bb89174f302cdac6d33f24029238639b"
@@ -413,7 +413,7 @@
         },
         {
           "path": "config/locatorbar.json",
-          "repositoryPath": "config/locatorbar.json",
+          "repositoryPath": "files/config/locatorbar.json",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "a77a770eb37324ed17d991f397b452bf5e5041e3d72ba7b16f51b3222eeee696"
@@ -437,7 +437,7 @@
         },
         {
           "path": "config/macos_input_fixes.txt",
-          "repositoryPath": "config/macos_input_fixes.txt",
+          "repositoryPath": "files/config/macos_input_fixes.txt",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "00305dd4fae07c67d520817809db3c68fcf54ce8114662e1b01f2a71b4ad6bde"
@@ -461,7 +461,7 @@
         },
         {
           "path": "config/modernfix-common.toml",
-          "repositoryPath": "config/modernfix-common.toml",
+          "repositoryPath": "files/config/modernfix-common.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "7f3177ba19f729e537c2f8b6856bf917a1cfefab5c1bceca63204ad75471a44f"
@@ -485,7 +485,7 @@
         },
         {
           "path": "config/MouseTweaks.cfg",
-          "repositoryPath": "config/MouseTweaks.cfg",
+          "repositoryPath": "files/config/MouseTweaks.cfg",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "4069ce1a439d8c37453c1b1e9f2037e0942674c7e48723a39b37eab245792ad4"
@@ -546,14 +546,14 @@
         },
         {
           "path": "config/sable-client.toml",
-          "repositoryPath": "config/sable-client.toml",
+          "repositoryPath": "files/config/sable-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "382974c32d6a1186f7a210327036deb131fe1ae79d97662da6a3f281a2290c62"
         },
         {
           "path": "config/sable-common.toml",
-          "repositoryPath": "config/sable-common.toml",
+          "repositoryPath": "files/config/sable-common.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "3ed88484dc135c426e6c7bbe2d980d2787a94cbd3e3f36576830e3f0fd1d27a2"
@@ -579,7 +579,7 @@
         },
         {
           "path": "config/sable_player_ragdoll-client.toml",
-          "repositoryPath": "config/sable_player_ragdoll-client.toml",
+          "repositoryPath": "files/config/sable_player_ragdoll-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "2349a6c04edae9328070d953f5be5431bcc4f51831984cc7f3c48d333cc69151"
@@ -603,7 +603,7 @@
         },
         {
           "path": "config/sodium-options.json",
-          "repositoryPath": "config/sodium-options.json",
+          "repositoryPath": "files/config/sodium-options.json",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "2d4d3283c3b527f9f7931bf37c1fbd9f9923e5033e6557d0969c69879357097b"
@@ -667,14 +667,14 @@
         },
         {
           "path": "config/sophisticatedcore-client.toml",
-          "repositoryPath": "config/sophisticatedcore-client.toml",
+          "repositoryPath": "files/config/sophisticatedcore-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "74512a459fd4cfd8b3a57aca903ab156ce512f18ea39ac9da19684ccabe3e7ef"
         },
         {
           "path": "config/sophisticatedcore-common.toml",
-          "repositoryPath": "config/sophisticatedcore-common.toml",
+          "repositoryPath": "files/config/sophisticatedcore-common.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "1b8e2fa4ab8b4d8fa9440eba3c109c6df5c14b05c3d72c9df093488ab47fea9b"
@@ -700,7 +700,7 @@
         },
         {
           "path": "config/sophisticatedstorage-client.toml",
-          "repositoryPath": "config/sophisticatedstorage-client.toml",
+          "repositoryPath": "files/config/sophisticatedstorage-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "85a65676f75155fd68e328923ec1f66bbf83fe736de31127e0f05465895f33cf"
@@ -789,14 +789,14 @@
       "files": [
         {
           "path": "config/neoforge-client.toml",
-          "repositoryPath": "config/neoforge-client.toml",
+          "repositoryPath": "files/config/neoforge-client.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "7532f6385a7238c1f2b53b554c728145da1f7aa669a8edd25ff6ba1050359bf5"
         },
         {
           "path": "config/neoforge-common.toml",
-          "repositoryPath": "config/neoforge-common.toml",
+          "repositoryPath": "files/config/neoforge-common.toml",
           "version": "1.0.1",
           "policy": "preserve",
           "sha256": "f966a2420d2a0a29413b2e8f7e1be5abf6264c747e5f23984e5d13f3edce0f52"

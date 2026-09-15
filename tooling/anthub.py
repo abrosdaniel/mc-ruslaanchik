@@ -102,7 +102,7 @@ def build(args):
         data=path.read_bytes();asset=sha(data);(out/asset).write_bytes(data);rel=path.relative_to(root).as_posix()
         kind='asset' if rel.startswith('assets/') else ('news' if '/news/' in rel else ('rules' if path.stem=='rules' else 'changelog'))
         content.append(dict(id=rel,type=kind,url=release_url+asset,sha256=asset,size=len(data)))
-    now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+    now=os.environ.get('ANTHUB_RELEASE_TIME') or datetime.datetime.now(datetime.timezone.utc).isoformat()
     lock={k:v for k,v in p.items() if k not in ('pack','content')}
     lock['project']=dict(p['project'],repository=repo)
     lock.update(release=dict(version=p['pack']['version'],channel=args.channel,sequence=args.sequence,createdAt=now,sourceCommit=args.commit,updatePolicy=args.policy),components=[{k:v for k,v in x.items() if k!='files'} for x in c['components']],files=locked,content=content)

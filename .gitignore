@@ -1,7 +1,6 @@
-dist/
-__pycache__/
-.DS_Store
-*.pyc
 release-output/
 *.private.pem
+__pycache__/
 .venv/
+.DS_Store
+*.pyc

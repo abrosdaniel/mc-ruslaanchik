@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://anthub.dev/schemas/v1/core-release.schema.json",
+  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/schemas/v1/core-release.schema.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
