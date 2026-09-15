@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""AntHub project validation, immutable lock building and Ed25519 signatures."""
+"""AntHub project validation, immutable lock building and SHA-256 verification."""
 import argparse, base64, datetime, hashlib, json, os, re, shutil, socket, ipaddress, urllib.request, urllib.parse
 from pathlib import Path
 from jsonschema import Draft202012Validator
-from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
-from cryptography.hazmat.primitives import serialization
 
 SCHEMAS=Path(__file__).resolve().parents[1]/'schemas/v1'
 def pairs(items):
@@ -78,8 +76,6 @@ def download(url):
         data=response.read(512*1024*1024+1)
         if len(data)>512*1024*1024:raise ValueError('Tooling download limit 512 MiB exceeded')
         return data
-def public(key,key_id):return {'schemaVersion':1,'keyId':key_id,'algorithm':'Ed25519','publicKey':base64.b64encode(key.public_key().public_bytes(serialization.Encoding.DER,serialization.PublicFormat.SubjectPublicKeyInfo)).decode()}
-def sign(data,key,key_id):return {'schemaVersion':1,'keyId':key_id,'algorithm':'Ed25519','signature':base64.b64encode(key.sign(data)).decode()}
 def build(args):
     root=args.project.resolve();p,c,files=load_project(root);out=args.output;out.mkdir(parents=True,exist_ok=True)
     if (out/'anthub.lock.json').exists():raise ValueError('Output already contains a lock; use a fresh output directory')
@@ -107,31 +103,27 @@ def build(args):
     lock['project']=dict(p['project'],repository=repo)
     lock.update(release=dict(version=p['pack']['version'],channel=args.channel,sequence=args.sequence,createdAt=now,sourceCommit=args.commit,updatePolicy=args.policy),components=[{k:v for k,v in x.items() if k!='files'} for x in c['components']],files=locked,content=content)
     validate_schema('lock',lock);semantics(lock['components'],locked,p['servers'])
-    key=serialization.load_pem_private_key(args.key.read_bytes(),password=None)
-    if not isinstance(key,Ed25519PrivateKey):raise ValueError('Ed25519 key required')
-    data=encoded(lock);(out/'anthub.lock.json').write_bytes(data);write(out/'anthub.lock.sig.json',sign(data,key,args.key_id))
-    pointer=dict(schemaVersion=1,repository=repo,channel=args.channel,sequence=args.sequence,version=p['pack']['version'],lockUrl=release_url+'anthub.lock.json',lockSha256=sha(data),signatureUrl=release_url+'anthub.lock.sig.json',publishedAt=now)
-    write(out/(args.channel+'.json'),pointer);write(out/(args.channel+'.sig.json'),sign(encoded(pointer),key,args.key_id))
-    print('Built signed release',p['pack']['version'],sha(data))
+    data=encoded(lock);(out/'anthub.lock.json').write_bytes(data)
+    pointer=dict(schemaVersion=1,repository=repo,channel='stable',sequence=args.sequence,version=p['pack']['version'],lockUrl=release_url+'anthub.lock.json',lockSha256=sha(data),publishedAt=now)
+    write(out/'stable.json',pointer)
+    print('Built release',p['pack']['version'],sha(data))
+def verify_release(folder):
+    raw=(folder/'anthub.lock.json').read_bytes();lock=read(folder/'anthub.lock.json');validate_schema('lock',lock)
+    pointer=read(folder/'stable.json');validate_schema('channel',pointer)
+    if sha(raw)!=pointer['lockSha256']:raise ValueError('Lock hash mismatch')
+    if pointer['repository']!=lock['project']['repository'] or pointer['version']!=lock['release']['version'] or pointer['sequence']!=lock['release']['sequence']:raise ValueError('Release identity mismatch')
+    semantics(lock['components'],lock['files'],lock['servers'])
+    for entry in lock['files']+lock['content']:
+        asset=folder/entry['sha256']
+        if asset.exists() and (asset.stat().st_size!=entry['size'] or sha(asset.read_bytes())!=entry['sha256']):raise ValueError('Asset hash mismatch')
+    print('Release manifest and hashes valid')
 def main():
     a=argparse.ArgumentParser();sub=a.add_subparsers(dest='command',required=True)
-    verify=sub.add_parser('verify-release');verify.add_argument('release',type=Path);verify.add_argument('--public-key',type=Path,required=True)
+    verify=sub.add_parser('verify-release');verify.add_argument('release',type=Path)
     v=sub.add_parser('validate');v.add_argument('project',type=Path)
-    k=sub.add_parser('keygen');k.add_argument('--private',type=Path,required=True);k.add_argument('--public',type=Path,required=True);k.add_argument('--key-id',default='project-1')
-    b=sub.add_parser('build-lock');b.add_argument('project',type=Path);b.add_argument('--output',type=Path,required=True);b.add_argument('--repository',required=True);b.add_argument('--commit',required=True);b.add_argument('--sequence',type=int,required=True);b.add_argument('--channel',choices=['stable','beta','dev'],default='stable');b.add_argument('--policy',choices=['required','recommended'],default='recommended');b.add_argument('--key',type=Path,required=True);b.add_argument('--key-id',default='project-1')
+    b=sub.add_parser('build-lock');b.add_argument('project',type=Path);b.add_argument('--output',type=Path,required=True);b.add_argument('--repository',required=True);b.add_argument('--commit',required=True);b.add_argument('--sequence',type=int,required=True);b.add_argument('--channel',choices=['stable'],default='stable');b.add_argument('--policy',choices=['required','recommended'],default='recommended')
     args=a.parse_args()
     if args.command=='validate':load_project(args.project);print('Project valid')
     elif args.command=='build-lock':build(args)
-    elif args.command=='verify-release':
-        raw=(args.release/'anthub.lock.json').read_bytes();lock=read(args.release/'anthub.lock.json');validate_schema('lock',lock)
-        sig=read(args.release/'anthub.lock.sig.json');key=read(args.public_key);validate_schema('signature',sig);validate_schema('public-key',key)
-        if sig['keyId']!=key['keyId']:raise ValueError('Signature key identity mismatch')
-        public_key=serialization.load_der_public_key(base64.b64decode(key['publicKey']));public_key.verify(base64.b64decode(sig['signature']),raw)
-        semantics(lock['components'],lock['files'],lock['servers']);print('Release signature and manifest valid')
-    else:
-        if args.private.exists() or args.public.exists():raise ValueError('Refusing to replace existing signing key')
-        key=Ed25519PrivateKey.generate();args.private.parent.mkdir(parents=True,exist_ok=True)
-        fd=os.open(args.private,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
-        with os.fdopen(fd,'wb') as f:f.write(key.private_bytes(serialization.Encoding.PEM,serialization.PrivateFormat.PKCS8,serialization.NoEncryption()))
-        write(args.public,public(key,args.key_id));print('Signing key generated; private key must remain secret')
+    elif args.command=='verify-release':verify_release(args.release)
 if __name__=='__main__':main()

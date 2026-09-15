@@ -9,7 +9,7 @@
 ```toml
 project = "https://github.com/abrosdaniel/mc-ruslaanchik"
 serverId = "survival"
-requiredPackVersion = "1.0.1"
+requiredPackVersion = "1.0.2"
 # Замените значение на SHA-256 точных байтов опубликованного anthub.lock.json.
 requiredLockSha256 = "REPLACE_WITH_PUBLISHED_LOCK_SHA256"
 requireClient = false

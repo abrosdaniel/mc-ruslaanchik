@@ -14,9 +14,7 @@
     },
     "channel": {
       "enum": [
-        "stable",
-        "beta",
-        "dev"
+        "stable"
       ]
     },
     "sequence": {
@@ -55,7 +53,6 @@
     "version",
     "lockUrl",
     "lockSha256",
-    "signatureUrl",
     "publishedAt"
   ]
 }

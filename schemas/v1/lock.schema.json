@@ -58,9 +58,7 @@
         },
         "channel": {
           "enum": [
-            "stable",
-            "beta",
-            "dev"
+            "stable"
           ]
         },
         "sequence": {

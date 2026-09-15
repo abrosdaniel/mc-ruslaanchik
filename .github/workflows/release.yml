@@ -28,19 +28,16 @@ jobs:
         run: pip install -r tooling/requirements.txt
       - if: steps.plan.outputs.publish == 'true'
         run: python tooling/anthub.py validate .
-      - name: Build signed release
+      - name: Build release
         if: steps.plan.outputs.publish == 'true'
         env:
-          ANTHUB_SIGNING_KEY: ${{ secrets.ANTHUB_SIGNING_KEY }}
-          ANTHUB_CHANNEL: stable
           ANTHUB_SEQUENCE: ${{ steps.plan.outputs.sequence }}
         run: python tooling/publish.py build
-      - name: Verify release signature
+      - name: Verify release hashes
         if: steps.plan.outputs.publish == 'true'
-        run: python tooling/anthub.py verify-release release-output --public-key keys/project.pub.json
+        run: python tooling/anthub.py verify-release release-output
       - name: Publish immutable release and stable channel
         if: steps.plan.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-          ANTHUB_CHANNEL: stable
         run: python tooling/publish.py publish

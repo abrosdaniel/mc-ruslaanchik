@@ -1,19 +1,14 @@
 import base64,json,os,subprocess,sys,tempfile
 from pathlib import Path
 def run(args,**kw):return subprocess.run(args,check=True,**kw)
-project=json.loads(Path('anthub.json').read_text());version=project['pack']['version'];channel=os.environ['ANTHUB_CHANNEL'];repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
+project=json.loads(Path('anthub.json').read_text());version=project['pack']['version'];channel='stable';repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
 if sys.argv[1]=='build':
-    secret=os.environ.pop('ANTHUB_SIGNING_KEY','')
-    if not secret:raise SystemExit('ANTHUB_SIGNING_KEY secret is required')
     os.environ['ANTHUB_RELEASE_TIME']=subprocess.check_output(['git','show','-s','--format=%cI',os.environ['GITHUB_SHA']],text=True).strip()
-    key_id=json.loads(Path('keys/project.pub.json').read_text())['keyId']
-    with tempfile.TemporaryDirectory() as folder:
-        key=Path(folder)/'key.pem';key.write_text(secret);key.chmod(0o600)
-        run([sys.executable,'tooling/anthub.py','build-lock','.', '--output','release-output','--repository','https://github.com/'+repo,'--commit',os.environ['GITHUB_SHA'],'--sequence',os.environ['ANTHUB_SEQUENCE'],'--channel',channel,'--key',str(key),'--key-id',key_id])
+    run([sys.executable,'tooling/anthub.py','build-lock','.', '--output','release-output','--repository','https://github.com/'+repo,'--commit',os.environ['GITHUB_SHA'],'--sequence',os.environ['ANTHUB_SEQUENCE']])
 elif sys.argv[1]=='publish':
     out=Path('release-output');existing=subprocess.run(['gh','release','view',tag,'--repo',repo],capture_output=True)
     release_exists=existing.returncode==0
-    assets=[str(p) for p in out.iterdir() if p.name not in (channel+'.json',channel+'.sig.json')]
+    assets=[str(p) for p in out.iterdir() if p.name not in (channel+'.json',)]
     if not release_exists:run(['gh','release','create',tag,*assets,'--repo',repo,'--target',os.environ['GITHUB_SHA'],'--title',tag,'--notes','AntHub pack '+version,'--draft'])
     with tempfile.TemporaryDirectory() as folder:
         run(['gh','release','download',tag,'--repo',repo,'--dir',folder])
@@ -21,7 +16,7 @@ elif sys.argv[1]=='publish':
             if Path(asset).read_bytes()!=(Path(folder)/Path(asset).name).read_bytes():raise SystemExit('Uploaded asset differs: '+asset)
     run(['gh','release','edit',tag,'--repo',repo,'--draft=false'])
     branch=os.environ.get('GITHUB_REF_NAME','main')
-    # One git-tree commit changes both pointer and signature together.
+    # Publish the release pointer only after every asset is available.
     def api(endpoint,payload=None):
         cmd=['gh','api',endpoint]
         if payload is not None:cmd+=['--method','POST','--input','-']
@@ -33,7 +28,7 @@ elif sys.argv[1]=='publish':
         raise SystemExit('A newer version is on the branch; release retained, channel not changed')
 
     entries=[]
-    for name in (channel+'.json',channel+'.sig.json'):
+    for name in (channel+'.json',):
         blob=api('repos/'+repo+'/git/blobs',{'content':base64.b64encode((out/name).read_bytes()).decode(),'encoding':'base64'})
         entries.append({'path':'channels/'+name,'mode':'100644','type':'blob','sha':blob['sha']})
     tree=api('repos/'+repo+'/git/trees',{'base_tree':commit['tree']['sha'],'tree':entries})

@@ -3,6 +3,7 @@ import json,os,subprocess
 from pathlib import Path
 
 def decision(version,previous,published):
+    if not published:return True,1,'First release for this repository'
     if version==previous:return False,0,'Pack version did not change'
     if published and published['version']==version:return False,0,'Version is already published'
     return True,(published['sequence']+1 if published else 1),'Pack version changed'
@@ -25,6 +26,8 @@ def main():
     subprocess.run(['git','fetch','origin',branch],check=True)
     latest=document('FETCH_HEAD','anthub.json')['pack']['version']
     pointer=document('FETCH_HEAD','channels/stable.json',True)
+    repository='https://github.com/'+event['repository']['full_name'].lower()
+    if pointer and pointer.get('repository')!=repository:pointer=None
     publish,sequence,reason=decision(current,previous,pointer)
     if latest!=current:publish=False;reason='A newer pack version is already on the default branch'
     with Path(os.environ['GITHUB_OUTPUT']).open('a') as out:
