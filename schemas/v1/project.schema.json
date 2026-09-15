@@ -1,60 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/schemas/v1/project.schema.json",
+  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/template/schemas/v1/project.schema.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
       "const": 1
-    },
-    "project": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": "string",
-          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
-        },
-        "name": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 512
-        },
-        "description": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 512
-        },
-        "authors": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 512
-          },
-          "maxItems": 20
-        }
-      },
-      "required": []
-    },
-    "pack": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "version": {
-          "type": "string",
-          "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
-        },
-        "manifest": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 512
-        }
-      },
-      "required": [
-        "version",
-        "manifest"
-      ]
     },
     "content": {
       "type": "object",
@@ -98,7 +49,6 @@
       },
       "required": [
         "version",
-        "loader",
         "loaderVersion"
       ]
     },
@@ -129,45 +79,6 @@
       "required": [
         "customFiles"
       ]
-    },
-    "servers": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 512
-          },
-          "address": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 512
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 512
-          }
-        },
-        "required": [
-          "id",
-          "name",
-          "address"
-        ]
-      },
-      "maxItems": 1,
-      "minItems": 1
-    },
-    "defaultServerId": {
-      "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
     },
     "integrations": {
       "type": "object",
@@ -220,28 +131,148 @@
       "required": [
         "address"
       ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": ".*\\S.*"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "kind": {
+            "enum": [
+              "required",
+              "recommended",
+              "optional"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+            },
+            "maxItems": 2000,
+            "uniqueItems": true
+          },
+          "conflicts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+            },
+            "maxItems": 2000,
+            "uniqueItems": true
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "url": {
+                  "type": "string",
+                  "pattern": "^https://",
+                  "maxLength": 2048
+                },
+                "repositoryPath": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "policy": {
+                  "enum": [
+                    "enforce",
+                    "update",
+                    "preserve"
+                  ]
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "oneOf": [
+                {
+                  "required": [
+                    "url"
+                  ],
+                  "not": {
+                    "required": [
+                      "repositoryPath"
+                    ]
+                  }
+                },
+                {
+                  "required": [
+                    "repositoryPath"
+                  ],
+                  "not": {
+                    "required": [
+                      "url"
+                    ]
+                  }
+                }
+              ]
+            },
+            "maxItems": 10000
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "files"
+        ]
+      },
+      "maxItems": 2000
     }
   },
   "required": [
-    "schemaVersion",
-    "pack",
+    "name",
+    "version",
+    "server",
     "minecraft",
-    "anthub",
-    "policies",
-    "integrations",
-    "theme",
-    "content"
-  ],
-  "oneOf": [
-    {
-      "required": [
-        "server"
-      ]
-    },
-    {
-      "required": [
-        "servers"
-      ]
-    }
+    "components"
   ]
 }

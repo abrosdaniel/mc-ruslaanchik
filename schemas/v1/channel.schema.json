@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/schemas/v1/channel.schema.json",
+  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/template/schemas/v1/channel.schema.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -33,11 +33,6 @@
     "lockSha256": {
       "type": "string",
       "pattern": "^[0-9a-f]{64}$"
-    },
-    "signatureUrl": {
-      "type": "string",
-      "pattern": "^https://",
-      "maxLength": 2048
     },
     "publishedAt": {
       "type": "string",

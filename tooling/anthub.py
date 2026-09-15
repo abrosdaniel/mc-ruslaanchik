@@ -53,15 +53,28 @@ def semantics(components,files,servers):
     if len({s['id'] for s in servers})!=len(servers):raise ValueError('Duplicate server id')
     if len({s['address'].lower() for s in servers})!=len(servers):raise ValueError('Duplicate server address')
 def load_project(root):
-    p=read(root/'anthub.json');validate_schema('project',p)
-    if 'server' in p:
-        address=p.pop('server')['address'];p['servers']=[dict(id='main',name=address,address=address)];p['defaultServerId']='main'
-    source=(root/p['pack']['manifest']).resolve()
-    if not source.is_relative_to(root.resolve()):raise ValueError('Pack manifest path escapes repository')
-    c=read(source);validate_schema('client-pack',c)
+    p=read(root/'anthub.json')
+    p.setdefault('schemaVersion',1)
+    p.setdefault('anthub',{'minVersion':'1.0.0-alpha.1'})
+    p.setdefault('policies',{'customFiles':'warn'})
+    p.setdefault('integrations',{'luckperms':False})
+    p.setdefault('theme',{})
+    p.setdefault('content',{})
+    if isinstance(p.get('minecraft'),dict):p['minecraft'].setdefault('loader','neoforge')
+    validate_schema('project',p)
+    address=p.pop('server')['address'];p['servers']=[dict(id='main',name=p['name'],address=address)]
+    c={'schemaVersion':1,'components':p.pop('components')}
+    for component in c.get('components',[]):
+        component.setdefault('description',component.get('name',''))
+        component.setdefault('kind','required');component.setdefault('category','other')
+        component.setdefault('dependencies',[]);component.setdefault('conflicts',[])
+        for file in component.get('files',[]):
+            file.setdefault('version',p['version'])
+            path=file.get('path','')
+            file.setdefault('policy','enforce' if path.startswith('mods/') else 'preserve' if path.startswith(('config/','defaultconfigs/')) else 'update')
+    validate_schema('client-pack',c)
     fs=[dict(f,componentId=x['id']) for x in c['components'] for f in x['files']]
     semantics(c['components'],fs,p['servers'])
-    if 'defaultServerId' in p and p['defaultServerId'] not in {s['id'] for s in p['servers']}:raise ValueError('Unknown defaultServerId')
     return p,c,fs
 class Redirects(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):
@@ -83,7 +96,7 @@ def build(args):
     if (out/'anthub.lock.json').exists():raise ValueError('Output already contains a lock; use a fresh output directory')
     repo=args.repository.rstrip('/').removesuffix('.git').lower()
     if not re.fullmatch(r'https://github.com/[a-z0-9_.-]+/[a-z0-9_.-]+',repo):raise ValueError('Expected GitHub repository URL')
-    release_url=repo+'/releases/download/pack-v'+p['pack']['version']+'/'
+    release_url=repo+'/releases/download/pack-v'+p['version']+'/'
     locked=[]
     for f in files:
         f=dict(f);expected=f.pop('sha256',None)
@@ -101,16 +114,16 @@ def build(args):
         kind='asset' if rel.startswith('assets/') else ('news' if '/news/' in rel else ('rules' if path.stem=='rules' else 'changelog'))
         content.append(dict(id=rel,type=kind,url=release_url+asset,sha256=asset,size=len(data)))
     now=os.environ.get('ANTHUB_RELEASE_TIME') or datetime.datetime.now(datetime.timezone.utc).isoformat()
-    lock={k:v for k,v in p.items() if k not in ('pack','content')}
+    lock={k:v for k,v in p.items() if k not in ('version','content','name')}
     identity=re.sub('[^a-z0-9-]', '-',repo.rsplit('/',1)[-1])[:64].strip('-') or 'project'
-    defaults=dict(id=identity,name=p['servers'][0]['address'],description=p['servers'][0]['address'],authors=[])
-    lock['project']=dict(defaults,**p.get('project',{}));lock['project']['repository']=repo
-    lock.update(release=dict(version=p['pack']['version'],channel=args.channel,sequence=args.sequence,createdAt=now,sourceCommit=args.commit,updatePolicy=args.policy),components=[{k:v for k,v in x.items() if k!='files'} for x in c['components']],files=locked,content=content)
+    defaults=dict(id=identity,name=p['name'],description=p['servers'][0]['address'],authors=[])
+    lock['project']=dict(defaults,repository=repo)
+    lock.update(release=dict(version=p['version'],channel=args.channel,sequence=args.sequence,createdAt=now,sourceCommit=args.commit,updatePolicy=args.policy),components=[{k:v for k,v in x.items() if k!='files'} for x in c['components']],files=locked,content=content)
     validate_schema('lock',lock);semantics(lock['components'],locked,p['servers'])
     data=encoded(lock);(out/'anthub.lock.json').write_bytes(data)
-    pointer=dict(schemaVersion=1,repository=repo,channel='stable',sequence=args.sequence,version=p['pack']['version'],lockUrl=release_url+'anthub.lock.json',lockSha256=sha(data),publishedAt=now)
+    pointer=dict(schemaVersion=1,repository=repo,channel='stable',sequence=args.sequence,version=p['version'],lockUrl=release_url+'anthub.lock.json',lockSha256=sha(data),publishedAt=now)
     write(out/'stable.json',pointer)
-    print('Built release',p['pack']['version'],sha(data))
+    print('Built release',p['version'],sha(data))
 def verify_release(folder):
     raw=(folder/'anthub.lock.json').read_bytes();lock=read(folder/'anthub.lock.json');validate_schema('lock',lock)
     pointer=read(folder/'stable.json');validate_schema('channel',pointer)

@@ -1,7 +1,8 @@
 import base64,json,os,subprocess,sys,tempfile
 from pathlib import Path
+from release_plan import project_version
 def run(args,**kw):return subprocess.run(args,check=True,**kw)
-project=json.loads(Path('anthub.json').read_text());version=project['pack']['version'];channel='stable';repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
+project=json.loads(Path('anthub.json').read_text());version=project_version(project);channel='stable';repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
 if sys.argv[1]=='build':
     os.environ['ANTHUB_RELEASE_TIME']=subprocess.check_output(['git','show','-s','--format=%cI',os.environ['GITHUB_SHA']],text=True).strip()
     run([sys.executable,'tooling/anthub.py','build-lock','.', '--output','release-output','--repository','https://github.com/'+repo,'--commit',os.environ['GITHUB_SHA'],'--sequence',os.environ['ANTHUB_SEQUENCE']])
@@ -24,7 +25,7 @@ elif sys.argv[1]=='publish':
         return json.loads(r.stdout)
     ref=api('repos/'+repo+'/git/ref/heads/'+branch);head=ref['object']['sha'];commit=api('repos/'+repo+'/git/commits/'+head)
     latest=api('repos/'+repo+'/contents/anthub.json?ref='+head)
-    if json.loads(base64.b64decode(latest['content']))['pack']['version']!=version:
+    if project_version(json.loads(base64.b64decode(latest['content'])))!=version:
         raise SystemExit('A newer version is on the branch; release retained, channel not changed')
 
     entries=[]

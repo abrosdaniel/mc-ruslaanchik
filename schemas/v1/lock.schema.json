@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/schemas/v1/lock.schema.json",
+  "$id": "https://raw.githubusercontent.com/abrosdaniel/anthub/HEAD/template/schemas/v1/lock.schema.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -349,11 +349,8 @@
           "address"
         ]
       },
-      "maxItems": 100
-    },
-    "defaultServerId": {
-      "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+      "maxItems": 1,
+      "minItems": 1
     },
     "integrations": {
       "type": "object",
