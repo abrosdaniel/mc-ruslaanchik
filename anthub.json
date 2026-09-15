@@ -4,13 +4,10 @@
     "id": "ruslaanchik",
     "name": "Ruslaanchik",
     "description": "Приватный Minecraft-сервер стримера Ruslaanchik. Выживание и механизмы Create.",
-    "authors": [
-      "Ruslaanchik",
-      "abrosdaniel"
-    ]
+    "authors": ["Ruslaanchik", "abrosdaniel"]
   },
   "pack": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest": "pack/client.json"
   },
   "minecraft": {
