@@ -7,7 +7,7 @@
     "authors": ["Ruslaanchik", "abrosdaniel"]
   },
   "pack": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "manifest": "pack/client.json"
   },
   "minecraft": {
@@ -26,6 +26,11 @@
       "id": "survival",
       "name": "Ruslaanchik",
       "address": "mc-ruslaanchik.ebash.id"
+    },
+    {
+      "id": "test",
+      "name": "Test Server",
+      "address": "mc-test.ebash.id"
     }
   ],
   "defaultServerId": "survival",
