@@ -8,8 +8,8 @@
 
 ```toml
 project = "https://github.com/abrosdaniel/mc-ruslaanchik"
-serverId = "survival"
-requiredPackVersion = "1.0.2"
+serverId = "main"
+requiredPackVersion = "1.0.4"
 # Замените значение на SHA-256 точных байтов опубликованного anthub.lock.json.
 requiredLockSha256 = "REPLACE_WITH_PUBLISHED_LOCK_SHA256"
 requireClient = false
@@ -18,3 +18,5 @@ luckperms = false
 ```
 
 После каждого развёртывания обновляйте version и hash согласно реально установленной серверной сборке. Публикация клиентского релиза не обновляет сервер. Включайте обязательный AntHub-клиент только после заполнения pin и проверки подключения.
+
+В новом формате единственному серверу автоматически назначается ID `main`. Пример pin выше применяется только после развёртывания версии 1.0.4; до этого используйте pin реально установленной версии.

@@ -54,6 +54,8 @@ def semantics(components,files,servers):
     if len({s['address'].lower() for s in servers})!=len(servers):raise ValueError('Duplicate server address')
 def load_project(root):
     p=read(root/'anthub.json');validate_schema('project',p)
+    if 'server' in p:
+        address=p.pop('server')['address'];p['servers']=[dict(id='main',name=address,address=address)];p['defaultServerId']='main'
     source=(root/p['pack']['manifest']).resolve()
     if not source.is_relative_to(root.resolve()):raise ValueError('Pack manifest path escapes repository')
     c=read(source);validate_schema('client-pack',c)
@@ -100,7 +102,9 @@ def build(args):
         content.append(dict(id=rel,type=kind,url=release_url+asset,sha256=asset,size=len(data)))
     now=os.environ.get('ANTHUB_RELEASE_TIME') or datetime.datetime.now(datetime.timezone.utc).isoformat()
     lock={k:v for k,v in p.items() if k not in ('pack','content')}
-    lock['project']=dict(p['project'],repository=repo)
+    identity=re.sub('[^a-z0-9-]', '-',repo.rsplit('/',1)[-1])[:64].strip('-') or 'project'
+    defaults=dict(id=identity,name=p['servers'][0]['address'],description=p['servers'][0]['address'],authors=[])
+    lock['project']=dict(defaults,**p.get('project',{}));lock['project']['repository']=repo
     lock.update(release=dict(version=p['pack']['version'],channel=args.channel,sequence=args.sequence,createdAt=now,sourceCommit=args.commit,updatePolicy=args.policy),components=[{k:v for k,v in x.items() if k!='files'} for x in c['components']],files=locked,content=content)
     validate_schema('lock',lock);semantics(lock['components'],locked,p['servers'])
     data=encoded(lock);(out/'anthub.lock.json').write_bytes(data)

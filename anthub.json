@@ -1,13 +1,7 @@
 {
   "schemaVersion": 1,
-  "project": {
-    "id": "ruslaanchik",
-    "name": "Ruslaanchik",
-    "description": "Приватный Minecraft-сервер стримера Ruslaanchik. Выживание и механизмы Create.",
-    "authors": ["Ruslaanchik", "abrosdaniel"]
-  },
   "pack": {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "manifest": "pack/client.json"
   },
   "minecraft": {
@@ -21,19 +15,6 @@
   "policies": {
     "customFiles": "warn"
   },
-  "servers": [
-    {
-      "id": "survival",
-      "name": "Ruslaanchik",
-      "address": "mc-ruslaanchik.ebash.id"
-    },
-    {
-      "id": "test",
-      "name": "Test Server",
-      "address": "mc-test.ebash.id"
-    }
-  ],
-  "defaultServerId": "survival",
   "integrations": {
     "luckperms": false
   },
@@ -45,5 +26,8 @@
     "rules": "content/rules.md",
     "news": "content/news",
     "changelog": "content/changelog.md"
+  },
+  "server": {
+    "address": "mc-ruslaanchik.ebash.id"
   }
 }

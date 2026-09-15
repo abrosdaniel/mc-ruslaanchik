@@ -35,12 +35,7 @@
           "maxItems": 20
         }
       },
-      "required": [
-        "id",
-        "name",
-        "description",
-        "authors"
-      ]
+      "required": []
     },
     "pack": {
       "type": "object",
@@ -167,7 +162,8 @@
           "address"
         ]
       },
-      "maxItems": 100
+      "maxItems": 1,
+      "minItems": 1
     },
     "defaultServerId": {
       "type": "string",
@@ -210,18 +206,42 @@
         }
       },
       "required": []
+    },
+    "server": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "address": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "address"
+      ]
     }
   },
   "required": [
     "schemaVersion",
-    "project",
     "pack",
     "minecraft",
     "anthub",
     "policies",
-    "servers",
     "integrations",
     "theme",
     "content"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "server"
+      ]
+    },
+    {
+      "required": [
+        "servers"
+      ]
+    }
   ]
 }
