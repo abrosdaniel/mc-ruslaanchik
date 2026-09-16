@@ -115,9 +115,9 @@ def build(args):
                 print('Warning: unavailable source for '+f['path']+' ('+urllib.parse.urlparse(url).netloc+'): '+type(error).__name__)
                 continue
             if data is None:data=candidate
-            elif sha(candidate)!=sha(data):raise ValueError('Mirror hash mismatch: '+f['path']+' ('+urllib.parse.urlparse(url).netloc+')')
+            elif sha(candidate)!=sha(data):raise ValueError('Mirror hash mismatch: '+f['path']+' ('+urllib.parse.urlparse(url).netloc+'). Sources contain different bytes. Use mirrors of the exact same file, or keep one source. SHA-256 is calculated automatically; do not copy the hash from another build.')
         if data is None:raise ValueError('All sources unavailable: '+f['path'])
-        if expected and sha(data)!=expected:raise ValueError('Source hash changed: '+f['path'])
+        if expected and sha(data)!=expected:raise ValueError('Source hash changed: '+f['path']+'. An explicit sha256 pins the previous bytes. Check the new file, then remove the optional sha256 field to calculate it automatically.')
         if f['path'].startswith('mods/') and f['path'].endswith('.jar'):inspect_jar(data,f['path'],p['minecraft']['version'],p['minecraft']['loaderVersion'],mod_ids)
         f.update(sha256=sha(data),size=len(data));locked.append(f)
     content=[]
@@ -156,4 +156,7 @@ def main():
     if args.command=='validate':load_project(args.project);print('Project valid')
     elif args.command=='build-lock':build(args)
     elif args.command=='verify-release':verify_release(args.release)
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:main()
+    except (ValueError,OSError) as error:
+        raise SystemExit('Release error: '+str(error)) from None

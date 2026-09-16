@@ -14,7 +14,7 @@ def accepts(expression,version):
     """Numeric Maven intervals/unions. None means unsupported rather than compatible."""
     target=numeric(version)
     if target is None:return None
-    expression=expression.strip()
+    expression=re.sub(r'\s+', '', expression)
     if not expression:return True
     if not expression.startswith(('[','(')):return True if numeric(expression) else None # Maven soft recommendation
     intervals=re.findall(r'[\[(][^\[\]()]*[\])]',expression)
@@ -57,5 +57,5 @@ def inspect_jar(data,path,minecraft,neoforge,seen):
             identity=dependency.get('modId');version={'minecraft':minecraft,'neoforge':neoforge}.get(identity)
             if version is None:continue
             requirement=dependency.get('versionRange','');result=accepts(requirement,version)
-            if result is False:raise ValueError(f'{path} requires {identity} {requirement}; project uses {version}')
+            if result is False:raise ValueError(f'{path} requires {identity} {requirement}; project uses {version}. Bounds with () are excluded; bounds with [] are included. Choose a compatible mod file: the JAR metadata, not its filename, defines compatibility.')
             if result is None:print(f'Warning: cannot evaluate {identity} range {requirement} in {path}')

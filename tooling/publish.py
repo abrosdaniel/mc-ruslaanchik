@@ -1,7 +1,9 @@
 import base64,json,os,subprocess,sys,tempfile
 from pathlib import Path
 from release_plan import project_version
-def run(args,**kw):return subprocess.run(args,check=True,**kw)
+def run(args,**kw):
+    try:return subprocess.run(args,check=True,**kw)
+    except subprocess.CalledProcessError as error:raise SystemExit(error.returncode) from None
 project=json.loads(Path('anthub.json').read_text());version=project_version(project);channel='stable';repo=os.environ['GITHUB_REPOSITORY'];tag='pack-v'+version
 if sys.argv[1]=='build':
     os.environ['ANTHUB_RELEASE_TIME']=subprocess.check_output(['git','show','-s','--format=%cI',os.environ['GITHUB_SHA']],text=True).strip()
