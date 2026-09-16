@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
@@ -70,9 +70,7 @@
       "description": "Chloride 1.8.1-NEO-1.21.1",
       "kind": "optional",
       "category": "mods",
-      "dependencies": [
-        "sodium"
-      ],
+      "dependencies": ["sodium"],
       "files": [
         {
           "path": "mods/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
@@ -125,9 +123,7 @@
       "name": "Create Hypertube",
       "description": "Create Hypertube 0.6.0",
       "category": "mods",
-      "dependencies": [
-        "create"
-      ],
+      "dependencies": ["create"],
       "files": [
         {
           "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
@@ -143,10 +139,7 @@
       "name": "Create: Coasters Simulated",
       "description": "Create: Coasters Simulated 0.1.5",
       "category": "mods",
-      "dependencies": [
-        "create",
-        "sable"
-      ],
+      "dependencies": ["create", "sable"],
       "files": [
         {
           "path": "mods/simulatedcoasters-0.1.5.jar",
@@ -163,9 +156,7 @@
       "name": "Create: Copycats+",
       "description": "Create: Copycats+ 3.0.9+mc.1.21.1-neoforge",
       "category": "mods",
-      "dependencies": [
-        "create"
-      ],
+      "dependencies": ["create"],
       "files": [
         {
           "path": "mods/copycats-3.0.9+mc.1.21.1-neoforge.jar",
@@ -183,10 +174,7 @@
       "description": "Create: EMI Schematics 1.1.0",
       "kind": "optional",
       "category": "mods",
-      "dependencies": [
-        "create",
-        "emi"
-      ],
+      "dependencies": ["create", "emi"],
       "files": [
         {
           "path": "mods/emi_create_schematics-1.1.0.jar",
@@ -204,9 +192,7 @@
       "name": "Create: Fast Schematic Cannon",
       "description": "Create: Fast Schematic Cannon 1.21.1-2.6.1-neoforge",
       "category": "mods",
-      "dependencies": [
-        "create"
-      ],
+      "dependencies": ["create"],
       "files": [
         {
           "path": "mods/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
@@ -265,7 +251,7 @@
         {
           "path": "mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
           "version": "1.10.0-preview.2-twitch-fix",
-          "repositoryPath": "files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2-twitch-fix.jar",
+          "repositoryPath": "files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
           "policy": "enforce"
         }
       ]
@@ -340,9 +326,7 @@
       "description": "Iris 1.8.14-beta.1+1.21.1-neoforge",
       "kind": "optional",
       "category": "mods",
-      "dependencies": [
-        "sodium"
-      ],
+      "dependencies": ["sodium"],
       "files": [
         {
           "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
@@ -488,10 +472,7 @@
       "name": "Ragdoll Reactions",
       "description": "Ragdoll Reactions 0.7.0",
       "category": "mods",
-      "dependencies": [
-        "sable-ragdolls",
-        "sable"
-      ],
+      "dependencies": ["sable-ragdolls", "sable"],
       "files": [
         {
           "path": "mods/ragdoll_reactions-1.21.1-0.7.0.jar",
@@ -533,9 +514,7 @@
       "name": "Sable Ragdolls",
       "description": "Sable Ragdolls 0.7.5",
       "category": "mods",
-      "dependencies": [
-        "sable"
-      ],
+      "dependencies": ["sable"],
       "files": [
         {
           "path": "mods/sable_player_ragdoll-1.21.1-0.7.5.jar",
@@ -577,9 +556,7 @@
       "name": "Sophisticated Backpacks",
       "description": "Sophisticated Backpacks 1.21.1-3.26.3.2158",
       "category": "mods",
-      "dependencies": [
-        "sophisticated-core"
-      ],
+      "dependencies": ["sophisticated-core"],
       "files": [
         {
           "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
@@ -640,9 +617,7 @@
       "name": "Sophisticated Storage",
       "description": "Sophisticated Storage 1.21.1-1.5.91.2127",
       "category": "mods",
-      "dependencies": [
-        "sophisticated-core"
-      ],
+      "dependencies": ["sophisticated-core"],
       "files": [
         {
           "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
