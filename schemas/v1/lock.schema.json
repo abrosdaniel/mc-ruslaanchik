@@ -173,11 +173,6 @@
             "minLength": 1,
             "maxLength": 512
           },
-          "url": {
-            "type": "string",
-            "pattern": "^https://",
-            "maxLength": 2048
-          },
           "sha256": {
             "type": "string",
             "pattern": "^[0-9a-f]{64}$"
@@ -193,13 +188,24 @@
               "update",
               "preserve"
             ]
+          },
+          "urls": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^https://",
+              "maxLength": 2048
+            }
           }
         },
         "required": [
           "componentId",
           "path",
           "version",
-          "url",
+          "urls",
           "sha256",
           "size",
           "policy"

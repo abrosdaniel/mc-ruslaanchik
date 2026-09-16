@@ -1,8 +1,8 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "server": {
-    "address": "mc-ruslaanchik.ebash.id"
+    "address": "mc-ruslaanchik.ebash.id:25566"
   },
   "minecraft": {
     "version": "1.21.1",
@@ -18,8 +18,13 @@
       "files": [
         {
           "path": "mods/appleskin-neoforge-mc1.21-3.0.9.jar",
-          "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
-          "version": "3.0.9+mc1.21"
+          "version": "3.0.9+mc1.21",
+          "urls": [
+            "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
+            "https://github.com/squeek502/AppleSkin/releases/download/v3.0.9/appleskin-neoforge-mc1.21-3.0.9.jar",
+            "https://edge.forgecdn.net/files/7854/442/appleskin-neoforge-mc1.21-3.0.9.jar"
+          ],
+          "sha256": "38b48dd6231341c9f964ce6e42c57ec866c6cc8f72bec938390a59bafb3922df"
         },
         {
           "path": "config/appleskin-client.toml",
@@ -37,21 +42,12 @@
       "files": [
         {
           "path": "mods/architectury-13.0.11-neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar",
-          "version": "13.0.11+neoforge"
-        }
-      ]
-    },
-    {
-      "id": "authlogic",
-      "name": "AuthLogic",
-      "description": "AuthLogic 0.0.5+1.21.1-neoforge",
-      "category": "mods",
-      "files": [
-        {
-          "path": "mods/auth-logic-0.0.5+1.21.1-neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/3YH8L7pG/versions/DKQipJGe/auth-logic-0.0.5%2B1.21.1-neoforge.jar",
-          "version": "0.0.5+1.21.1-neoforge"
+          "version": "13.0.11+neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar",
+            "https://edge.forgecdn.net/files/8492/726/architectury-13.0.11-neoforge.jar"
+          ],
+          "sha256": "9cc92f2c09533fc5482c60f993bd891c655a0e32b637037cdcb7c2b23adedeeb"
         }
       ]
     },
@@ -64,8 +60,11 @@
       "files": [
         {
           "path": "mods/chat_heads-0.15.7-neoforge-1.21.jar",
-          "url": "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
-          "version": "0.15.7"
+          "version": "0.15.7",
+          "urls": [
+            "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar"
+          ],
+          "sha256": "02e10437ceeed34e14e0efe206204658e4b8aa8ee7df10f2a9e28ac20f1b0391"
         }
       ]
     },
@@ -79,8 +78,12 @@
       "files": [
         {
           "path": "mods/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
-          "url": "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
-          "version": "1.8.1-NEO-1.21.1"
+          "version": "1.8.1-NEO-1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
+            "https://edge.forgecdn.net/files/8462/29/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar"
+          ],
+          "sha256": "d0b0a80a241078f917afb96e53821d7c70c38faebaca9adee0c86a9a8cb482c1"
         },
         {
           "path": "config/chloride-client.toml",
@@ -98,8 +101,11 @@
       "files": [
         {
           "path": "mods/corpse-neoforge-1.21.1-1.1.13.jar",
-          "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar",
-          "version": "neoforge-1.21.1-1.1.13"
+          "version": "neoforge-1.21.1-1.1.13",
+          "urls": [
+            "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar"
+          ],
+          "sha256": "80d984f0a17d968220129cc58edd5c9f28a5f61a84ec67dcc41228a46dfa4bb1"
         }
       ]
     },
@@ -111,8 +117,12 @@
       "files": [
         {
           "path": "mods/create-1.21.1-6.0.10.jar",
-          "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
-          "version": "6.0.10+mc1.21.1"
+          "version": "6.0.10+mc1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+            "https://edge.forgecdn.net/files/7963/363/create-1.21.1-6.0.10.jar"
+          ],
+          "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
         }
       ]
     },
@@ -125,8 +135,11 @@
       "files": [
         {
           "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
-          "url": "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar",
-          "version": "0.6.0"
+          "version": "0.6.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar"
+          ],
+          "sha256": "7bdb8979c7ff7d3b29f7a23771b6ae4870a6dcb7ce2e4a3214fdd6059aacace8"
         }
       ]
     },
@@ -139,8 +152,12 @@
       "files": [
         {
           "path": "mods/simulatedcoasters-0.1.5.jar",
-          "url": "https://cdn.modrinth.com/data/W1ZUfWdr/versions/PGhQoSBq/simulatedcoasters-0.1.5.jar",
-          "version": "0.1.5"
+          "version": "0.1.5",
+          "urls": [
+            "https://cdn.modrinth.com/data/W1ZUfWdr/versions/PGhQoSBq/simulatedcoasters-0.1.5.jar",
+            "https://edge.forgecdn.net/files/8655/742/simulatedcoasters-0.1.5.jar"
+          ],
+          "sha256": "f80b4c3cdf9fa6188804967147761b0373e150a6eadbdc53626e5ac9700b2049"
         }
       ]
     },
@@ -153,8 +170,12 @@
       "files": [
         {
           "path": "mods/copycats-3.0.9+mc.1.21.1-neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar",
-          "version": "3.0.9+mc.1.21.1-neoforge"
+          "version": "3.0.9+mc.1.21.1-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar",
+            "https://edge.forgecdn.net/files/8822/348/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar"
+          ],
+          "sha256": "d1efdd8688af6603dff9425299ac4547ef56a7d5cfee757716ead7853276694e"
         }
       ]
     },
@@ -168,8 +189,13 @@
       "files": [
         {
           "path": "mods/emi_create_schematics-1.1.0.jar",
-          "url": "https://cdn.modrinth.com/data/5bgqgixq/versions/opyfkMHl/emi_create_schematics-1.1.0.jar",
-          "version": "1.1.0"
+          "version": "1.1.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/5bgqgixq/versions/opyfkMHl/emi_create_schematics-1.1.0.jar",
+            "https://github.com/LIUKRAST/EmiCreateSchematics/releases/download/1.1.0/emi_create_schematics-1.1.0.jar",
+            "https://edge.forgecdn.net/files/7563/724/emi_create_schematics-1.1.0.jar"
+          ],
+          "sha256": "2b5cac7e2be8505ff555f679f2c71b717b7be883f1e01f7d8e97c586019947a7"
         }
       ]
     },
@@ -182,8 +208,11 @@
       "files": [
         {
           "path": "mods/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/DebMSCVn/versions/bG6IJw6J/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
-          "version": "1.21.1-2.6.1-neoforge"
+          "version": "1.21.1-2.6.1-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/DebMSCVn/versions/bG6IJw6J/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar"
+          ],
+          "sha256": "6d5ea8f1a7db565baf8d5ab8823fdbb25ed6cd0e47f028ac6c820c1ad993fd07"
         }
       ]
     },
@@ -195,8 +224,12 @@
       "files": [
         {
           "path": "mods/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/fdEYikBb/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
-          "version": "2.13.46"
+          "version": "2.13.46",
+          "urls": [
+            "https://cdn.modrinth.com/data/OsZiaDHq/versions/fdEYikBb/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
+            "https://edge.forgecdn.net/files/8857/710/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar"
+          ],
+          "sha256": "3fe2144fc608978203681f5c787dd75034879baf135372cc2302d6218ea75932"
         }
       ]
     },
@@ -209,14 +242,35 @@
       "files": [
         {
           "path": "mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
-          "version": "3.2.0-b-1.21.1"
+          "version": "3.2.0-b-1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+            "https://edge.forgecdn.net/files/8389/148/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar"
+          ],
+          "sha256": "d6a7a963f794501678113e2545d8b25c90e123ef6b9256bb5716907d059e1ef5"
         },
         {
           "path": "config/DistantHorizons.toml",
           "repositoryPath": "files/config/DistantHorizons.toml",
           "version": "1.0.1",
           "sha256": "7f7ee14c699209b6b48a12cdb5cd29433feac42c72a2429ebf7045a1a25a6709"
+        }
+      ]
+    },
+    {
+      "id": "dream-displays",
+      "name": "Dream Displays",
+      "description": "Экраны для воспроизведения видео и изображений.",
+      "kind": "required",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
+          "version": "1.10.0-preview.2",
+          "urls": [
+            "https://cdn.modrinth.com/data/4IIKQyBu/versions/YwVTLxbk/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar"
+          ],
+          "sha256": "2e217bdd2f7f7e09eab6762d20a98d4afed0214fdb5b9d8560e4bd1c47f6bd77"
         }
       ]
     },
@@ -229,8 +283,13 @@
       "files": [
         {
           "path": "mods/emi-1.1.24+1.21.1+neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
-          "version": "1.1.24+1.21.1+neoforge"
+          "version": "1.1.24+1.21.1+neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
+            "https://github.com/emilyploszaj/emi/releases/download/1.1.24%2B1.21.1/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
+            "https://edge.forgecdn.net/files/8081/408/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
+          ],
+          "sha256": "b68691f94f0727fc517cac2ab55bd6658d1179cc8cc715fe610b60c37469bc4c"
         },
         {
           "path": "config/emi.css",
@@ -248,8 +307,11 @@
       "files": [
         {
           "path": "mods/easy-villagers-neoforge-1.21.1-1.1.42.jar",
-          "url": "https://cdn.modrinth.com/data/Kaov2qgi/versions/uXQvvtUt/easy-villagers-neoforge-1.21.1-1.1.42.jar",
-          "version": "neoforge-1.21.1-1.1.42"
+          "version": "neoforge-1.21.1-1.1.42",
+          "urls": [
+            "https://cdn.modrinth.com/data/Kaov2qgi/versions/uXQvvtUt/easy-villagers-neoforge-1.21.1-1.1.42.jar"
+          ],
+          "sha256": "fb3a77e4efea7eca99cbb6a9eb279bff54d52a9154e1cf1da36e03c66fd39d3b"
         },
         {
           "path": "config/easy_villagers-client.toml",
@@ -268,8 +330,11 @@
       "files": [
         {
           "path": "mods/ferritecore-7.0.3-neoforge.jar",
-          "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
-          "version": "7.0.3-neoforge"
+          "version": "7.0.3-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar"
+          ],
+          "sha256": "d87ea28262715ebff45b8a82d493e6b468e7a4521bc021df5d88302196d030a8"
         },
         {
           "path": "config/ferritecore-mixin.toml",
@@ -289,8 +354,11 @@
       "files": [
         {
           "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
-          "version": "1.8.14-beta.1+1.21.1-neoforge"
+          "version": "1.8.14-beta.1+1.21.1-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar"
+          ],
+          "sha256": "60d5f8bf52f25e9986440f4a4270a6bd986d9cff994510e1108ac1547063b314"
         },
         {
           "path": "config/iris.properties",
@@ -309,8 +377,13 @@
       "files": [
         {
           "path": "mods/lambdynamiclights-4.8.11+1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
-          "version": "4.8.11+1.21.1"
+          "version": "4.8.11+1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
+            "https://github.com/LambdAurora/LambDynamicLights/releases/download/v4.8.11%2B1.21.1/lambdynamiclights-4.8.11%2B1.21.1.jar",
+            "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar"
+          ],
+          "sha256": "913b0358b1031828f1e060ea0ee361232dc2a1c82464f488a0a920739ce7c763"
         },
         {
           "path": "config/lambdynlights.toml",
@@ -329,8 +402,12 @@
       "files": [
         {
           "path": "mods/LocatorBar-neoforge-1.2.2+1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
-          "version": "1.2.2+1.21.1-neoforge"
+          "version": "1.2.2+1.21.1-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
+            "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.2/LocatorBar-neoforge-1.2.2%2B1.21.1.jar"
+          ],
+          "sha256": "1beb157efdb32e2e19eabb31bd93ffe87002f13b2904f621a898c6af33e524b6"
         },
         {
           "path": "config/locatorbar.json",
@@ -349,8 +426,11 @@
       "files": [
         {
           "path": "mods/macos_input_fixes-26.04.27.jar",
-          "url": "https://cdn.modrinth.com/data/ac3bcWXA/versions/l5jRTw9P/macos_input_fixes-26.04.27.jar",
-          "version": "26.04.27"
+          "version": "26.04.27",
+          "urls": [
+            "https://cdn.modrinth.com/data/ac3bcWXA/versions/l5jRTw9P/macos_input_fixes-26.04.27.jar"
+          ],
+          "sha256": "38d67e4900486aaf36f7a09da3bdd04a0d8aca755544f838634ce7200e1b5799"
         },
         {
           "path": "config/macos_input_fixes.txt",
@@ -369,8 +449,11 @@
       "files": [
         {
           "path": "mods/modernfix-neoforge-5.27.24+mc1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar",
-          "version": "5.27.24+mc1.21.1"
+          "version": "5.27.24+mc1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar"
+          ],
+          "sha256": "e6e9446890f0feb3aab3f6e73ae18cb17575c370f232179fef7baa30e61538fe"
         },
         {
           "path": "config/modernfix-common.toml",
@@ -389,8 +472,12 @@
       "files": [
         {
           "path": "mods/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
-          "url": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
-          "version": "1.21-2.26.1-neoforge"
+          "version": "1.21-2.26.1-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+            "https://edge.forgecdn.net/files/5637/846/MouseTweaks-neoforge-mc1.21-2.26.1.jar"
+          ],
+          "sha256": "68e6f4201c5de97b77929a7215c9552495696ca6a3bf3ae4eacc34e135f6cc8b"
         },
         {
           "path": "config/MouseTweaks.cfg",
@@ -408,8 +495,12 @@
       "files": [
         {
           "path": "mods/plasmovoice-neoforge-1.21.1-2.1.16.jar",
-          "url": "https://cdn.modrinth.com/data/1bZhdhsH/versions/zMpeWebP/plasmovoice-neoforge-1.21.1-2.1.16.jar",
-          "version": "neoforge-1.21.1-2.1.16"
+          "version": "neoforge-1.21.1-2.1.16",
+          "urls": [
+            "https://cdn.modrinth.com/data/1bZhdhsH/versions/zMpeWebP/plasmovoice-neoforge-1.21.1-2.1.16.jar",
+            "https://github.com/plasmoapp/plasmo-voice/releases/download/2.1.16/plasmovoice-neoforge-1.21.1-2.1.16.jar"
+          ],
+          "sha256": "a40437eb049a719a85e55897ae03ab4b49e3730ee3c29a11c4362daba582603d"
         }
       ]
     },
@@ -422,8 +513,11 @@
       "files": [
         {
           "path": "mods/ragdoll_reactions-1.21.1-0.7.0.jar",
-          "url": "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar",
-          "version": "0.7.0"
+          "version": "0.7.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar"
+          ],
+          "sha256": "d61a118c0b5ad2f3e761af6b3d71726bc2887bb3d0c7c90c2dc604bb4d3792b8"
         }
       ]
     },
@@ -435,8 +529,12 @@
       "files": [
         {
           "path": "mods/sable-neoforge-1.21.1-2.0.5.jar",
-          "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar",
-          "version": "2.0.5+mc1.21.1"
+          "version": "2.0.5+mc1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar",
+            "https://edge.forgecdn.net/files/8673/825/sable-neoforge-1.21.1-2.0.5.jar"
+          ],
+          "sha256": "c8710f85bc780bbf523e6726ceaaf76dd0b8c61479db497b382c6bb34317e7ab"
         },
         {
           "path": "config/sable-client.toml",
@@ -461,8 +559,11 @@
       "files": [
         {
           "path": "mods/sable_player_ragdoll-1.21.1-0.7.5.jar",
-          "url": "https://cdn.modrinth.com/data/I3mWDgfy/versions/CyKh8XSr/sable_player_ragdoll-1.21.1-0.7.5.jar",
-          "version": "0.7.5"
+          "version": "0.7.5",
+          "urls": [
+            "https://cdn.modrinth.com/data/I3mWDgfy/versions/CyKh8XSr/sable_player_ragdoll-1.21.1-0.7.5.jar"
+          ],
+          "sha256": "69611deff1c2b18ae0ae7dbaea24cc14f4b69f0368297653933ae9b33adf2d2b"
         },
         {
           "path": "config/sable_player_ragdoll-client.toml",
@@ -481,8 +582,11 @@
       "files": [
         {
           "path": "mods/sodium-neoforge-0.8.13+mc1.21.1.jar",
-          "url": "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar",
-          "version": "mc1.21.1-0.8.13-neoforge"
+          "version": "mc1.21.1-0.8.13-neoforge",
+          "urls": [
+            "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar"
+          ],
+          "sha256": "575d187b15328d7bddd8a9b1bee64333c22c14735f5780ec49eac0cd5503c08d"
         },
         {
           "path": "config/sodium-options.json",
@@ -501,8 +605,11 @@
       "files": [
         {
           "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
-          "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/AhPnzNtJ/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
-          "version": "1.21.1-3.26.3.2158"
+          "version": "1.21.1-3.26.3.2158",
+          "urls": [
+            "https://cdn.modrinth.com/data/TyCTlI4b/versions/AhPnzNtJ/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar"
+          ],
+          "sha256": "3690359cc3bb2aa43e40db6ca047ca7d5feda5141c8b9fd647c4355678e971e2"
         }
       ]
     },
@@ -519,8 +626,11 @@
       "files": [
         {
           "path": "mods/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar",
-          "url": "https://cdn.modrinth.com/data/s85zLEDe/versions/Tz7IXNXZ/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar",
-          "version": "1.21.1-0.2.0.168"
+          "version": "1.21.1-0.2.0.168",
+          "urls": [
+            "https://cdn.modrinth.com/data/s85zLEDe/versions/Tz7IXNXZ/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar"
+          ],
+          "sha256": "ac5e86548088bbb3dbf7117d14f5903016ba3344424b60cf8e82dbc813930a9d"
         }
       ]
     },
@@ -532,8 +642,11 @@
       "files": [
         {
           "path": "mods/sophisticatedcore-1.21.1-1.5.1.2341.jar",
-          "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar",
-          "version": "1.21.1-1.5.1.2341"
+          "version": "1.21.1-1.5.1.2341",
+          "urls": [
+            "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar"
+          ],
+          "sha256": "f627b497fc0a2b50da9f20b77e13073df9245718660259d8f559aa184c4418a1"
         },
         {
           "path": "config/sophisticatedcore-client.toml",
@@ -558,41 +671,17 @@
       "files": [
         {
           "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
-          "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/H7wGZ8Sl/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
-          "version": "1.21.1-1.5.91.2127"
+          "version": "1.21.1-1.5.91.2127",
+          "urls": [
+            "https://cdn.modrinth.com/data/hMlaZH8f/versions/H7wGZ8Sl/sophisticatedstorage-1.21.1-1.5.91.2127.jar"
+          ],
+          "sha256": "a2c3521edd88196f2948ea9a3db08187907baaa4cdcb27c1b004069782c6bf8f"
         },
         {
           "path": "config/sophisticatedstorage-client.toml",
           "repositoryPath": "files/config/sophisticatedstorage-client.toml",
           "version": "1.0.1",
           "sha256": "85a65676f75155fd68e328923ec1f66bbf83fe736de31127e0f05465895f33cf"
-        }
-      ]
-    },
-    {
-      "id": "waterframes",
-      "name": "WaterFrames",
-      "description": "WaterFrames NEOFORGE-mc1.21.1-v2.1.23",
-      "category": "mods",
-      "dependencies": ["creativecore", "watermedia"],
-      "files": [
-        {
-          "path": "mods/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
-          "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/ygogZrIE/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
-          "version": "NEOFORGE-mc1.21.1-v2.1.23"
-        }
-      ]
-    },
-    {
-      "id": "watermedia",
-      "name": "WaterMedia",
-      "description": "WaterMedia 2.1.34",
-      "category": "mods",
-      "files": [
-        {
-          "path": "mods/watermedia-2.1.34.jar",
-          "url": "https://cdn.modrinth.com/data/G922NeHS/versions/qGhHJv6H/watermedia-2.1.34.jar",
-          "version": "2.1.34"
         }
       ]
     },
@@ -605,8 +694,11 @@
       "files": [
         {
           "path": "mods/xaerominimap-neoforge-1.21.1-26.5.0.jar",
-          "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar",
-          "version": "neoforge-1.21.1-26.5.0"
+          "version": "neoforge-1.21.1-26.5.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar"
+          ],
+          "sha256": "667105d8fdca64b27b29d8e0b88e67e7342038d3fb4edc4129bf452b601c6d20"
         }
       ]
     },
@@ -619,8 +711,11 @@
       "files": [
         {
           "path": "mods/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
-          "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
-          "version": "neoforge-1.21.1-1.46.0"
+          "version": "neoforge-1.21.1-1.46.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
+          ],
+          "sha256": "a7f059e4c48211f6d5c962e7640f5179cc1636bccc907ea77ab9e1865635cb24"
         }
       ]
     },

@@ -1,6 +1,6 @@
 # Доступ к серверу
 
-Сервер приватный. Проходку можно получить за баллы канала на [Twitch](https://www.twitch.tv/ruslaanchik) или донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik). Для добавления в whitelist сообщите администрации игровой ник.
+Сервер приватный. Проходку можно получить за баллы канала на [Twitch](https://www.twitch.tv/ruslaanchik) или донат на [DonationAlerts](https://www.donationalerts.com/r/ruslaanchik).
 
 Актуальные правила и условия участия уточняйте у администрации в [Telegram](https://t.me/Ruslaanchik_gg).
 

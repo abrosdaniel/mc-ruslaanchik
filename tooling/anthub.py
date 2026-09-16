@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """AntHub project validation, immutable lock building and SHA-256 verification."""
-import argparse, base64, datetime, hashlib, json, os, re, shutil, socket, ipaddress, urllib.request, urllib.parse
+import argparse, urllib.error, datetime, hashlib, json, os, re, shutil, socket, ipaddress, urllib.request, urllib.parse
 from pathlib import Path
 from jsonschema import Draft202012Validator
+from mod_metadata import inspect_jar
 
 SCHEMAS=Path(__file__).resolve().parents[1]/'schemas/v1'
 def pairs(items):
@@ -97,15 +98,27 @@ def build(args):
     repo=args.repository.rstrip('/').removesuffix('.git').lower()
     if not re.fullmatch(r'https://github.com/[a-z0-9_.-]+/[a-z0-9_.-]+',repo):raise ValueError('Expected GitHub repository URL')
     release_url=repo+'/releases/download/pack-v'+p['version']+'/'
-    locked=[]
+    locked=[];mod_ids={}
     for f in files:
         f=dict(f);expected=f.pop('sha256',None)
+        data=None
+        urls=f.pop('urls',[])
         if 'repositoryPath' in f:
             path=(root/f.pop('repositoryPath')).resolve()
             if not path.is_relative_to(root):raise ValueError('Repository source escapes root')
-            data=path.read_bytes();asset=sha(data);(out/asset).write_bytes(data);f['url']=release_url+asset
-        else:data=download(f['url'])
+            data=path.read_bytes();asset=sha(data);(out/asset).write_bytes(data)
+            f['urls']=[release_url+asset]+urls
+        else:f['urls']=urls
+        for url in urls:
+            try: candidate=download(url)
+            except (OSError, urllib.error.URLError) as error:
+                print('Warning: unavailable source for '+f['path']+' ('+urllib.parse.urlparse(url).netloc+'): '+type(error).__name__)
+                continue
+            if data is None:data=candidate
+            elif sha(candidate)!=sha(data):raise ValueError('Mirror hash mismatch: '+f['path']+' ('+urllib.parse.urlparse(url).netloc+')')
+        if data is None:raise ValueError('All sources unavailable: '+f['path'])
         if expected and sha(data)!=expected:raise ValueError('Source hash changed: '+f['path'])
+        if f['path'].startswith('mods/') and f['path'].endswith('.jar'):inspect_jar(data,f['path'],p['minecraft']['version'],p['minecraft']['loaderVersion'],mod_ids)
         f.update(sha256=sha(data),size=len(data));locked.append(f)
     content=[]
     for path in sorted(root.rglob('*')):
