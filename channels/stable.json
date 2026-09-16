@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "repository": "https://github.com/abrosdaniel/mc-ruslaanchik",
   "channel": "stable",
-  "sequence": 3,
-  "version": "1.0.14",
-  "lockUrl": "https://github.com/abrosdaniel/mc-ruslaanchik/releases/download/pack-v1.0.14/anthub.lock.json",
-  "lockSha256": "78e5b1be0fa2c96bc27cbf6bc8502ffc9337e6890d047fcd225e1e4a151ce3f0",
-  "publishedAt": "2026-09-16T19:20:07+02:00"
+  "sequence": 4,
+  "version": "1.0.15",
+  "lockUrl": "https://github.com/abrosdaniel/mc-ruslaanchik/releases/download/pack-v1.0.15/anthub.lock.json",
+  "lockSha256": "a16666b2a23cd506a58c9e3cfd67f028306dc68839d5ce20e2e195953a4da71d",
+  "publishedAt": "2026-09-16T19:56:29+02:00"
 }
