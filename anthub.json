@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
@@ -264,10 +264,9 @@
       "files": [
         {
           "path": "mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
-          "version": "1.10.0-preview.2",
-          "urls": [
-            "https://cdn.modrinth.com/data/4IIKQyBu/versions/YwVTLxbk/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar"
-          ]
+          "version": "1.10.0-preview.2-twitch-fix",
+          "repositoryPath": "files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2-twitch-fix.jar",
+          "policy": "enforce"
         }
       ]
     },

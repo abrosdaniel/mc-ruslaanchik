@@ -20,8 +20,6 @@
 **Minecraft:** 1.21.1  
 **Модлоадер:** NeoForge 21.1.250
 
-[![📦 Скачать сборку](https://img.shields.io/badge/-📦_Скачать_сборку-green)](https://github.com/abrosdaniel/mc-ruslaanchik/releases/latest)
-
 </td>
 <td width="600" align="right" valign="top">
 
@@ -77,7 +75,7 @@
 <li><a href="https://modrinth.com/mod/UT2M39wf/version/bPYeUWZx">Create: Copycats+</a> [3.0.9+mc.1.21.1-neoforge]</li>
 <li><a href="https://modrinth.com/mod/DebMSCVn/version/bG6IJw6J">Create: Fast Schematic Cannon</a> [1.21.1-2.6.1-neoforge]</li>
 <li><a href="https://modrinth.com/mod/OsZiaDHq/version/fdEYikBb">CreativeCore</a> [2.13.46]</li>
-<li><a href="https://modrinth.com/mod/4IIKQyBu/version/YwVTLxbk">Dream Displays</a> [1.10.0-preview.2]</li>
+<li><a href="files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2-twitch-fix.jar">Dream Displays</a> [1.10.0-preview.2-twitch-fix]</li>
 <li><a href="https://modrinth.com/mod/Kaov2qgi/version/uXQvvtUt">Easy Villagers</a> [neoforge-1.21.1-1.1.42]</li>
 <li><a href="https://modrinth.com/mod/1bZhdhsH/version/zMpeWebP">Plasmo Voice</a> [neoforge-1.21.1-2.1.16]</li>
 <li><a href="https://modrinth.com/mod/6awFMFjR/version/yx32Af0N">Ragdoll Reactions</a> [0.7.0]</li>
@@ -114,7 +112,7 @@
 <a name="mod-list-end"></a>
 
 > [!NOTE]
-> В релиз включены обязательные и необязательные моды. Дополнительные клиентские моды разрешены, но их корректная работа не гарантируется.
+> **Дополнительные клиентские моды разрешены, но их корректная работа не гарантируется.**
 
 <a name="setup"></a>
 
@@ -130,13 +128,11 @@
 8. Следуйте инструкциям в [AntHub](https://github.com/abrosdaniel/anthub), мод сам установит сборку и все нужные зависимости.
 
 > [!WARNING]
-> **Не обновляйте Minecraft, NeoForge и моды самостоятельно** — дождитесь обновления списка администрацией.
+> **Не обновляйте Minecraft, NeoForge и моды самостоятельно.**
 
 <a name="connect"></a>
 
 ## 🌐 Подключение к серверу
-
-Адрес: `mc-ruslaanchik.ebash.id:25566`.
 
 Для доступа нужно купить проходку, в комментариях к донату/награде указать игровой ник. В течении 24 часов вы будете добавлены в whitelist.
 
@@ -149,18 +145,10 @@
 При первом входе на сервер, вас попросит ввести пароль. Это внутренняя регистрация на сервере, для возможности играть как с Лицензией, так и без.
 
 > [!WARNING]
-> Не используйте пароль от Microsoft и не передавайте другим свою сборку с данными!
+> **Не используйте пароль от Microsoft и не передавайте другим свою сборку с данными!**
 
 Для голосового чата разрешите доступ к микрофону и выберите его в меню **Plasmo Voice**. Клавишу открытия меню и передачи голоса можно посмотреть в настройках управления Minecraft.
 
 ---
 
 <h3 align="center">🎮 Ждём именно тебя на сервере стримера Ruslaanchik!</h3>
-
-## Обновление сборки
-
-Состав и источники файлов находятся в `anthub.json`. Для выпуска увеличьте `version` и сделайте push в основную ветку. Проверка и публикация выполняются автоматически. `channels/stable.json` создаётся workflow; вручную добавлять его не нужно.
-
-Размер и SHA-256 рассчитываются автоматически при публикации и записываются в `anthub.lock.json`. В исходном `anthub.json` заполнять их не нужно. Все зеркала одного файла должны отдавать одинаковые байты. Проверка JAR учитывает границы диапазонов и матрицу совместимости NeoForge 1.21.1 с Minecraft 1.21 / NeoForge 21.0.166. Диапазон Minecraft `[1.21,1.21.1)` допускается этой матрицей. Проверка метаданных не заменяет запуск игры.
-
-Локальная проверка: `python tooling/anthub.py validate .` после установки зависимостей из `tooling/requirements.txt`.
