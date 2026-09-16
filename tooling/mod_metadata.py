@@ -31,6 +31,20 @@ def accepts(expression,version):
         if (a is None or target>a or (target==a and interval[0]=='[')) and (b is None or target<b or (target==b and interval[-1]==']')):return True
     return False
 
+def accepts_dependency(expression, identity, version, minecraft):
+    """Match FML's 1.21.1 VersionSupportMatrix, including its fallback versions.
+
+    Source: NeoForged/FancyModLoader, branch 1.21.1,
+    loader/src/main/java/net/neoforged/fml/loading/VersionSupportMatrix.java
+    """
+    result=accepts(expression,version)
+    if result is True:return True
+    fallback={'minecraft':'1.21','neoforge':'21.0.166'}.get(identity) if minecraft=='1.21.1' else None
+    if fallback is None:return result
+    alternate=accepts(expression,fallback)
+    if alternate is True:return True
+    return None if result is None or alternate is None else False
+
 def inspect_jar(data,path,minecraft,neoforge,seen):
     try:
         with zipfile.ZipFile(io.BytesIO(data)) as jar:
@@ -56,6 +70,6 @@ def inspect_jar(data,path,minecraft,neoforge,seen):
             if dependency.get('side','BOTH')=='SERVER' or dependency.get('type','required') in ('incompatible','discouraged'):continue
             identity=dependency.get('modId');version={'minecraft':minecraft,'neoforge':neoforge}.get(identity)
             if version is None:continue
-            requirement=dependency.get('versionRange','');result=accepts(requirement,version)
+            requirement=dependency.get('versionRange','');result=accepts_dependency(requirement,identity,version,minecraft)
             if result is False:raise ValueError(f'{path} requires {identity} {requirement}; project uses {version}. Bounds with () are excluded; bounds with [] are included. Choose a compatible mod file: the JAR metadata, not its filename, defines compatibility.')
             if result is None:print(f'Warning: cannot evaluate {identity} range {requirement} in {path}')
