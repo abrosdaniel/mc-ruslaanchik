@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "anthubVersion": "2.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -22,8 +22,8 @@
           "version": "3.0.9+mc1.21",
           "urls": [
             "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar",
-            "https://github.com/squeek502/AppleSkin/releases/download/v3.0.9/appleskin-neoforge-mc1.21-3.0.9.jar",
-            "https://edge.forgecdn.net/files/7854/442/appleskin-neoforge-mc1.21-3.0.9.jar"
+            "https://edge.forgecdn.net/files/7854/442/appleskin-neoforge-mc1.21-3.0.9.jar",
+            "https://github.com/squeek502/AppleSkin/releases/download/v3.0.9/appleskin-neoforge-mc1.21-3.0.9.jar"
           ]
         },
         {
@@ -60,7 +60,8 @@
           "path": "mods/chat_heads-0.15.7-neoforge-1.21.jar",
           "version": "0.15.7",
           "urls": [
-            "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar"
+            "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
+            "https://edge.forgecdn.net/files/8642/154/chat_heads-0.15.7-neoforge-1.21.jar"
           ]
         }
       ]
@@ -71,7 +72,9 @@
       "description": "Chloride 1.8.1-NEO-1.21.1",
       "kind": "optional",
       "category": "mods",
-      "dependencies": ["sodium"],
+      "dependencies": [
+        "sodium"
+      ],
       "files": [
         {
           "path": "mods/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
@@ -124,13 +127,16 @@
       "name": "Create Hypertube",
       "description": "Create Hypertube 0.6.0",
       "category": "mods",
-      "dependencies": ["create"],
+      "dependencies": [
+        "create"
+      ],
       "files": [
         {
           "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
           "version": "0.6.0",
           "urls": [
-            "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar"
+            "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar",
+            "https://edge.forgecdn.net/files/8541/877/create_hypertube-0.6.0-NEOFORGE.jar"
           ]
         }
       ]
@@ -140,7 +146,10 @@
       "name": "Create: Coasters Simulated",
       "description": "Create: Coasters Simulated 0.1.5",
       "category": "mods",
-      "dependencies": ["create", "sable"],
+      "dependencies": [
+        "create",
+        "sable"
+      ],
       "files": [
         {
           "path": "mods/simulatedcoasters-0.1.5.jar",
@@ -157,7 +166,9 @@
       "name": "Create: Copycats+",
       "description": "Create: Copycats+ 3.0.9+mc.1.21.1-neoforge",
       "category": "mods",
-      "dependencies": ["create"],
+      "dependencies": [
+        "create"
+      ],
       "files": [
         {
           "path": "mods/copycats-3.0.9+mc.1.21.1-neoforge.jar",
@@ -175,15 +186,18 @@
       "description": "Create: EMI Schematics 1.1.0",
       "kind": "optional",
       "category": "mods",
-      "dependencies": ["create", "emi"],
+      "dependencies": [
+        "create",
+        "emi"
+      ],
       "files": [
         {
           "path": "mods/emi_create_schematics-1.1.0.jar",
           "version": "1.1.0",
           "urls": [
             "https://cdn.modrinth.com/data/5bgqgixq/versions/opyfkMHl/emi_create_schematics-1.1.0.jar",
-            "https://github.com/LIUKRAST/EmiCreateSchematics/releases/download/1.1.0/emi_create_schematics-1.1.0.jar",
-            "https://edge.forgecdn.net/files/7563/724/emi_create_schematics-1.1.0.jar"
+            "https://edge.forgecdn.net/files/7563/724/emi_create_schematics-1.1.0.jar",
+            "https://github.com/LIUKRAST/EmiCreateSchematics/releases/download/1.1.0/emi_create_schematics-1.1.0.jar"
           ]
         }
       ]
@@ -193,7 +207,9 @@
       "name": "Create: Fast Schematic Cannon",
       "description": "Create: Fast Schematic Cannon 1.21.1-2.6.1-neoforge",
       "category": "mods",
-      "dependencies": ["create"],
+      "dependencies": [
+        "create"
+      ],
       "files": [
         {
           "path": "mods/CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar",
@@ -223,16 +239,15 @@
     {
       "id": "distant-horizons",
       "name": "Distant Horizons",
-      "description": "Distant Horizons 3.2.0-b-1.21.1",
+      "description": "Distant Horizons 3.3.0-1.21.1",
       "kind": "optional",
       "category": "mods",
       "files": [
         {
-          "path": "mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
-          "version": "3.2.0-b-1.21.1",
+          "path": "mods/DistantHorizons-3.3.0-1.21.1-fabric-neoforge.jar",
+          "version": "3.3.0-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
-            "https://edge.forgecdn.net/files/8389/148/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar"
+            "https://cdn.modrinth.com/data/uCdwusMi/versions/EtH8QtMq/DistantHorizons-3.3.0-1.21.1-fabric-neoforge.jar"
           ]
         },
         {
@@ -269,8 +284,8 @@
           "version": "1.1.24+1.21.1+neoforge",
           "urls": [
             "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
-            "https://github.com/emilyploszaj/emi/releases/download/1.1.24%2B1.21.1/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
-            "https://edge.forgecdn.net/files/8081/408/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
+            "https://edge.forgecdn.net/files/8081/408/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
+            "https://github.com/emilyploszaj/emi/releases/download/1.1.24%2B1.21.1/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
           ]
         },
         {
@@ -311,7 +326,8 @@
           "path": "mods/ferritecore-7.0.3-neoforge.jar",
           "version": "7.0.3-neoforge",
           "urls": [
-            "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar"
+            "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
+            "https://edge.forgecdn.net/files/7524/151/ferritecore-7.0.3-neoforge.jar"
           ]
         },
         {
@@ -327,13 +343,16 @@
       "description": "Iris 1.8.14-beta.1+1.21.1-neoforge",
       "kind": "optional",
       "category": "mods",
-      "dependencies": ["sodium"],
+      "dependencies": [
+        "sodium"
+      ],
       "files": [
         {
           "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
           "version": "1.8.14-beta.1+1.21.1-neoforge",
           "urls": [
-            "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar"
+            "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
+            "https://edge.forgecdn.net/files/8242/804/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar"
           ]
         },
         {
@@ -355,8 +374,8 @@
           "version": "4.8.11+1.21.1",
           "urls": [
             "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
-            "https://github.com/LambdAurora/LambDynamicLights/releases/download/v4.8.11%2B1.21.1/lambdynamiclights-4.8.11%2B1.21.1.jar",
-            "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar"
+            "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar",
+            "https://github.com/LambdAurora/LambDynamicLights/releases/download/v4.8.11%2B1.21.1/lambdynamiclights-4.8.11%2B1.21.1.jar"
           ]
         },
         {
@@ -420,7 +439,8 @@
           "path": "mods/modernfix-neoforge-5.27.24+mc1.21.1.jar",
           "version": "5.27.24+mc1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar"
+            "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar",
+            "https://edge.forgecdn.net/files/8774/737/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar"
           ]
         },
         {
@@ -455,15 +475,15 @@
     {
       "id": "plasmo-voice",
       "name": "Plasmo Voice",
-      "description": "Plasmo Voice neoforge-1.21.1-2.1.16",
+      "description": "Plasmo Voice neoforge-1.21.1-2.1.17",
       "category": "mods",
       "files": [
         {
-          "path": "mods/plasmovoice-neoforge-1.21.1-2.1.16.jar",
-          "version": "neoforge-1.21.1-2.1.16",
+          "path": "mods/plasmovoice-neoforge-1.21.1-2.1.17.jar",
+          "version": "neoforge-1.21.1-2.1.17",
           "urls": [
-            "https://cdn.modrinth.com/data/1bZhdhsH/versions/zMpeWebP/plasmovoice-neoforge-1.21.1-2.1.16.jar",
-            "https://github.com/plasmoapp/plasmo-voice/releases/download/2.1.16/plasmovoice-neoforge-1.21.1-2.1.16.jar"
+            "https://cdn.modrinth.com/data/1bZhdhsH/versions/97HOKGM0/plasmovoice-neoforge-1.21.1-2.1.17.jar",
+            "https://github.com/plasmoapp/plasmo-voice/releases/download/2.1.17/plasmovoice-neoforge-1.21.1-2.1.17.jar"
           ]
         }
       ]
@@ -473,13 +493,17 @@
       "name": "Ragdoll Reactions",
       "description": "Ragdoll Reactions 0.7.0",
       "category": "mods",
-      "dependencies": ["sable-ragdolls", "sable"],
+      "dependencies": [
+        "sable-ragdolls",
+        "sable"
+      ],
       "files": [
         {
           "path": "mods/ragdoll_reactions-1.21.1-0.7.0.jar",
           "version": "0.7.0",
           "urls": [
-            "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar"
+            "https://cdn.modrinth.com/data/6awFMFjR/versions/yx32Af0N/ragdoll_reactions-1.21.1-0.7.0.jar",
+            "https://edge.forgecdn.net/files/8281/400/ragdoll_reactions-1.21.1-0.7.0.jar"
           ]
         }
       ]
@@ -515,7 +539,9 @@
       "name": "Sable Ragdolls",
       "description": "Sable Ragdolls 0.7.5",
       "category": "mods",
-      "dependencies": ["sable"],
+      "dependencies": [
+        "sable"
+      ],
       "files": [
         {
           "path": "mods/sable_player_ragdoll-1.21.1-0.7.5.jar",
@@ -557,7 +583,9 @@
       "name": "Sophisticated Backpacks",
       "description": "Sophisticated Backpacks 1.21.1-3.26.3.2158",
       "category": "mods",
-      "dependencies": ["sophisticated-core"],
+      "dependencies": [
+        "sophisticated-core"
+      ],
       "files": [
         {
           "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
@@ -618,7 +646,9 @@
       "name": "Sophisticated Storage",
       "description": "Sophisticated Storage 1.21.1-1.5.91.2127",
       "category": "mods",
-      "dependencies": ["sophisticated-core"],
+      "dependencies": [
+        "sophisticated-core"
+      ],
       "files": [
         {
           "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
@@ -661,7 +691,8 @@
           "path": "mods/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
           "version": "neoforge-1.21.1-1.46.0",
           "urls": [
-            "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
+            "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+            "https://edge.forgecdn.net/files/8849/973/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
           ]
         }
       ]

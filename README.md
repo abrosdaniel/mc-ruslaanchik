@@ -78,7 +78,7 @@
 <li><a href="https://modrinth.com/mod/OsZiaDHq/version/fdEYikBb">CreativeCore</a> [2.13.46]</li>
 <li><a href="files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar">Dream Displays</a> [1.10.0-preview.2-twitch-fix]</li>
 <li><a href="https://modrinth.com/mod/Kaov2qgi/version/uXQvvtUt">Easy Villagers</a> [neoforge-1.21.1-1.1.42]</li>
-<li><a href="https://modrinth.com/mod/1bZhdhsH/version/zMpeWebP">Plasmo Voice</a> [neoforge-1.21.1-2.1.16]</li>
+<li><a href="https://modrinth.com/mod/1bZhdhsH/version/97HOKGM0">Plasmo Voice</a> [neoforge-1.21.1-2.1.17]</li>
 <li><a href="https://modrinth.com/mod/6awFMFjR/version/yx32Af0N">Ragdoll Reactions</a> [0.7.0]</li>
 <li><a href="https://modrinth.com/mod/T9PomCSv/version/U678xqle">Sable</a> [2.0.5+mc1.21.1]</li>
 <li><a href="https://modrinth.com/mod/I3mWDgfy/version/CyKh8XSr">Sable Ragdolls</a> [0.7.5]</li>
@@ -92,7 +92,7 @@
 <li><a href="https://modrinth.com/mod/Wb5oqrBJ/version/ZPylso9i">Chat Heads</a> [0.15.7]</li>
 <li><a href="https://modrinth.com/mod/yD9qW65f/version/IgWRdE2d">Chloride</a> [1.8.1-NEO-1.21.1]</li>
 <li><a href="https://modrinth.com/mod/5bgqgixq/version/opyfkMHl">Create: EMI Schematics</a> [1.1.0]</li>
-<li><a href="https://modrinth.com/mod/uCdwusMi/version/ZpKb4kZp">Distant Horizons</a> [3.2.0-b-1.21.1]</li>
+<li><a href="https://modrinth.com/mod/uCdwusMi/version/EtH8QtMq">Distant Horizons</a> [3.3.0-1.21.1]</li>
 <li><a href="https://modrinth.com/mod/fRiHVvU7/version/5sIPA1To">EMI</a> [1.1.24+1.21.1+neoforge]</li>
 <li><a href="https://modrinth.com/mod/uXXizFIs/version/x7kQWVju">Ferrite Core</a> [7.0.3-neoforge]</li>
 <li><a href="https://modrinth.com/mod/YL57xq9U/version/KduFYu4t">Iris</a> [1.8.14-beta.1+1.21.1-neoforge]</li>
