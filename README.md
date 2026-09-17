@@ -18,7 +18,8 @@
 
 **Java:** 21  
 **Minecraft:** 1.21.1  
-**Модлоадер:** NeoForge 21.1.250
+**Модлоадер:** NeoForge 21.1.250<br>
+**AntHub:** 2.x.x
 
 </td>
 <td width="600" align="right" valign="top">
@@ -75,7 +76,7 @@
 <li><a href="https://modrinth.com/mod/UT2M39wf/version/bPYeUWZx">Create: Copycats+</a> [3.0.9+mc.1.21.1-neoforge]</li>
 <li><a href="https://modrinth.com/mod/DebMSCVn/version/bG6IJw6J">Create: Fast Schematic Cannon</a> [1.21.1-2.6.1-neoforge]</li>
 <li><a href="https://modrinth.com/mod/OsZiaDHq/version/fdEYikBb">CreativeCore</a> [2.13.46]</li>
-<li><a href="files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2-twitch-fix.jar">Dream Displays</a> [1.10.0-preview.2-twitch-fix]</li>
+<li><a href="files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar">Dream Displays</a> [1.10.0-preview.2-twitch-fix]</li>
 <li><a href="https://modrinth.com/mod/Kaov2qgi/version/uXQvvtUt">Easy Villagers</a> [neoforge-1.21.1-1.1.42]</li>
 <li><a href="https://modrinth.com/mod/1bZhdhsH/version/zMpeWebP">Plasmo Voice</a> [neoforge-1.21.1-2.1.16]</li>
 <li><a href="https://modrinth.com/mod/6awFMFjR/version/yx32Af0N">Ragdoll Reactions</a> [0.7.0]</li>
@@ -120,11 +121,11 @@
 
 1. Скачайте и установите лаунчер.
 2. В лаунчере скачайте экземпляр Java 21 Minecraft 1.21.1 NeoForge 21.1.250.
-3. Скачайте последний релиз мода [AntHub](https://github.com/abrosdaniel/anthub).
+3. Скачайте релиз мода [AntHub](https://github.com/abrosdaniel/anthub) версии **2.x.x**.
 4. Откройте папку экземпляра через лаунчер. Положите скаченый мод [AntHub](https://github.com/abrosdaniel/anthub) в папку `/mods`.
 5. Запустите экземпляр.
 6. В правом верхнем углу появится кнопка мода [AntHub](https://github.com/abrosdaniel/anthub).
-7. Откройте меню AntHub и добавьте проект по ссылке `https://github.com/abrosdaniel/mc-ruslaanchik`.
+7. Откройте меню [AntHub](https://github.com/abrosdaniel/anthub) и добавьте проект "Ruslaanchik" из каталога.
 8. Следуйте инструкциям в [AntHub](https://github.com/abrosdaniel/anthub), мод сам установит сборку и все нужные зависимости.
 
 > [!WARNING]
