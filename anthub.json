@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "anthubVersion": "2.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -723,6 +723,25 @@
             "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
             "https://edge.forgecdn.net/files/8849/973/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
           ]
+        }
+      ]
+    },
+    {
+      "id": "xaeros-waystones-compatibility",
+      "name": "Xaero's Waystones Compatibility",
+      "description": "Добавляет путевые точки на карты Xaero при активации камней Waystones.",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": ["waystones"],
+      "files": [
+        {
+          "path": "mods/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+          "version": "2.1.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/7mLhyqIY/versions/k8wIAiWT/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+            "https://edge.forgecdn.net/files/7976/140/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar"
+          ],
+          "policy": "enforce"
         }
       ]
     }
