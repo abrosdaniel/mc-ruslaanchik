@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "anthubVersion": "2.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -25,11 +25,6 @@
             "https://edge.forgecdn.net/files/7854/442/appleskin-neoforge-mc1.21-3.0.9.jar",
             "https://github.com/squeek502/AppleSkin/releases/download/v3.0.9/appleskin-neoforge-mc1.21-3.0.9.jar"
           ]
-        },
-        {
-          "path": "config/appleskin-client.toml",
-          "repositoryPath": "files/config/appleskin-client.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -53,7 +48,6 @@
       "id": "balm",
       "name": "Balm",
       "description": "Библиотека для Waystones.",
-      "kind": "required",
       "category": "mods",
       "files": [
         {
@@ -98,11 +92,6 @@
             "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
             "https://edge.forgecdn.net/files/8462/29/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar"
           ]
-        },
-        {
-          "path": "config/chloride-client.toml",
-          "repositoryPath": "files/config/chloride-client.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -133,23 +122,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
             "https://edge.forgecdn.net/files/7963/363/create-1.21.1-6.0.10.jar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "create-hypertube",
-      "name": "Create Hypertube",
-      "description": "Create Hypertube 0.6.0",
-      "category": "mods",
-      "dependencies": ["create"],
-      "files": [
-        {
-          "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
-          "version": "0.6.0",
-          "urls": [
-            "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar",
-            "https://edge.forgecdn.net/files/8541/877/create_hypertube-0.6.0-NEOFORGE.jar"
           ]
         }
       ]
@@ -236,11 +208,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/uCdwusMi/versions/IcOcoekl/DistantHorizons-3.3.1-1.21.1-fabric-neoforge.jar"
           ]
-        },
-        {
-          "path": "config/DistantHorizons.toml",
-          "repositoryPath": "files/config/DistantHorizons.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -248,14 +215,12 @@
       "id": "dream-displays",
       "name": "Dream Displays",
       "description": "Dream Displays 1.10.0-fork.3",
-      "kind": "required",
       "category": "mods",
       "files": [
         {
           "path": "mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
           "version": "1.10.0-fork.3",
-          "repositoryPath": "files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar",
-          "policy": "enforce"
+          "repositoryPath": "files/mods/dreamdisplays-neoforge-1.21.1-1.10.0-preview.2.jar"
         }
       ]
     },
@@ -271,11 +236,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/Kaov2qgi/versions/uXQvvtUt/easy-villagers-neoforge-1.21.1-1.1.42.jar"
           ]
-        },
-        {
-          "path": "config/easy_villagers-client.toml",
-          "repositoryPath": "files/config/easy_villagers-client.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -294,11 +254,6 @@
             "https://edge.forgecdn.net/files/8081/408/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
             "https://github.com/emilyploszaj/emi/releases/download/1.1.24%2B1.21.1/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
           ]
-        },
-        {
-          "path": "config/emi.css",
-          "repositoryPath": "files/config/emi.css",
-          "version": "1.0.1"
         }
       ]
     },
@@ -316,11 +271,6 @@
             "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
             "https://edge.forgecdn.net/files/7524/151/ferritecore-7.0.3-neoforge.jar"
           ]
-        },
-        {
-          "path": "config/ferritecore-mixin.toml",
-          "repositoryPath": "files/config/ferritecore-mixin.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -339,11 +289,6 @@
             "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar",
             "https://edge.forgecdn.net/files/8242/804/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar"
           ]
-        },
-        {
-          "path": "config/iris.properties",
-          "repositoryPath": "files/config/iris.properties",
-          "version": "1.0.1"
         }
       ]
     },
@@ -395,11 +340,6 @@
             "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar",
             "https://github.com/LambdAurora/LambDynamicLights/releases/download/v4.8.11%2B1.21.1/lambdynamiclights-4.8.11%2B1.21.1.jar"
           ]
-        },
-        {
-          "path": "config/lambdynlights.toml",
-          "repositoryPath": "files/config/lambdynlights.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -417,11 +357,6 @@
             "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
             "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.2/LocatorBar-neoforge-1.2.2%2B1.21.1.jar"
           ]
-        },
-        {
-          "path": "config/locatorbar.json",
-          "repositoryPath": "files/config/locatorbar.json",
-          "version": "1.0.1"
         }
       ]
     },
@@ -460,11 +395,6 @@
             "https://cdn.modrinth.com/data/nmDcB62a/versions/5HLHxQ2F/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar",
             "https://edge.forgecdn.net/files/8774/737/modernfix-neoforge-5.27.24%2Bmc1.21.1.jar"
           ]
-        },
-        {
-          "path": "config/modernfix-common.toml",
-          "repositoryPath": "files/config/modernfix-common.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -482,11 +412,6 @@
             "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
             "https://edge.forgecdn.net/files/5637/846/MouseTweaks-neoforge-mc1.21-2.26.1.jar"
           ]
-        },
-        {
-          "path": "config/MouseTweaks.cfg",
-          "repositoryPath": "files/config/MouseTweaks.cfg",
-          "version": "1.0.1"
         }
       ]
     },
@@ -536,16 +461,6 @@
             "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar",
             "https://edge.forgecdn.net/files/8673/825/sable-neoforge-1.21.1-2.0.5.jar"
           ]
-        },
-        {
-          "path": "config/sable-client.toml",
-          "repositoryPath": "files/config/sable-client.toml",
-          "version": "1.0.1"
-        },
-        {
-          "path": "config/sable-common.toml",
-          "repositoryPath": "files/config/sable-common.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -562,11 +477,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/I3mWDgfy/versions/CyKh8XSr/sable_player_ragdoll-1.21.1-0.7.5.jar"
           ]
-        },
-        {
-          "path": "config/sable_player_ragdoll-client.toml",
-          "repositoryPath": "files/config/sable_player_ragdoll-client.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -583,11 +493,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar"
           ]
-        },
-        {
-          "path": "config/sodium-options.json",
-          "repositoryPath": "files/config/sodium-options.json",
-          "version": "1.0.1"
         }
       ]
     },
@@ -639,37 +544,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar"
           ]
-        },
-        {
-          "path": "config/sophisticatedcore-client.toml",
-          "repositoryPath": "files/config/sophisticatedcore-client.toml",
-          "version": "1.0.1"
-        },
-        {
-          "path": "config/sophisticatedcore-common.toml",
-          "repositoryPath": "files/config/sophisticatedcore-common.toml",
-          "version": "1.0.1"
-        }
-      ]
-    },
-    {
-      "id": "sophisticated-storage",
-      "name": "Sophisticated Storage",
-      "description": "Sophisticated Storage 1.21.1-1.5.91.2127",
-      "category": "mods",
-      "dependencies": ["sophisticated-core"],
-      "files": [
-        {
-          "path": "mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar",
-          "version": "1.21.1-1.5.91.2127",
-          "urls": [
-            "https://cdn.modrinth.com/data/hMlaZH8f/versions/H7wGZ8Sl/sophisticatedstorage-1.21.1-1.5.91.2127.jar"
-          ]
-        },
-        {
-          "path": "config/sophisticatedstorage-client.toml",
-          "repositoryPath": "files/config/sophisticatedstorage-client.toml",
-          "version": "1.0.1"
         }
       ]
     },
@@ -734,8 +608,7 @@
           "urls": [
             "https://cdn.modrinth.com/data/7mLhyqIY/versions/k8wIAiWT/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
             "https://edge.forgecdn.net/files/7976/140/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar"
-          ],
-          "policy": "enforce"
+          ]
         }
       ]
     }
