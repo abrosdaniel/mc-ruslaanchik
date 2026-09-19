@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "anthubVersion": "2.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -677,7 +677,6 @@
       "id": "waystones",
       "name": "Waystones",
       "description": "Камни телепортации между точками мира.",
-      "kind": "required",
       "category": "mods",
       "dependencies": ["balm"],
       "files": [
@@ -695,7 +694,6 @@
       "id": "xaero-s-minimap",
       "name": "Xaero's Minimap",
       "description": "Xaero's Minimap neoforge-1.21.1-26.5.0",
-      "kind": "optional",
       "category": "mods",
       "files": [
         {
@@ -711,7 +709,6 @@
       "id": "xaero-s-world-map",
       "name": "Xaero's World Map",
       "description": "Xaero's World Map neoforge-1.21.1-1.46.0",
-      "kind": "optional",
       "category": "mods",
       "files": [
         {
@@ -728,7 +725,6 @@
       "id": "xaeros-waystones-compatibility",
       "name": "Xaero's Waystones Compatibility",
       "description": "Добавляет путевые точки на карты Xaero при активации камней Waystones.",
-      "kind": "optional",
       "category": "mods",
       "dependencies": ["waystones"],
       "files": [
