@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "anthubVersion": "2.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -56,6 +56,22 @@
           "urls": [
             "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar",
             "https://edge.forgecdn.net/files/8492/726/architectury-13.0.11-neoforge.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baguettelib",
+      "name": "BaguetteLib",
+      "description": "Библиотека BaguetteLib.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/baguettelib-1.21.1-NeoForge-2.0.7.jar",
+          "version": "2.0.7",
+          "urls": [
+            "https://cdn.modrinth.com/data/OfKzpbRU/versions/5RiJQA1Z/baguettelib-1.21.1-NeoForge-2.0.7.jar",
+            "https://edge.forgecdn.net/files/8887/463/baguettelib-1.21.1-NeoForge-2.0.7.jar"
           ]
         }
       ]
@@ -122,6 +138,23 @@
           "version": "neoforge-1.21.1-1.1.13",
           "urls": [
             "https://cdn.modrinth.com/data/WrpuIfhw/versions/Zwf8nv8y/corpse-neoforge-1.21.1-1.1.13.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corpse-curios-compatibility",
+      "name": "Corpse Curios Compatibility",
+      "description": "Добавляет совместимость Corpse с аксессуарами Curios.",
+      "category": "mods",
+      "dependencies": ["corpse", "curios-api", "baguettelib"],
+      "files": [
+        {
+          "path": "mods/corpsecurioscompat-1.21.1-NeoForge-4.0.1.jar",
+          "version": "4.0.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/pJGcKPh1/versions/Ix4uAd2i/corpsecurioscompat-1.21.1-NeoForge-4.0.1.jar",
+            "https://edge.forgecdn.net/files/7891/800/corpsecurioscompat-1.21.1-NeoForge-4.0.1.jar"
           ]
         }
       ]
@@ -272,7 +305,8 @@
           "path": "mods/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar",
           "version": "3.3.2-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/uCdwusMi/versions/Ez3cx7Yd/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar"
+            "https://cdn.modrinth.com/data/uCdwusMi/versions/Ez3cx7Yd/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar",
+            "https://edge.forgecdn.net/files/8943/824/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar"
           ]
         }
       ]
@@ -421,6 +455,7 @@
           "version": "1.2.2+1.21.1-neoforge",
           "urls": [
             "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
+            "https://edge.forgecdn.net/files/8602/125/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
             "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.2/LocatorBar-neoforge-1.2.2%2B1.21.1.jar"
           ]
         }
@@ -492,6 +527,7 @@
           "version": "neoforge-1.21.1-2.1.17",
           "urls": [
             "https://cdn.modrinth.com/data/1bZhdhsH/versions/97HOKGM0/plasmovoice-neoforge-1.21.1-2.1.17.jar",
+            "https://edge.forgecdn.net/files/8890/194/plasmovoice-neoforge-1.21.1-2.1.17.jar",
             "https://github.com/plasmoapp/plasmo-voice/releases/download/2.1.17/plasmovoice-neoforge-1.21.1-2.1.17.jar"
           ]
         }
@@ -557,7 +593,8 @@
           "path": "mods/sodium-neoforge-0.8.13+mc1.21.1.jar",
           "version": "mc1.21.1-0.8.13-neoforge",
           "urls": [
-            "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar"
+            "https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar",
+            "https://edge.forgecdn.net/files/8756/580/sodium-neoforge-0.8.13%2Bmc1.21.1.jar"
           ]
         }
       ]
@@ -640,7 +677,8 @@
           "path": "mods/xaerominimap-neoforge-1.21.1-26.5.0.jar",
           "version": "neoforge-1.21.1-26.5.0",
           "urls": [
-            "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar"
+            "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar",
+            "https://edge.forgecdn.net/files/8849/842/xaerominimap-neoforge-1.21.1-26.5.0.jar"
           ]
         }
       ]
