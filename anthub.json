@@ -11,9 +11,25 @@
   },
   "components": [
     {
+      "id": "another-furniture",
+      "name": "Another Furniture",
+      "description": "Мебель и декорации в стиле Minecraft.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/another_furniture-neoforge-4.0.2.jar",
+          "version": "4.0.2",
+          "urls": [
+            "https://cdn.modrinth.com/data/ulloLmqG/versions/Q29JlZfU/another_furniture-neoforge-4.0.2.jar",
+            "https://edge.forgecdn.net/files/7355/747/another_furniture-neoforge-4.0.2.jar"
+          ]
+        }
+      ]
+    },
+    {
       "id": "appleskin",
       "name": "AppleSkin",
-      "description": "AppleSkin 3.0.9+mc1.21",
+      "description": "Интерактивное отображение голода и насыщения в Minecraft.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -31,7 +47,7 @@
     {
       "id": "architectury",
       "name": "Architectury",
-      "description": "Architectury 13.0.11+neoforge",
+      "description": "Библиотека Architectury",
       "category": "mods",
       "files": [
         {
@@ -47,7 +63,7 @@
     {
       "id": "balm",
       "name": "Balm",
-      "description": "Библиотека для Waystones.",
+      "description": "Библиотека Balm",
       "category": "mods",
       "files": [
         {
@@ -63,7 +79,7 @@
     {
       "id": "chat-heads",
       "name": "Chat Heads",
-      "description": "Chat Heads 0.15.7",
+      "description": "Отображает голову игрока рядом с сообщением в чате и табе.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -80,7 +96,7 @@
     {
       "id": "chloride",
       "name": "Chloride",
-      "description": "Chloride 1.8.1-NEO-1.21.1",
+      "description": "Библиотека Chloride",
       "kind": "optional",
       "category": "mods",
       "dependencies": ["sodium"],
@@ -98,7 +114,7 @@
     {
       "id": "corpse",
       "name": "Corpse",
-      "description": "Corpse neoforge-1.21.1-1.1.13",
+      "description": "Тело после смерти игрока, с его инвентарём и возможностью забрать.",
       "category": "mods",
       "files": [
         {
@@ -113,7 +129,7 @@
     {
       "id": "create",
       "name": "Create",
-      "description": "Create 6.0.10+mc1.21.1",
+      "description": "Технологический мод с механизмами, конвейерами и автоматизацией.",
       "category": "mods",
       "files": [
         {
@@ -129,7 +145,7 @@
     {
       "id": "create-coasters-simulated",
       "name": "Create: Coasters Simulated",
-      "description": "Create: Coasters Simulated 0.1.5",
+      "description": "Парк атракционов с катанием на американских горках.",
       "category": "mods",
       "dependencies": ["create", "sable"],
       "files": [
@@ -144,9 +160,26 @@
       ]
     },
     {
+      "id": "create-connected",
+      "name": "Create: Connected",
+      "description": "Дополнительные блоки-механизмы для Create.",
+      "category": "mods",
+      "dependencies": ["create"],
+      "files": [
+        {
+          "path": "mods/create_connected-1.3.3-mc1.21.1.jar",
+          "version": "1.3.3-mc1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/Vg5TIO6d/versions/Xe7EqzfQ/create_connected-1.3.3-mc1.21.1.jar",
+            "https://github.com/hlysine/create_connected/releases/download/1.3.3-mc1.21.1/create_connected-1.3.3-mc1.21.1.jar"
+          ]
+        }
+      ]
+    },
+    {
       "id": "create-copycats",
       "name": "Create: Copycats+",
-      "description": "Create: Copycats+ 3.0.9+mc.1.21.1-neoforge",
+      "description": "Дполнительные декоративные блоки для Create.",
       "category": "mods",
       "dependencies": ["create"],
       "files": [
@@ -163,7 +196,7 @@
     {
       "id": "create-emi-schematics",
       "name": "Create: EMI Schematics",
-      "description": "Create: EMI Schematics 1.1.0",
+      "description": "Интеграция Create с EMI для отображения схем в интерфейсе.",
       "kind": "optional",
       "category": "mods",
       "dependencies": ["create", "emi"],
@@ -182,7 +215,7 @@
     {
       "id": "create-fast-schematic-cannon",
       "name": "Create: Fast Schematic Cannon",
-      "description": "Create: Fast Schematic Cannon 1.21.1-2.6.1-neoforge",
+      "description": "Быстрая стрельба схемами для Create.",
       "category": "mods",
       "dependencies": ["create"],
       "files": [
@@ -196,17 +229,50 @@
       ]
     },
     {
+      "id": "create-ultimate-factory",
+      "name": "Create: Ultimate Factory",
+      "description": "Дополнительные рецепты автоматизации для Create.",
+      "category": "mods",
+      "dependencies": ["create"],
+      "files": [
+        {
+          "path": "mods/create_ultimate_factory-2.2.4-neoforge-1.21.1.jar",
+          "version": "2.2.4",
+          "urls": [
+            "https://cdn.modrinth.com/data/N9QToVpw/versions/AEMRNsNS/create_ultimate_factory-2.2.4-neoforge-1.21.1.jar",
+            "https://edge.forgecdn.net/files/8038/954/create_ultimate_factory-2.2.4-neoforge-1.21.1.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curios-api",
+      "name": "Curios API",
+      "description": "Библиотека дополнительных слотов для аксессуаров и экипировки.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/curios-neoforge-9.5.1+1.21.1.jar",
+          "version": "9.5.1+1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/vvuO3ImH/versions/yohfFbgD/curios-neoforge-9.5.1%2B1.21.1.jar",
+            "https://edge.forgecdn.net/files/6529/130/curios-neoforge-9.5.1%2B1.21.1.jar"
+          ]
+        }
+      ]
+    },
+    {
       "id": "distant-horizons",
       "name": "Distant Horizons",
-      "description": "Distant Horizons 3.3.1",
+      "description": "Отображает упрощённый ландшафт за пределами обычной дальности прорисовки.",
       "kind": "optional",
       "category": "mods",
       "files": [
         {
-          "path": "mods/DistantHorizons-3.3.1-1.21.1-fabric-neoforge.jar",
-          "version": "3.3.1-1.21.1",
+          "path": "mods/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar",
+          "version": "3.3.2-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/uCdwusMi/versions/IcOcoekl/DistantHorizons-3.3.1-1.21.1-fabric-neoforge.jar"
+            "https://cdn.modrinth.com/data/uCdwusMi/versions/Ez3cx7Yd/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar"
           ]
         }
       ]
@@ -214,7 +280,7 @@
     {
       "id": "dream-displays",
       "name": "Dream Displays",
-      "description": "Dream Displays 1.10.0-fork.3",
+      "description": "Улучшенный форк мода Display Screens для просотра видео/трансляций на экранах в Minecraft.",
       "category": "mods",
       "files": [
         {
@@ -227,7 +293,7 @@
     {
       "id": "easy-villagers",
       "name": "Easy Villagers",
-      "description": "Easy Villagers neoforge-1.21.1-1.1.42",
+      "description": "Легко разводить и управлять деревенскими жителями.",
       "category": "mods",
       "files": [
         {
@@ -242,7 +308,7 @@
     {
       "id": "emi",
       "name": "EMI",
-      "description": "EMI 1.1.24+1.21.1+neoforge",
+      "description": "Интерфейс для просмотра рецептов и крафта в Minecraft.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -260,7 +326,7 @@
     {
       "id": "ferrite-core",
       "name": "Ferrite Core",
-      "description": "Ferrite Core 7.0.3-neoforge",
+      "description": "Библиотека Ferrite Core.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -277,7 +343,7 @@
     {
       "id": "iris",
       "name": "Iris",
-      "description": "Iris 1.8.14-beta.1+1.21.1-neoforge",
+      "description": "Шейдеры на Sodium. Улучшает графику и освещение в Minecraft.",
       "kind": "optional",
       "category": "mods",
       "dependencies": ["sodium"],
@@ -328,7 +394,7 @@
     {
       "id": "lambdynamiclights",
       "name": "LambDynamicLights",
-      "description": "LambDynamicLights 4.8.11+1.21.1",
+      "description": "Динамическое освещение от предметов в руках и на спине.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -346,7 +412,7 @@
     {
       "id": "locator-bar",
       "name": "Locator Bar",
-      "description": "Locator Bar 1.2.2+1.21.1-neoforge",
+      "description": "Отображает координаты игрока и направление движения в виде панели.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -363,7 +429,7 @@
     {
       "id": "macos-input-fixes",
       "name": "MacOS Input Fixes",
-      "description": "MacOS Input Fixes 26.04.27",
+      "description": "Исправления ввода для macOS.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -384,7 +450,7 @@
     {
       "id": "modernfix",
       "name": "ModernFix",
-      "description": "ModernFix 5.27.24+mc1.21.1",
+      "description": "Библиотека ModernFix.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -401,7 +467,7 @@
     {
       "id": "mouse-tweaks",
       "name": "Mouse Tweaks",
-      "description": "Mouse Tweaks 1.21-2.26.1-neoforge",
+      "description": "Изменения поведения мыши для лучшего управления.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -418,7 +484,7 @@
     {
       "id": "plasmo-voice",
       "name": "Plasmo Voice",
-      "description": "Plasmo Voice neoforge-1.21.1-2.1.17",
+      "description": "Голосовой чат для Minecraft с поддержкой 3D-звука.",
       "category": "mods",
       "files": [
         {
@@ -434,7 +500,7 @@
     {
       "id": "ragdoll-reactions",
       "name": "Ragdoll Reactions",
-      "description": "Ragdoll Reactions 0.7.0",
+      "description": "Ragdoll падения и реакции на удары.",
       "category": "mods",
       "dependencies": ["sable-ragdolls", "sable"],
       "files": [
@@ -451,7 +517,7 @@
     {
       "id": "sable",
       "name": "Sable",
-      "description": "Sable 2.0.5+mc1.21.1",
+      "description": "Библиотека Sable.",
       "category": "mods",
       "files": [
         {
@@ -467,7 +533,7 @@
     {
       "id": "sable-ragdolls",
       "name": "Sable Ragdolls",
-      "description": "Sable Ragdolls 0.7.5",
+      "description": "Физические модели тел после смерти игрока и мобов.",
       "category": "mods",
       "dependencies": ["sable"],
       "files": [
@@ -483,7 +549,7 @@
     {
       "id": "sodium",
       "name": "Sodium",
-      "description": "Sodium mc1.21.1-0.8.13-neoforge",
+      "description": "Библиотека Sodium.",
       "kind": "optional",
       "category": "mods",
       "files": [
@@ -499,7 +565,7 @@
     {
       "id": "sophisticated-backpacks",
       "name": "Sophisticated Backpacks",
-      "description": "Sophisticated Backpacks 1.21.1-3.26.3.2158",
+      "description": "Рюкзаки с продвинутыми функциями.",
       "category": "mods",
       "dependencies": ["sophisticated-core"],
       "files": [
@@ -515,7 +581,7 @@
     {
       "id": "sophisticated-backpacks-create-integration",
       "name": "Sophisticated Backpacks Create Integration",
-      "description": "Sophisticated Backpacks Create Integration 1.21.1-0.2.0.168",
+      "description": "Интеграция Sophisticated Backpacks с Create.",
       "category": "mods",
       "dependencies": [
         "create",
@@ -535,7 +601,7 @@
     {
       "id": "sophisticated-core",
       "name": "Sophisticated Core",
-      "description": "Sophisticated Core 1.21.1-1.5.1.2341",
+      "description": "Библиотека Sophisticated Core.",
       "category": "mods",
       "files": [
         {
@@ -567,7 +633,7 @@
     {
       "id": "xaero-s-minimap",
       "name": "Xaero's Minimap",
-      "description": "Xaero's Minimap neoforge-1.21.1-26.5.0",
+      "description": "Миникарта.",
       "category": "mods",
       "files": [
         {
@@ -582,7 +648,7 @@
     {
       "id": "xaero-s-world-map",
       "name": "Xaero's World Map",
-      "description": "Xaero's World Map neoforge-1.21.1-1.46.0",
+      "description": "Карта мира.",
       "category": "mods",
       "files": [
         {
