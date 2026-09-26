@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "anthubVersion": "3.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -389,6 +389,23 @@
             "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
             "https://edge.forgecdn.net/files/8081/408/emi-1.1.24%2B1.21.1%2Bneoforge.jar",
             "https://github.com/emilyploszaj/emi/releases/download/1.1.24%2B1.21.1/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emi-for-create",
+      "name": "EMI for Create",
+      "description": "Добавляет полноценную интеграцию Create с EMI и отображение рецептов механизмов.",
+      "kind": "optional",
+      "category": "mods",
+      "dependencies": ["emi", "create"],
+      "files": [
+        {
+          "path": "mods/emicreatecompat-1.1.1.jar",
+          "version": "1.1.1",
+          "urls": [
+            "https://edge.forgecdn.net/files/8609/093/emicreatecompat-1.1.1.jar"
           ]
         }
       ]
