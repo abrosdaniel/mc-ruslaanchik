@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "anthubVersion": "3.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -439,8 +439,7 @@
           "path": "mods/kubejs-neoforge-2101.7.2-build.377.jar",
           "version": "2101.7.2-build.377",
           "urls": [
-            "https://cdn.modrinth.com/data/umyGl7zF/versions/THIGFPwf/kubejs-neoforge-2101.7.2-build.377.jar",
-            "https://edge.forgecdn.net/files/8843/626/kubejs-neoforge-2101.7.2-build.377.jar"
+            "https://cdn.modrinth.com/data/umyGl7zF/versions/THIGFPwf/kubejs-neoforge-2101.7.2-build.377.jar"
           ]
         }
       ]
@@ -473,8 +472,7 @@
           "path": "mods/kubejs-create-neoforge-2101.3.1-build.18.jar",
           "version": "2101.3.1-build.18",
           "urls": [
-            "https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar",
-            "https://edge.forgecdn.net/files/7213/667/kubejs-create-neoforge-2101.3.1-build.18.jar"
+            "https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar"
           ]
         }
       ]
@@ -490,8 +488,7 @@
           "path": "mods/kubejsable-1.1.0.jar",
           "version": "1.1.0",
           "urls": [
-            "https://cdn.modrinth.com/data/aH1sOU2k/versions/jxjUAAAq/kubejsable-1.1.0.jar",
-            "https://edge.forgecdn.net/files/8876/733/kubejsable-1.1.0.jar"
+            "https://cdn.modrinth.com/data/aH1sOU2k/versions/jxjUAAAq/kubejsable-1.1.0.jar"
           ]
         }
       ]
@@ -507,7 +504,7 @@
           "version": "2101.2.8-build.91",
           "urls": [
             "https://cdn.modrinth.com/data/sk9knFPE/versions/SqkDvOLG/rhino-2101.2.8-build.91.jar",
-            "https://edge.forgecdn.net/files/8694/768/rhino-2101.2.8-build.91.jar"
+            "https://edge.forgecdn.net/files/8463/898/rhino-2101.2.8-build.91.jar"
           ]
         }
       ]
