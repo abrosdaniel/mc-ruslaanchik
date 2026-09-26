@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "anthubVersion": "3.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -93,6 +93,22 @@
       ]
     },
     {
+      "id": "better-advanced-tooltips",
+      "name": "Better Advanced Tooltips",
+      "description": "Расширенные подсказки для предметов в режиме F3+H.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/better-advanced-tooltips-2101.1.0-build.5.jar",
+          "version": "2101.1.0-build.5",
+          "urls": [
+            "https://cdn.modrinth.com/data/iHLDc0eo/versions/uPFbnD32/better-advanced-tooltips-2101.1.0-build.5.jar",
+            "https://edge.forgecdn.net/files/8576/077/better-advanced-tooltips-2101.1.0-build.5.jar"
+          ]
+        }
+      ]
+    },
+    {
       "id": "chat-heads",
       "name": "Chat Heads",
       "description": "Отображает голову игрока рядом с сообщением в чате и табе.",
@@ -123,6 +139,26 @@
           "urls": [
             "https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar",
             "https://edge.forgecdn.net/files/8462/29/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chunk-loaders",
+      "name": "Chunk Loaders",
+      "description": "Добавляет блоки для постоянной загрузки чанков.",
+      "category": "mods",
+      "dependencies": [
+        "supermartijn642-config-lib",
+        "supermartijn642-core-lib"
+      ],
+      "files": [
+        {
+          "path": "mods/chunkloaders-1.2.9-neoforge-mc1.21.jar",
+          "version": "1.2.9-neoforge-mc1.21",
+          "urls": [
+            "https://cdn.modrinth.com/data/t1VgucWo/versions/lVVhQRyh/chunkloaders-1.2.9-neoforge-mc1.21.jar",
+            "https://edge.forgecdn.net/files/6832/703/chunkloaders-1.2.9-neoforge-mc1.21.jar"
           ]
         }
       ]
@@ -393,6 +429,90 @@
       ]
     },
     {
+      "id": "kubejs",
+      "name": "KubeJS",
+      "description": "Система скриптов на JavaScript для настройки рецептов, событий и модпака.",
+      "category": "mods",
+      "dependencies": ["rhino", "better-advanced-tooltips"],
+      "files": [
+        {
+          "path": "mods/kubejs-neoforge-2101.7.2-build.377.jar",
+          "version": "2101.7.2-build.377",
+          "urls": [
+            "https://cdn.modrinth.com/data/umyGl7zF/versions/THIGFPwf/kubejs-neoforge-2101.7.2-build.377.jar",
+            "https://edge.forgecdn.net/files/8843/626/kubejs-neoforge-2101.7.2-build.377.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kubejs-additions",
+      "name": "KubeJS Additions",
+      "description": "Дополнительные возможности и интеграции для KubeJS.",
+      "category": "mods",
+      "dependencies": ["kubejs"],
+      "files": [
+        {
+          "path": "mods/kubejsadditions-neoforge-1.21.1-6.0.0.jar",
+          "version": "1.21.1-6.0.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/BZemjxZb/versions/EK0wJfqY/kubejsadditions-neoforge-1.21.1-6.0.0.jar",
+            "https://edge.forgecdn.net/files/8290/338/kubejsadditions-neoforge-1.21.1-6.0.0.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kubejs-create",
+      "name": "KubeJS Create",
+      "description": "Интеграция KubeJS с Create.",
+      "category": "mods",
+      "dependencies": ["kubejs", "create"],
+      "files": [
+        {
+          "path": "mods/kubejs-create-neoforge-2101.3.1-build.18.jar",
+          "version": "2101.3.1-build.18",
+          "urls": [
+            "https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar",
+            "https://edge.forgecdn.net/files/7213/667/kubejs-create-neoforge-2101.3.1-build.18.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kubejsable",
+      "name": "KubeJSable",
+      "description": "Интеграция KubeJS с Sable.",
+      "category": "mods",
+      "dependencies": ["kubejs", "sable"],
+      "files": [
+        {
+          "path": "mods/kubejsable-1.1.0.jar",
+          "version": "1.1.0",
+          "urls": [
+            "https://cdn.modrinth.com/data/aH1sOU2k/versions/jxjUAAAq/kubejsable-1.1.0.jar",
+            "https://edge.forgecdn.net/files/8876/733/kubejsable-1.1.0.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rhino",
+      "name": "Rhino",
+      "description": "JavaScript-движок, используемый KubeJS.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/rhino-2101.2.8-build.91.jar",
+          "version": "2101.2.8-build.91",
+          "urls": [
+            "https://cdn.modrinth.com/data/sk9knFPE/versions/SqkDvOLG/rhino-2101.2.8-build.91.jar",
+            "https://edge.forgecdn.net/files/8694/768/rhino-2101.2.8-build.91.jar"
+          ]
+        }
+      ]
+    },
+    {
       "id": "jade",
       "name": "Jade",
       "description": "Информация о блоках и существах под прицелом.",
@@ -646,6 +766,38 @@
           "version": "1.21.1-1.5.1.2341",
           "urls": [
             "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supermartijn642-config-lib",
+      "name": "SuperMartijn642's Config Lib",
+      "description": "Библиотека конфигурации SuperMartijn642.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+          "version": "1.1.8-neoforge-mc1.21",
+          "urls": [
+            "https://cdn.modrinth.com/data/LN9BxssP/versions/qKL9jM75/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+            "https://edge.forgecdn.net/files/5546/996/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supermartijn642-core-lib",
+      "name": "SuperMartijn642's Core Lib",
+      "description": "Основная библиотека SuperMartijn642.",
+      "category": "mods",
+      "files": [
+        {
+          "path": "mods/supermartijn642corelib-1.1.24a-neoforge-mc1.21.jar",
+          "version": "1.1.24a-neoforge-mc1.21",
+          "urls": [
+            "https://cdn.modrinth.com/data/rOUBggPv/versions/y8iP3aUs/supermartijn642corelib-1.1.24a-neoforge-mc1.21.jar",
+            "https://edge.forgecdn.net/files/8943/316/supermartijn642corelib-1.1.24a-neoforge-mc1.21.jar"
           ]
         }
       ]
