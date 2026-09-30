@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.31",
+  "version": "1.0.33",
   "anthubVersion": "3.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -17,11 +17,11 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/another_furniture-neoforge-4.0.2.jar",
-          "version": "4.0.2",
+          "path": "mods/another_furniture-neoforge-4.0.3.jar",
+          "version": "4.0.3",
           "urls": [
-            "https://cdn.modrinth.com/data/ulloLmqG/versions/Q29JlZfU/another_furniture-neoforge-4.0.2.jar",
-            "https://edge.forgecdn.net/files/7355/747/another_furniture-neoforge-4.0.2.jar"
+            "https://cdn.modrinth.com/data/ulloLmqG/versions/cugGiMKt/another_furniture-neoforge-4.0.3.jar",
+            "https://edge.forgecdn.net/files/8955/672/another_furniture-neoforge-4.0.3.jar"
           ]
         }
       ]
@@ -83,11 +83,11 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/balm-neoforge-1.21.1-21.0.65.jar",
-          "version": "21.0.65+neoforge-1.21.1",
+          "path": "mods/balm-neoforge-1.21.1-21.0.66.jar",
+          "version": "21.0.66+neoforge-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/MBAkmtvl/versions/KgypwTqX/balm-neoforge-1.21.1-21.0.65.jar",
-            "https://edge.forgecdn.net/files/8645/517/balm-neoforge-1.21.1-21.0.65.jar"
+            "https://cdn.modrinth.com/data/MBAkmtvl/versions/CquiaiDj/balm-neoforge-1.21.1-21.0.66.jar",
+            "https://edge.forgecdn.net/files/8969/738/balm-neoforge-1.21.1-21.0.66.jar"
           ]
         }
       ]
@@ -338,11 +338,11 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar",
-          "version": "3.3.2-1.21.1",
+          "path": "mods/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+          "version": "3.3.3-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/uCdwusMi/versions/Ez3cx7Yd/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar",
-            "https://edge.forgecdn.net/files/8943/824/DistantHorizons-3.3.2-1.21.1-fabric-neoforge.jar"
+            "https://cdn.modrinth.com/data/uCdwusMi/versions/9w34y8ai/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar",
+            "https://edge.forgecdn.net/files/9004/764/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar"
           ]
         }
       ]
@@ -585,12 +585,12 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/LocatorBar-neoforge-1.2.2+1.21.1.jar",
-          "version": "1.2.2+1.21.1-neoforge",
+          "path": "mods/LocatorBar-neoforge-1.2.4+1.21.1.jar",
+          "version": "1.2.4+1.21.1-neoforge",
           "urls": [
-            "https://cdn.modrinth.com/data/BD7N7OcY/versions/Yi2Vr03m/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
-            "https://edge.forgecdn.net/files/8602/125/LocatorBar-neoforge-1.2.2%2B1.21.1.jar",
-            "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.2/LocatorBar-neoforge-1.2.2%2B1.21.1.jar"
+            "https://cdn.modrinth.com/data/BD7N7OcY/versions/T99P6QRt/LocatorBar-neoforge-1.2.4%2B1.21.1.jar",
+            "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.4/LocatorBar-neoforge-1.2.4%2B1.21.1.jar",
+            "https://edge.forgecdn.net/files/8963/934/LocatorBar-neoforge-1.2.4%2B1.21.1.jar"
           ]
         }
       ]
@@ -657,12 +657,10 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/plasmovoice-neoforge-1.21.1-2.1.17.jar",
-          "version": "neoforge-1.21.1-2.1.17",
+          "path": "mods/plasmovoice-neoforge-1.21.1-2.2.0-beta.1.jar",
+          "version": "neoforge-1.21.1-2.2.0-beta.1",
           "urls": [
-            "https://cdn.modrinth.com/data/1bZhdhsH/versions/97HOKGM0/plasmovoice-neoforge-1.21.1-2.1.17.jar",
-            "https://edge.forgecdn.net/files/8890/194/plasmovoice-neoforge-1.21.1-2.1.17.jar",
-            "https://github.com/plasmoapp/plasmo-voice/releases/download/2.1.17/plasmovoice-neoforge-1.21.1-2.1.17.jar"
+            "https://cdn.modrinth.com/data/1bZhdhsH/versions/aqyfrhqp/plasmovoice-neoforge-1.21.1-2.2.0-beta.1.jar"
           ]
         }
       ]
@@ -741,10 +739,10 @@
       "dependencies": ["sophisticated-core"],
       "files": [
         {
-          "path": "mods/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar",
-          "version": "1.21.1-3.26.3.2158",
+          "path": "mods/sophisticatedbackpacks-1.21.1-3.26.6.2174.jar",
+          "version": "1.21.1-3.26.6.2174",
           "urls": [
-            "https://cdn.modrinth.com/data/TyCTlI4b/versions/AhPnzNtJ/sophisticatedbackpacks-1.21.1-3.26.3.2158.jar"
+            "https://cdn.modrinth.com/data/TyCTlI4b/versions/pJxNzk4X/sophisticatedbackpacks-1.21.1-3.26.6.2174.jar"
           ]
         }
       ]
@@ -761,10 +759,10 @@
       ],
       "files": [
         {
-          "path": "mods/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar",
-          "version": "1.21.1-0.2.0.168",
+          "path": "mods/sophisticatedbackpackscreateintegration-1.21.1-0.2.1.171.jar",
+          "version": "1.21.1-0.2.1.171",
           "urls": [
-            "https://cdn.modrinth.com/data/s85zLEDe/versions/Tz7IXNXZ/sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar"
+            "https://cdn.modrinth.com/data/s85zLEDe/versions/xQr7vEEu/sophisticatedbackpackscreateintegration-1.21.1-0.2.1.171.jar"
           ]
         }
       ]
@@ -776,10 +774,10 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/sophisticatedcore-1.21.1-1.5.1.2341.jar",
-          "version": "1.21.1-1.5.1.2341",
+          "path": "mods/sophisticatedcore-1.21.1-1.5.2.2343.jar",
+          "version": "1.21.1-1.5.2.2343",
           "urls": [
-            "https://cdn.modrinth.com/data/nmoqTijg/versions/PXl6rB3q/sophisticatedcore-1.21.1-1.5.1.2341.jar"
+            "https://cdn.modrinth.com/data/nmoqTijg/versions/blXGSmAb/sophisticatedcore-1.21.1-1.5.2.2343.jar"
           ]
         }
       ]
@@ -824,11 +822,11 @@
       "dependencies": ["balm"],
       "files": [
         {
-          "path": "mods/waystones-neoforge-1.21.1-21.1.45.jar",
-          "version": "21.1.45+neoforge-1.21.1",
+          "path": "mods/waystones-neoforge-1.21.1-21.1.46.jar",
+          "version": "21.1.46+neoforge-1.21.1",
           "urls": [
-            "https://cdn.modrinth.com/data/LOpKHB2A/versions/Is55014l/waystones-neoforge-1.21.1-21.1.45.jar",
-            "https://edge.forgecdn.net/files/8873/0/waystones-neoforge-1.21.1-21.1.45.jar"
+            "https://cdn.modrinth.com/data/LOpKHB2A/versions/6Z6MQ6os/waystones-neoforge-1.21.1-21.1.46.jar",
+            "https://edge.forgecdn.net/files/8969/751/waystones-neoforge-1.21.1-21.1.46.jar"
           ]
         }
       ]
@@ -861,23 +859,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
             "https://edge.forgecdn.net/files/8849/973/xaeroworldmap-neoforge-1.21.1-1.46.0.jar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "xaeros-waystones-compatibility",
-      "name": "Xaero's Waystones Compatibility",
-      "description": "Добавляет путевые точки на карты Xaero при активации камней Waystones.",
-      "category": "mods",
-      "dependencies": ["waystones"],
-      "files": [
-        {
-          "path": "mods/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
-          "version": "2.1.0",
-          "urls": [
-            "https://cdn.modrinth.com/data/7mLhyqIY/versions/k8wIAiWT/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
-            "https://edge.forgecdn.net/files/7976/140/xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar"
           ]
         }
       ]
