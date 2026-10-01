@@ -4,6 +4,6 @@ permissions:
   contents: write
 jobs:
   project:
-    uses: abrosdaniel/anthub/.github/workflows/seed.yml@v2.0.0
+    uses: abrosdaniel/anthub/.github/workflows/seed.yml@main
     with:
-      tooling-ref: v2.0.0
+      tooling-ref: main
