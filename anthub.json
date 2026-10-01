@@ -1,7 +1,7 @@
 {
   "name": "Ruslaanchik",
   "version": "1.0.34",
-  "anthubVersion": "3.4.x",
+  "anthubVersion": "3.6.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
