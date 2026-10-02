@@ -1,7 +1,7 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.35",
-  "anthubVersion": "3.7.x",
+  "version": "1.0.36",
+  "anthubVersion": "3.8.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
@@ -191,6 +191,39 @@
           "urls": [
             "https://cdn.modrinth.com/data/pJGcKPh1/versions/Ix4uAd2i/corpsecurioscompat-1.21.1-NeoForge-4.0.1.jar",
             "https://edge.forgecdn.net/files/7891/800/corpsecurioscompat-1.21.1-NeoForge-4.0.1.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmetic-armor-reworked-forked",
+      "name": "Cosmetic Armor Reworked Forked",
+      "description": "Скрывает надетую броню или заменяет её внешний вид косметической бронёй.",
+      "category": "mods",
+      "dependencies": ["architectury"],
+      "files": [
+        {
+          "path": "mods/cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar",
+          "version": "1.21.1-0.0.4",
+          "urls": [
+            "https://cdn.modrinth.com/data/6cpT8CUC/versions/U6kExSSz/cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar",
+            "https://edge.forgecdn.net/files/7685/857/cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sable-ragdolls-cosmetic-armor-fix",
+      "name": "Sable: Ragdolls + Cosmetic Armor Reworked Forked compatibility fix",
+      "description": "Клиентское исправление отображения косметической и скрытой брони на моделях Sable Ragdolls.",
+      "category": "mods",
+      "dependencies": ["sable-ragdolls", "cosmetic-armor-reworked-forked"],
+      "files": [
+        {
+          "path": "mods/ragdollscosmeticarmorfix-1.0.jar",
+          "version": "1.0",
+          "urls": [
+            "https://edge.forgecdn.net/files/8756/902/ragdollscosmeticarmorfix-1.0.jar"
           ]
         }
       ]
