@@ -1,7 +1,7 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.34",
-  "anthubVersion": "3.6.x",
+  "version": "1.0.35",
+  "anthubVersion": "3.7.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
@@ -207,6 +207,24 @@
           "urls": [
             "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
             "https://edge.forgecdn.net/files/7963/363/create-1.21.1-6.0.10.jar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "create-access-denied",
+      "name": "Create: Access Denied",
+      "description": "Управление доступом игроков к логистической сети Create.",
+      "category": "mods",
+      "dependencies": ["create"],
+      "files": [
+        {
+          "path": "mods/create-access-denied-0.0.4+c6.0.10.mc1.21.1.jar",
+          "version": "0.0.4+c6.0.10.mc1.21.1",
+          "urls": [
+            "https://cdn.modrinth.com/data/l7OfHLkp/versions/g0JvLmzZ/create-access-denied-0.0.4%2Bc6.0.10.mc1.21.1.jar",
+            "https://edge.forgecdn.net/files/7984/871/create-access-denied-0.0.4%2Bc6.0.10.mc1.21.1.jar",
+            "https://github.com/5w14/create-access-denied/releases/download/v0.0.4%2Bc6.0.10/create-access-denied-0.0.4%2Bc6.0.10.mc1.21.1.jar"
           ]
         }
       ]
