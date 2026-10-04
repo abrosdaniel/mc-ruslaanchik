@@ -1,6 +1,6 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.0.39",
+  "version": "1.1.0",
   "rivetVersion": "1.0.x",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
@@ -437,9 +437,9 @@
       "category": "mods",
       "files": [
         {
-          "path": "mods/rivet-display-neoforge-1.21.1-1.10.0-fork.10.jar",
-          "version": "1.10.0-fork.10",
-          "repositoryPath": "files/mods/rivet-display-neoforge-1.21.1-1.10.0-fork.10.jar"
+          "path": "mods/rivet-display-neoforge-1.21.1-1.10.0-fork.11.jar",
+          "version": "1.10.0-fork.11",
+          "repositoryPath": "files/mods/rivet-display-neoforge-1.21.1-1.10.0-fork.11.jar"
         }
       ]
     },
