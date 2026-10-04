@@ -19,7 +19,7 @@
 **Java:** 21  
 **Minecraft:** 1.21.1  
 **Модлоадер:** NeoForge 21.1.250<br>
-**AntHub:** 2.x.x
+**Rivet:** минимум 1.0.x
 
 </td>
 <td width="600" align="right" valign="top">
@@ -67,12 +67,12 @@
 
 1. Скачайте и установите лаунчер.
 2. В лаунчере скачайте экземпляр Java 21 Minecraft 1.21.1 NeoForge 21.1.250.
-3. Скачайте релиз мода [AntHub](https://github.com/abrosdaniel/anthub) версии **2.x.x**.
-4. Откройте папку экземпляра через лаунчер. Положите скаченый мод [AntHub](https://github.com/abrosdaniel/anthub) в папку `/mods`.
+3. Скачайте релиз мода [Rivet](https://github.com/abrosdaniel/rivet/releases/latest).
+4. Откройте папку экземпляра через лаунчер. Положите скачанный мод Rivet в папку `mods/`.
 5. Запустите экземпляр.
-6. В правом верхнем углу появится кнопка мода [AntHub](https://github.com/abrosdaniel/anthub).
-7. Откройте меню [AntHub](https://github.com/abrosdaniel/anthub) и добавьте проект "Ruslaanchik" из каталога.
-8. Следуйте инструкциям в [AntHub](https://github.com/abrosdaniel/anthub), мод сам установит сборку и все нужные зависимости.
+6. В главном меню (в правом верхнем углу) откройте [Rivet](https://github.com/abrosdaniel/rivet).
+7. Добавьте сборку «Ruslaanchik» по ссылке на репозиторий: `https://github.com/abrosdaniel/mc-ruslaanchik` или выбрав из каталога проектов.
+8. Выберите необязательные компоненты и установите сборку через Rivet. Перезапустите игру, если мод предложит это.
 
 > [!WARNING]
 > **Не обновляйте Minecraft, NeoForge и моды самостоятельно.**
@@ -85,9 +85,9 @@
 
 Подключение можно произвести:
 
-1. С главного экрана, если выбран проект в меню [AntHub](https://github.com/abrosdaniel/anthub).
-2. Через меню [AntHub](https://github.com/abrosdaniel/anthub) выбрав Rusllanchik в списке проектов.
-3. Через стандартное меню. После установки сборки [AntHub](https://github.com/abrosdaniel/anthub) сам добавит сервер в ваш список.
+1. С главного экрана, если выбран проект в меню [Rivet](https://github.com/abrosdaniel/rivet).
+2. Через меню [Rivet](https://github.com/abrosdaniel/rivet) выбрав Ruslaanchik в списке сборок.
+3. Через стандартное меню. После установки сборки [Rivet](https://github.com/abrosdaniel/rivet) сам добавит сервер в ваш список.
 
 При первом входе на сервер, вас попросит ввести пароль. Это внутренняя регистрация на сервере, для возможности играть как с Лицензией, так и без.
 
