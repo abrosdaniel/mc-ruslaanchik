@@ -1,7 +1,7 @@
 {
   "name": "Ruslaanchik",
-  "version": "1.1.1",
-  "rivetVersion": "1.0.x",
+  "version": "1.1.2",
+  "rivetVersion": ">=1.2.0 <2.0.0",
   "server": {
     "address": "mc-ruslaanchik.ebash.id:25566"
   },
@@ -104,23 +104,6 @@
           "urls": [
             "https://cdn.modrinth.com/data/iHLDc0eo/versions/uPFbnD32/better-advanced-tooltips-2101.1.0-build.5.jar",
             "https://edge.forgecdn.net/files/8576/077/better-advanced-tooltips-2101.1.0-build.5.jar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "chat-heads",
-      "name": "Chat Heads",
-      "description": "Отображает голову игрока рядом с сообщением в чате и табе.",
-      "kind": "optional",
-      "category": "mods",
-      "files": [
-        {
-          "path": "mods/chat_heads-0.15.7-neoforge-1.21.jar",
-          "version": "0.15.7",
-          "urls": [
-            "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/ZPylso9i/chat_heads-0.15.7-neoforge-1.21.jar",
-            "https://edge.forgecdn.net/files/8642/154/chat_heads-0.15.7-neoforge-1.21.jar"
           ]
         }
       ]
@@ -656,24 +639,6 @@
             "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar",
             "https://edge.forgecdn.net/files/8780/227/lambdynamiclights-4.8.11%2B1.21.1.jar",
             "https://github.com/LambdAurora/LambDynamicLights/releases/download/v4.8.11%2B1.21.1/lambdynamiclights-4.8.11%2B1.21.1.jar"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "locator-bar",
-      "name": "Locator Bar",
-      "description": "Отображает координаты игрока и направление движения в виде панели.",
-      "kind": "optional",
-      "category": "mods",
-      "files": [
-        {
-          "path": "mods/LocatorBar-neoforge-1.2.4+1.21.1.jar",
-          "version": "1.2.4+1.21.1-neoforge",
-          "urls": [
-            "https://cdn.modrinth.com/data/BD7N7OcY/versions/T99P6QRt/LocatorBar-neoforge-1.2.4%2B1.21.1.jar",
-            "https://github.com/FuzjaJadrowa/LocatorBar/releases/download/v1.2.4/LocatorBar-neoforge-1.2.4%2B1.21.1.jar",
-            "https://edge.forgecdn.net/files/8963/934/LocatorBar-neoforge-1.2.4%2B1.21.1.jar"
           ]
         }
       ]

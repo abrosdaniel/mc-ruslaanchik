@@ -19,7 +19,7 @@
 **Java:** 21  
 **Minecraft:** 1.21.1  
 **Модлоадер:** NeoForge 21.1.250<br>
-**Rivet:** минимум 1.0.x
+**Rivet:** 1.2.x
 
 </td>
 <td width="600" align="right" valign="top">
